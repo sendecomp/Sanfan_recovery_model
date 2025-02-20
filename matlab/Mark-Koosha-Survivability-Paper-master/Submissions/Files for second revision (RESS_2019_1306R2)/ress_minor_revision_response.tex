@@ -1,0 +1,97 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newenvironment{response}{
+  \doublespacing
+  \setlength\parindent{0.05\linewidth}
+  \ttfamily
+}{}
+\tcbuselibrary{skins}
+\tcolorboxenvironment{response}{
+  empty, breakable, left = 1em, top = 1ex,
+  bottom = 1ex, borderline west = {2pt} {0pt} {black!20}
+}
+\newsavebox{\mybox}
+\newenvironment{textblock}[1]
+{\begin{tcolorbox}[breakable,enhanced]{#1 \\ \\}}
+{\end{tcolorbox}}
+
+\title{Authors' Response to Minor Revision for Submission RESS\_2019\_1306R1: \\
+Survivability Evaluation and Importance Analysis \\for Cyber-Physical Smart Grids}
+\date{}
+
+
+\begin{document}
+\maketitle
+\noindent
+We thank the reviewers and the editor-in-chief for the time and expertise they have invested in reviewing our submission. We have considered this constructive feedback very carefully.
+
+To facilitate the review process for this revision of the manuscript, we have included a verbatim copy of the full decision letter, including reviewers' comments. For each concern raised by the reviewers, we have provided our responses directly underneath the corresponding comment. \vspace{3em}
+
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+
+\section{Decision Letter}
+\label{sec:decision_letter}
+Dear Dr. Sedigh Sarvestani,
+
+Thank you for submitting your manuscript to Reliability Engineering and System Safety.
+
+I have completed my evaluation of your manuscript. The reviewers recommend \textbf{reconsideration of your manuscript following minor revision and modification}. I invite you to resubmit your manuscript after addressing the comments below. Please resubmit your revised manuscript by Dec 03, 2020.
+
+When revising your manuscript, please consider all issues mentioned in the reviewers' comments carefully: please outline every change made in response to their comments and provide suitable rebuttals for any comments not addressed. Please note that your revised submission may need to be re-reviewed.
+
+To submit your revised manuscript, please log in as an author at \url{https://www.editorialmanager.com/jress/}, and navigate to the ``Submissions Needing Revision'' folder under the Author Main Menu.
+
+Reliability Engineering and System Safety values your contribution and I look forward to receiving your revised manuscript.
+
+Please remember to sign in to receive the list of contents of next issues of RESS in:
+\url{https://www.sciencedirect.com/science/serial-alerts/save/09518320} \\ \\
+Kind regards \\
+Prof. Carlos Guedes Soares \\
+Editor-in-Chief \\
+Reliability Engineering and System Safety
+
+\section{Reviewers' Comments}
+\label{sec:reviewers}
+
+\subsection{Reviewer 1}
+\label{sec:reviewer:r1}
+The authors have addressed most comments. But this paper also needs some improvements. Therefore, this manuscript also needs a minor revision. The concerns are listed as follows.
+
+\begin{enumerate}
+  \item After reading this research work carefully again, the definition of ``survivability'' is correct, while the statement of ``resilience'' is not proper. In this paper, the authors stated that ``Resilience is defined as the ability of a system to bounce back from failure [15, 16].'' However, the authors in references [15] and [16], whose opinions have been accepted by scholars in recent years, think that resilience is throughout the whole process when the disruptive event occurs, so resilience is not just for the recovery process. Moreover, please check whether the definition of resilience should refer to reference [6] because the word resilience only appears once throughout the entire content, although this reference is high-cited. Please revise the relevant statement about the resilience in this paper.
+  \item For the importance analysis, the importance ranks based on the criticality or fragility is different, and the authors also have explained the differences in the ranks. Please explain the reasons why the ranks are different.
+\end{enumerate}
+
+\begin{response}
+Regarding the comment in item 1, we understand that there is a lack of consensus on the definition and the scope of resilience in the literature. Reference [15] in  summarizes these different definitions and specifically mentions that ``... there is no consistent quantitative approach to resilience because there is no consistent treatment of the concept of resilience. For example, if resilience relates to avoiding disruptions and also recovering from disruptions, how can a resilience metric be defined that would be consistent with both perspectives?''. Based on our literature review, we find the metrics presented in [15] most suitable for the domains of interest to our work. In [15], the authors argue that ``a successful resilience action is one that restores the system to a stable recovered state [...] from a disrupted state [...] between time $t_s$ and $t_f$ [...]''. Therefore, the authors of [15] quantify a system's ability in bouncing back from a degraded state (after a disruptive event) by defining ``successful resilience action.'' Please note that the extent of resilience in [15] is still after the disruptive event, even though the proposed resilience metrics uses the value of FoM at $t_0$ (initial state) as the reference for the normal state.
+
+Regarding another comment in item 1 about reference [6] (reference [7] in our resubmission), we have not used this study as our reference for resilience. The current concept of resilience has emerged after the publication of reference [7] and as pointed out by the respected reviewer, there is only a brief mention of resilience in this article.
+
+Regarding the comment in item 2, we ask that Reviewer 1 kindly consider the following portion of Section 4.6, which explains why the ranks are different.
+
+\begin{textblock}{Section 4.6}
+Table 3 lists the top ten lines of the IEEE 57-bus smart grid, ranked by fragility and criticality, respectively. It can be seen that some lines rank similarly by both measures, e.g., lines $l_{4-18}$, $l_{3-4}$, and $l_{4-6}$. In contrast, a few lines, such as $l_{8-9}$ and $l_{6-7}$, are far more critical than they are fragile, i.e., these lines fail in a relatively small fraction of failure cases, but when they do fail, they cause significant degradation of the system FoM. Conversely, a few lines, such as $l_{1-2}$ and $l_{1-15}$, can be considered fragile, but non-critical. These lines fail when a more important line fails, but their failure is relatively insignificant in terms of system survivability.
+\end{textblock}
+
+Please note that the two importance criteria presented in this paper, namely criticality and fragility, capture different aspects of survivability, and hence, are expected to provide different rankings in the importance analysis. A component with high criticality is one whose failure affects several other components of the system. On the other hand, a component with high fragility is one that experiences failures more often than other components. Therefore, a component may have a high criticality (e.g., single point of failure) but a low fragility (e.g., high MTTF) or conversely, a low criticality (e.g., heavily redundant systems) but a high fragility (e.g., low MTTF).
+
+\end{response}
+
+\subsection{Reviewer 2}
+\label{sec:reviewer:r2}
+The author has responded the reviewers' comments. No more comment.
+
+\subsection{Reviewer 3}
+\label{sec:reviewer:r3}
+Thank you for introducing my recommended changes. I am happy for the manuscript to be published in its present form.
+
+\subsection{Reviewer 4}
+\label{sec:reviewer:r4}
+The paper has merit and is well written, and the topic is interesting. In this reviewer's opinion, the authors have responded to all the reviewers' concerns. Thus, the paper results improved and worth of publication.
+
+\end{document}

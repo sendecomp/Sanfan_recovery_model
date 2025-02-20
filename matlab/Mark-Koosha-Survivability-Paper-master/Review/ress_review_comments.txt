@@ -1,0 +1,75 @@
+Dear Dr. Sedigh Sarvestani,
+
+Thank you for submitting your manuscript to Reliability Engineering and System Safety.
+
+I have completed my evaluation of your manuscript. The reviewers recommend reconsideration of your manuscript following revision. I invite you to resubmit your manuscript after addressing the comments below.
+
+When revising your manuscript, please consider all issues mentioned in the reviewers' comments carefully: please outline in a cover letter every change made in response to their comments and provide suitable rebuttals for any comments not addressed. Please note that your revised submission may need to be re-reviewed.
+
+If you would like to revise your manuscript, you first need to accept this invitation:
+
+Log into EVISE® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=RESS;
+Locate your manuscript under the header 'My Submissions that need Revisions' on your 'My Author Tasks' view; and
+Click on 'Agree to Revise'.
+Upon agreeing to revise your manuscript, your revision deadline will be displayed in your 'My Author Tasks' view.
+
+When you are ready, please submit your revision by logging into EVISE® at: http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=RESS
+
+Reliability Engineering and System Safety values your contribution and I look forward to receiving your revised manuscript.
+
+Please remember to sign in to receive the list of contents of next issues of RESS in:
+https://www.sciencedirect.com/science/serial-alerts/save/09518320
+
+Kind regards
+
+Prof. Carlos Guedes Soares
+Editor-in-Chief
+Reliability Engineering and System Safety
+
+Editor and Reviewer Comments:
+-Editor
+
+  - Please conduct a thorough and careful revision according to reviewers' comments for reconsideration. 
+-Reviewer 1
+
+  -
+
+This paper proposed an evaluation method for survivability based on the FoM at first, and then the importance analysis is developed to identify components most frequently involved in system-level failures according to criticality or fragility. This topic is interesting with the scope of RESS, but the organization and presentation of this manuscript is hard to understand. So, I must reject the current version of this manuscript, and I encourage authors to resubmit it again after revising it according to the following suggestions and comments.
+
+(1)	Please reconsider the structure of Sections 1 and 2. I think the contribution of this topic should be summarized based on the literature review instead of summarizing it before the analysis of the status-of-art. The basis of your motivation and contribution should be illustrated clearly.
+(2)	Please check and restate the conceptions of “survivability”, “performability”, and “resilience”. In this paper, I think some descriptions of the definitions are not correct. Such as, “Resilience is defined as the ability of a system to bounce back from failure [14, 15].” is not exact because resilience also can evaluate the resistance ability of systems when the disruptive event occurs.
+(3)	Table 1 in Section 3 can be placed in Section 1 or Section 2 after the discussion of the mentioned definitions.
+(4)	For Section 3, the authors clarify the reasons why the distance between the degradation point and origin can represent the degradation index.
+(5)	For the importance analysis, the importance ranks may be different by the criticality or fragility. How to explain the differences of the results?
+(6)	Please illustrate the meaning of the symbols or variables clearly. Such as, “M(t)”, “l1-2” should be revised as “l1-5” in the second paragraph on Page 21.
+(7)	Please unify the style of references. Some references have no authors’ information, such as References 15, 21, 22, 24, 36 and 42.
+(8)	Please check and revise the grammar carefully. Such as, “…to evaluation of …”, “whose very purpose…”, “As such, …”.
+
+
+-Reviewer 2
+
+  -
+
+This paper proposes metrics and an evaluation method for survivability evaluation and importance analysis for cyber-physical systems. Survivability in terms of the extent and rate of degradation of a domain-speciﬁc ﬁgure-of-merit is quantified. Importance analysis is proposed to identify components most frequently involved in system-level failures, as well as components whose failure has the most severe consequences. Three smart grids are investigated using simulation-based fault injection to provide their survivability in the presence of failures resulting from corrupted data, transmission line outages, and loss of power regulators. The reviewer has the following comments:
+
+ 
+
+1.     For cyber-physical systems, the interdependence between the cyber systems and the physical systems is not analyzed. For example, in a power grid, a failure in the cyber system might result in the mis-operation of the physical components leading to the system failure and vice versa.
+
+2.     In Section 3, these two indices including the full extent of degradation and the most rapid rate of degradation have been utilized to express the survivability in previous references. The importance lies in how to calculate these indices instead of introduce the exiting indices.
+
+3.     Moreover, the introduced indices as well the importance analysis can be utilized in a general system. It looks like that these indices as well the importance analysis is generally introduced and then was applied to a smart grid with the consideration of cyber failures, without the consideration of critical features of cyber physical systems.
+
+
+-Reviewer 3
+
+  -
+
+The manuscript necessitates of further proofreading throughout. The models presented are relatively high level and intuitive but the formulation is clear and the associated simulation case studies are interesting. However, I do not believe that the proposed models applicability is universal in the Cyber-Physical Systems domain (autonomous, intelligent/adaptive and closed-loop human-machine systems). Additionally, the simulation case studies performed are only relative to Smart Grid applications (which is an interesting case but very specific). So, my recommendation is to modify the paper (both the title and the text) to reflect this fact and only referring to Smart Grid applications. Much more efforts should be devoted to identify other practical Cyber-Physical Systems applications and associated recommendations for future research. For instance, there are clear gaps in the area of cyber-physical systems safety and security that this work could support but no recommendations for future research are formulated that reflect these important industry-relevant needs.
+
+
+-Reviewer 4
+
+  - This Reviewer wants to compliment the Authors for the work they have done. First of all, it is not common to find a manuscript which presents such complex topics in an easy to comprehend way.
+
+Then, the Authors addressed a significant topic, which will become more and more significant in the future. Finally, the proposed method is well explained, and easy to be applied to real systems.

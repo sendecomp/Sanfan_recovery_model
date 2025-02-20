@@ -1,0 +1,142 @@
+Manuscript Number: RESS_2019_1308  
+
+Identification of Interdependencies and Prediction of Fault Propagation for Cyber-Physical
+Systems  
+
+Dear Dr Sedigh Sarvestani,    
+
+Thank you for submitting your manuscript to Reliability Engineering and System Safety.  
+
+I have completed my evaluation of your manuscript. The reviewers recommend
+reconsideration of your manuscript following minor revision and modification. I invite you
+to resubmit your manuscript after addressing the comments below. Please resubmit your
+revised manuscript by Oct 11, 2020.
+
+When revising your manuscript, please consider all issues mentioned in the reviewers'
+comments carefully: please outline every change made in response to their comments and
+provide suitable rebuttals for any comments not addressed. Please note that your revised
+submission may need to be re-reviewed.    
+
+To submit your revised manuscript, please log in as an author at
+https://www.editorialmanager.com/jress/, and navigate to the "Submissions Needing
+Revision" folder under the Author Main Menu.    
+
+Reliability Engineering and System Safety values your contribution and I look forward to
+receiving your revised manuscript.￼  
+
+Please remember to sign in to receive the list of contents of next issues of RESS in:
+https://www.sciencedirect.com/science/serial-alerts/save/09518320
+
+Kind regards
+
+Prof. Carlos Guedes Soares
+Editor-in-Chief
+Reliability Engineering and System Safety
+
+
+
+Editor and Reviewer comments:    
+
+Reviewer #1: In this paper, identification of interdependencies and prediction of fault
+propagation are studied for cyber-physical systems. However, the innovation is weak, and
+there are some issues in this paper.
+
+  The comments are as follows:
+
+1.        In Introduction, the research background is not clear, and the research motivation is
+not specified.
+2.        The main contribution and the novelty of the paper should be described in detail.
+3.        What is the relation between identification of interdependencies and prediction of
+fault propagation? Are the two independent?
+4.        How are the interdependencies identified in the simulations? Please explain it
+clearly.
+5.        The prediction of fault propagation is a general neural network prediction. What is
+the innovation?
+6.        What is the basis for selecting the number of hidden layers and hidden layer nodes
+of the ANN?
+7.        On page 19, “while the validation dataset is employed to minimize overfitting during
+the training cycles” is mentioned. Please explain it clearly.
+8.        This paper lacks comparisons with other related papers in simulation. It’s essential to
+embody the superiority of the control method in this paper.
+9.        The conclusion should be concise.
+
+
+Reviewer #2: In this work, the authors identify the inter-dependencies among the
+components of a cyber physical system using correlation metrics. They have presented a
+model of inter-dependency for cyber physical systems and developed a tool for predicting
+the components that are in risk of failure. Authors talked about physical - physical, physical
+-cyber, cyber-cyber, cyber physical dependencies.
+
+The format and literary presentation of the paper is satisfactory. The structure of the paper
+is deliberate and transparent. The work is presented in 4 sections. Inter-dependency
+concepts and fault prediction concepts are well explained.Reference are written in an
+adequate manner and results are properly demonstrated with tabular results and
+graphs.The list of symbols and abbreviations is also given for the better understanding of
+the mathematical terms.
+
+Some minor suggestions are mentioned here.
+1. Section 2 is very lengthy. It may be divided in two parts for better readability.
+2. The causation dependency should be more clearly defined with supportive example.
+3. The difference between cyber-physical and physical-cyber dependency should be
+explained with some clear example.
+4. Authors did not mentioned that how the causation dependencies can be identified.
+5. In equation 2, alpha value is set to 0.9. Its reason should be mentioned.
+
+
+Reviewer #3: This paper identify the critical interdependencies and predict the fault
+propagation for power CPS. The authors should address the following issues.
+1) In the interdependency identification, the authors employ the method of reference [17] to
+analyze the causation. Compared with [17], the author considers the impacts of FACT and
+PMUs on the system. However, this paper still focuses on identifying the critical
+interdependencies among branches.
+2) The contribution is not clear. The contribution is to propose a new method or to apply the
+old method to the failure propagation analysis of CPS?
+3) The authors should explain the differentiation of correlation and causation, for example,
+the role of correlation and causation in fault propagation. The reviewer suggests that the
+authors give an example to explain it.
+4) In section 3, the authors claim "PMU device is disabled as soon as a voltage violation
+occurs at the bus on which it is installed". What is the basis of this assumption?
+5) In section 3, the authors don't consider the communication failures in the paper. If the
+authors do not consider the communication failures, this paper still focuses on studying the
+fault propagation of pure power system. In this paper, what is the interdependency of
+cyber-cyber.
+6) The authors employ the state variable to calculate the RDC. The state variable is power
+flow ?
+7) The authors should explain how to propagate a fault after the PMU or FACTS fails.
+8) The authors should employ a large-scale system to verify the effectiveness of proposed
+method.
+9) Please give some diagrams to explain figs 2-4 although reference [17] has been
+explained clearly.
+Overall, we recommend the major revision.
+
+
+
+Reviewer #4: In the paper, the authors studied the intrinsic interdependencies in cyber-
+physical power systems and predicted the failure propagation with neural networks. In
+general, the manuscript is clearly presented and the topic is up to date. The reviewer has
+the following comments.
+
+(1)   What is the meaning of c_{ij} in Equation (2)?
+(2)   How does the IEEE test network correspond to four types of dependency in section
+2.1? In other words, which components have dependencies in Figure 3, such as P-P, P-C, C-P
+and C-C? Please give a more detailed illustration about simulated networks
+(3)   Matrix W in subsection 2.2.2 has not been used since it was proposed, and what is
+the difference between w_{ij} and e_{ij}?
+(4)   Subsection 2.2.2 should be better reorganized for clearer narrative purposes.
+(5)   Is the decision support algorithm in section 3 proposed by the authors? Please give
+more details about the algorithm.
+(6)   In section 3, the authors use the IEEE 57 bus system to demonstrate the scalability
+of the proposed method. However, the IEEE 57 bus system is still relatively a small-scale
+system, and the method may be infeasible to large-scale system due to the high
+computational complexity. As shown in Table 1, the number of total buses of the system
+increased by about four times (from 14 to 57), but the total number of cases required to be
+simulated increased by about 100 times (from 6720 to 673920), the complexity of the
+proposed should be discussed by the authors.
+(7)   As mentioned by the authors in the last paragraph of section 1 "Using the
+knowledge of the interdependency, we develop an artificial neural network for prediction
+of fault propagation paths and cascading failure". However, it seems that the
+interdependency knowledge have not been used to develop the ANN. Thus, two parts of
+research (interdependency identification and fault prediction) seem to be separate.
+(8)   As is mentioned in comment (7), how to validate the results of correlation and
+causation analysis, rather than just calculating the numerical value. Thus, the authors are
+suggested to give more experiments or illustrations about this concern.

@@ -1,0 +1,140 @@
+POWER FLOW REPORT
+ 
+P S A T  2.1.11
+ 
+Author:  Federico Milano, (c) 2002-2019
+e-mail:  federico.milano@ucd.ie
+website: faraday1.ucd.ie/psat.html
+ 
+File:  D:\matlab\Koosha-Interdependency-master\simulations\data\ieee9_smart
+Date:  26-Oct-2024 11:37:58
+
+
+NETWORK STATISTICS
+
+Buses:                        14         
+Lines:                        20         
+Generators:                   5          
+Loads:                        11         
+
+SOLUTION STATISTICS
+
+Number of Iterations:         3          
+Maximum P mismatch [p.u.]     15.5241    
+Maximum Q mismatch [p.u.]     4.4131     
+Power rate [MVA]              100        
+
+POWER FLOW RESULTS
+
+Bus         V           phase       P gen       Q gen       P load      Q load      
+            [p.u.]      [rad]       [p.u.]      [p.u.]      [p.u.]      [p.u.]      
+
+Bus 1       1.06        0           2.2326      0.22546     0           0          
+Bus 10      1.1401      0.52821     0           0           0.09        0.058      
+Bus 11      1.1063      0.52513     0           0           0.035       0.018      
+Bus 12      1.0766      0.52535     0           0           0.061       0.016      
+Bus 13      1.0832      0.52449     0           0           0.135       0.058      
+Bus 14      1.1249      0.52955     0           0           0.149       0.05       
+Bus 2       1.045       0.08411     0.4         0.57215     0.217       0.127      
+Bus 3       1.01        0.75085     0          -0.20132     0.942       0.19       
+Bus 4       1.1607      0.538       0           0           0.478      -0.039      
+Bus 5       1.158       0.48216     0           0           0.076       0.016      
+Bus 6       1.07        0.52365     0           0.02163     0.112       0.075      
+Bus 7       1.1438      0.53306     0           0           0           0          
+Bus 8       1.09        0.53306     0           0.14326     0           0          
+Bus 9       1.1541      0.52939     0           0           0.295      -0.04787    
+
+STATE VARIABLES
+
+vcs_Sssc_1                    0.74946    
+vpi_Sssc_1                    0.74946    
+vcs_Sssc_2                    1.0625     
+vpi_Sssc_2                    1.0625     
+vcs_Sssc_3                    0.53853    
+vpi_Sssc_3                    0.53853    
+vm_Pmu_1                      1.045      
+thetam_Pmu_1                  0.08411    
+vm_Pmu_2                      1.07       
+thetam_Pmu_2                  0.52365    
+vm_Pmu_3                      1.1541     
+thetam_Pmu_3                  0.52939    
+
+OTHER ALGEBRAIC VARIABLES
+
+v0_Sssc_1                     0.74946    
+pref_Sssc_1                   1.114      
+v0_Sssc_2                     1.0625     
+pref_Sssc_2                   0.7966     
+v0_Sssc_3                     0.53853    
+pref_Sssc_3                   0.33006    
+
+LINE FLOWS
+
+From Bus    To Bus      Line        P Flow      Q Flow      P Loss      Q Loss      
+                                    [p.u.]      [p.u.]      [p.u.]      [p.u.]      
+
+Bus 1     H Bus 2       1          -1.3213      0.73799     0.04028     0.06448    
+Bus 1     H Bus 5       2          -6.1065      0.38718     0           3.1057     
+Bus 2     H Bus 3       3          -8.5002      3.4199      0           5.9032     
+Bus 2     H Bus 4       4          -5.5932      1.8273      0.8988      2.6418     
+Bus 2     H Bus 5       5          -2.4762      0.65726     0.3436      1.007      
+Bus 3     H Bus 4       6           1.0056     -1.1358      0.15019     0.36818    
+Bus 4     H Bus 5       7           1.6545     -0.39946     0.02871     0.09055    
+Bus 4     H Bus 7       8           0.03204     0.24401     0           0.00899    
+Bus 4     H Bus 9       9           0.02138     0.09434     0           0.00363    
+Bus 5     H Bus 6       10         -0.2188      0.85476     0           0.12709    
+Bus 6     L Bus 11      11         -0.08297    -0.15537     0.00257     0.00539    
+Bus 6     L Bus 12      12         -0.01695    -0.01939     7e-05       0.00015    
+Bus 6     L Bus 13      13         -0.04983    -0.08346     0.00055     0.00108    
+Bus 7     Z Bus 8       14          0           0.34957     0           0.01645    
+Bus 7     Z Bus 9       15          0.04401    -0.10644     0           0.00112    
+Bus 9     L Bus 10      16          0.07907     0.16092     0.00077     0.00204    
+Bus 9     L Bus 14      17          0.04728     0.10214     0.00121     0.00257    
+Bus 10    L Bus 11      18          0.08973     0.16274     0.00218     0.0051     
+Bus 12    L Bus 13      19         -0.01559    -0.01863     0.00011     0.0001     
+Bus 13    L Bus 14      20         -0.06561    -0.09753     0.00201     0.0041     
+
+LINE FLOWS
+
+From Bus    To Bus      Line        P Flow      Q Flow      P Loss      Q Loss      
+                                    [p.u.]      [p.u.]      [p.u.]      [p.u.]      
+
+Bus 2     H Bus 1       1           1.3616     -0.67352     0.04028     0.06448    
+Bus 5     H Bus 1       2           6.1065      2.7186      0           3.1057     
+Bus 3     H Bus 2       3           8.5002      2.4833      0           5.9032     
+Bus 4     H Bus 2       4           6.4919      0.81452     0.8988      2.6418     
+Bus 5     H Bus 2       5           2.8197      0.34972     0.3436      1.007      
+Bus 4     H Bus 3       6          -0.85537     1.504       0.15019     0.36818    
+Bus 5     H Bus 4       7          -1.6258      0.49001     0.02871     0.09055    
+Bus 7     Z Bus 4       8          -0.03204    -0.23502     0           0.00899    
+Bus 9     L Bus 4       9          -0.02138    -0.09071     0           0.00363    
+Bus 6     L Bus 5       10          0.2188     -0.72767     0           0.12709    
+Bus 11    L Bus 6       11          0.08554     0.16076     0.00257     0.00539    
+Bus 12    L Bus 6       12          0.01702     0.01954     7e-05       0.00015    
+Bus 13    L Bus 6       13          0.05038     0.08453     0.00055     0.00108    
+Bus 8     T Bus 7       14          0          -0.33311     0           0.01645    
+Bus 9     L Bus 7       15         -0.04401     0.10756     0           0.00112    
+Bus 10    L Bus 9       16         -0.0783     -0.15888     0.00077     0.00204    
+Bus 14    L Bus 9       17         -0.04607    -0.09956     0.00121     0.00257    
+Bus 11    L Bus 10      18         -0.08755    -0.15764     0.00218     0.0051     
+Bus 13    L Bus 12      19          0.0157      0.01873     0.00011     0.0001     
+Bus 14    L Bus 13      20          0.06762     0.10163     0.00201     0.0041     
+
+GLOBAL SUMMARY REPORT
+
+
+TOTAL GENERATION
+
+REAL POWER [p.u.]             2.6326     
+REACTIVE POWER [p.u.]         0.76118    
+
+TOTAL LOAD
+
+REAL POWER [p.u.]             2.59       
+REACTIVE POWER [p.u.]         0.52113    
+
+TOTAL LOSSES
+
+REAL POWER [p.u.]             0.04256    
+REACTIVE POWER [p.u.]         0.24004    
+

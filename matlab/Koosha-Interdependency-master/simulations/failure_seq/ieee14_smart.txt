@@ -1,0 +1,43 @@
+line[1] > line[2] ~
+line[2] > line[1] facts[1] > line[7] pmu[3] > line[5] .
+line[3] > facts[2] .
+line[4] > facts[3] .
+line[5] .
+line[6] .
+line[7] > line[1] > line[2] ~
+line[8] .
+line[9] .
+line[10] .
+line[11] .
+line[12] .
+line[13] .
+line[14] .
+line[15] .
+line[16] .
+line[17] .
+line[18] .
+line[19] .
+line[20] .
+line[1] ds[1] > line[2] ~
+line[2] ds[1] > line[1] facts[1] > pmu[3] .
+line[3] ds[1] > line[2] facts[2] ~
+line[4] ds[1] > facts[3] .
+line[5] ds[1] .
+line[6] ds[1] .
+line[7] ds[1] > line[1] > line[2] ~
+line[8] ds[1] .
+line[9] ds[1] .
+line[10] ds[1] .
+line[11] ds[1] .
+line[12] ds[1] .
+line[13] ds[1] .
+line[14] ds[1] .
+line[15] ds[1] .
+line[16] ds[1] .
+line[17] ds[1] .
+line[18] ds[1] .
+line[19] ds[1] .
+line[20] ds[1] .
+line[1] ds_facts[1] > line[2] > line[7] facts[1] pmu[3] > line[5] .
+line[1] ds_facts[2] > line[2] > line[11] facts[1] pmu[3] .
+line[1] ds_facts[3] > line[2] ~

@@ -1,0 +1,145 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newenvironment{response}{
+  \doublespacing
+  \setlength\parindent{0.05\linewidth}
+  \ttfamily
+}{}
+\tcbuselibrary{skins}
+\tcolorboxenvironment{response}{
+  empty, breakable, left = 1em, top = 1ex,
+  bottom = 1ex, borderline west = {2pt} {0pt} {black!20}
+}
+\newsavebox{\mybox}
+\newenvironment{textblock}[1]
+{\begin{tcolorbox}[breakable,enhanced]{#1 \\ \\}}
+{\end{tcolorbox}}
+
+\title{Summary of Changes to Submission RESS\_2019\_1308R1: \\
+Identification of Interdependencies and Prediction of Fault Propagation for Cyber-Physical Systems}
+\date{}
+
+
+\begin{document}
+\maketitle
+\noindent
+We thank the reviewers and the guest editor for the time and expertise they have invested in reviewing our re-submission. We have carefully revised the paper in response to this constructive feedback.
+
+To facilitate the review process for the third submission of the manuscript, we have included a verbatim copy of the full decision letter including reviewers' comments. For each concern raised by the reviewers, we have provided our responses under respective comments. Where applicable, we have also explained how we have addressed the concerns and provided verbatim copies of the revision(s) made in the new submission. \vspace{3em}
+
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+
+\section{Decision Letter}
+\label{sec:decision_letter}
+Dear Dr. Sedigh Sarvestani,
+
+Thank you for submitting your manuscript to Reliability Engineering and System Safety.
+
+I have completed my evaluation of your manuscript. The reviewers recommend \textbf{reconsideration of your manuscript following minor revision and modification}. I invite you to \textbf{resubmit your manuscript after addressing the comments below}. Please resubmit your revised manuscript by \textbf{Jan 19, 2021}.
+
+When revising your manuscript, please consider all issues mentioned in the reviewers' comments carefully: please outline every change made in response to their comments and provide suitable rebuttals for any comments not addressed. Please note that your revised submission may need to be re-reviewed.
+
+To submit your revised manuscript, please log in as an author at \url{https://www.editorialmanager.com/jress/}, and navigate to the ``Submissions Needing Revision'' folder under the Author Main Menu.
+
+Reliability Engineering and System Safety values your contribution and I look forward to receiving your revised manuscript.
+
+Please remember to sign in to receive the list of contents of next issues of RESS in: \url{https://www.sciencedirect.com/science/serial-alerts/save/09518320} \\ \\
+Kind regards \\
+Prof. Carlos Guedes Soares \\
+Editor-in-Chief \\
+Reliability Engineering and System Safety
+
+\section{Guest Editor's Comments}
+\label{sec:editor}
+A thorough revision fully addressing reviewers' comments needs to be done for reconsideration. The literature survey should be updated with the latest development in the field. The novelty of the proposed method should be clearly stated as compared to the state-of-the-art methods.
+
+\begin{response}
+We re-reviewed the recent studies and identified a number of relevant papers that have been included in different journals and conferences. Namely, discussions on references [9], [10], [11], and [18] that have appeared respectively in recent releases of RESS, Chaos, Physica A, and IEEE Transactions on Network Science \& Engineering journals were added to Section 1. The updated parts of Section 1 are shown below.
+
+\begin{textblock}{Section 1}
+The study presented in [9] utilizes graph-theoretic metrics to model cascading failures in power grids while the impacts of both load dynamics (physical domain) and node dependencies (cyber domain) are captured by applying topological constraints. In [10], a Markovian process model is used to encapsulate both stochastic and deterministic behaviors of a failure propagation scenario in power systems. Although the cyber infrastructure is taken into account, the focus of authors is mainly on the application of multi-agent control techniques in the modern smart grids as well as their impacts and advantages on cascading failures. Another recent study presented in [11] attempts to improve interdependency models by accounting for the resilience of a given cyber or physical component against failures in its counterpart in the other network. This resilience is modeled using two-way probabilistic inter-network dependency joints.
+
+[...]
+
+In [18], authors use a graph-theoretical presentation of a power grid system that is coupled with a communication network. To model the propagation of failures in a cyber-physical power system, supervised machine learning techniques including polynomial and decision trees regression models are trained with synthetic failure data.
+\end{textblock}
+
+ We then conclude Section 1 by summarizing our contributions and explaining how our work complements the state-of-the-art.
+
+\begin{textblock}{Section 1}
+In this paper, our objective is to present a model of interdependency by observing sequence of failures for a set of failure cases and capturing the extent of interdependence with quantitative metrics as well as to provide a tool for prediction of failure sequences. We identify interdependencies among components of a CPS using correlation and causation analyses and quantify them with dependency metrics presented in our previous work [19]. Using the knowledge of the interdependency, we identify areas of the system where faults can propagate and create larger failures. We then create a set of failure cases and use the data from the resulting failure sequences to develop and configure an artificial neural network for prediction of fault propagation paths and cascading failures. This work complements the study of Sturaro et al. in [18] by utilizing a domain-specific cyber-physical simulation tool to provide the resolution required for capturing behaviors of discrete-time cyber components in sensing, decision making, and control roles. Our research paves the road to a better understanding of interdependencies in a system and prediction of its future failures. To illustrate our approach, we have applied it to two smart power grids based on the well-studied IEEE 14-bus and 57-bus test systems.
+\end{textblock}
+
+\end{response}
+
+\section{Reviewers' Comments}
+\label{sec:reviewers}
+
+\subsection{Reviewer 1}
+\label{sec:reviewer:r1}
+From my reading, the paper has few technical contributions since this work only lies in the link from the identification of interdependencies to the prediction of failures. The authors only demonstrate applicability of neural network method in the field of CPS interdependency. The prediction of fault propagation is also a general neural network prediction. Compared with the existing relevant methods, the superiority of the proposed method is not clearly explained. The authors did not answer the reviewers' questions directly, such as item 6, 8 in reviewer1's comments and item 8, 9 in reviewer3's comments. Overall, this work is far away from the standard of Reliability Engineering and System Safety publication, and should be rejected.
+
+\begin{enumerate}
+  \item The references in the last five years are rarely cited. What has been the state of the art in this field in the last five years? In Introduction, some of the latest relevant research work has not been included to illustrate the research motivation to provide the method. It is not clear what has not been done before and why the authors designed this method to address the problem. The authors did not give a reasonable explanation.
+  \item As the authors stated, ``this study is not focused on the technical aspects of the machine learning tools. We only demonstrate applicability of such techniques in the field of CPS interdependency.'' However, based on machine learning, the prediction of fault propagation for cyber-physical systems is an important part in this paper. The number of hidden layers and hidden layer nodes affect the prediction performance of the ANN. But, the authors did not explain the basis for selecting the number of hidden layers and hidden layer nodes of the ANN.
+  \item In Case Study on Smart Grids, the parameters of the simulations are missing. The parameters of the neural network are not given for IEEE-14 and IEEE-57 bus test systems. Are the parameters the same in both cases? Moreover, is the number of hidden layers and hidden layer nodes of the neural network the same in both cases? How to ensure that they can achieve good results for different cases?
+  \item For the neural network prediction model, the generalization ability is also important. How to ensure the generalization ability of the neural network in this paper?
+  \item In Simulations, Authors are suggested to compare the proposed method with other relevant methods to indicate the superiority of the proposed method. This reflects the advantages of the designed method rather than ``distract readers from the main topic''.
+  \item The conclusion is still too long and it is difficult to grasp the main results. I recommend that the conclusion should be rewritten. The conclusion should be simplified only to highlight the major ones.
+\end{enumerate}
+
+\begin{response}
+Regarding the comment in item 1, indeed, we had left out a number of relevant recent studies in the Introduction Section. We appreciate the feedback and to address the issue, we discussed references [9], [10], [11], and [18] in Section 1. Please see our response to the Guest Editor's comment above in Section~\ref{sec:editor} of this document.
+
+To address the concerns mentioned in items 2, we provided additional details regarding the selection of the neural network architecture in Section 3 as shown below.
+
+\begin{textblock}{Section 3}
+The choice of ANN architecture is generally based on heuristic rules and is only for the sake of demonstrating applicability of the method. The choice of number and size of the hidden layers is according to the previous studies on the performance of different ANNs in classification and time series prediction problems [27]. The bottleneck hidden layer structure used in this work is known to create a compressed representation of the information, and hence, acts as a nonlinear transformation and dimensionality reduction stage for the inputs. The number of hidden layers was selected through experimentation with available failure records and according to the quantitative performance metrics that are later discussed in 3.1. The number of nodes for each layer are chosen as powers of two to ensure computationally optimal matrix multiplications. Overall, the architecture presented here has shown an excellent performance on the test cases investigated in Section 4; however, depending on the type and size of the system under test, reconfiguration and adjustments may be necessary.
+\end{textblock}
+
+In response to the comments in items 3 and 4, please note that a drawback of neural networks is the difficulty in achieving suitable generalization for handling different scenarios. Indeed, depending on the type of problem, it may be impossible to achieve a generalized neural network model that can perform satisfactorily in all conditions. Parameters such as size, topologies of the cyber and physical networks, and control scheme in a modern smart grid can be very diverse and it seems very unlikely to be able to formulate a single neural network architecture that can provide an acceptable performance on all systems. However, we were able to achieve satisfactory results from the neural network configuration presented in Section 3 for both of the IEEE-14 and IEEE-57 cases without changing any of the parameters. In Section 3, we have explained the possible need for changing the configuration and/or adjustments of the neural network for other power systems.
+
+Regarding the comment in item 5, we have performed an extensive comparison between our cyber-physical power system simulation technique and other methods in our previous study [33]. A reference to our previous work is included in this paper for this purpose.
+
+To address the concern mentioned in item 6, we modified the Conclusions section and removed some of the unnecessary parts as shown below.
+
+\begin{textblock}{Section 5}
+** OLD **\\
+The research presented in this paper investigates the use of correlation and causation metrics for detection and quantification of the extent of dependency links among the components of a CPS. We provided the interdependency metrics, which seek to capture the effect of the multi-step dependencies as well as the immediate dependency links. These interdependency metrics revealed a number of dependency links among the components which previously were indiscernible. Such component pairs are not in the geographical, logical, physical, or cyber reach of each other, nevertheless are strongly dependent. This nonlocal property of the fault propagation has been observed in the past and was shown on the test cases in this paper.
+
+We also proposed a neural network approach for prediction of imminent component failures. Partly due to the high level of interdependence among the components of the analyzed systems, the neural network shows excellent predictive performance. This setup could detect the forthcoming failures with a high $F_1$ score of 98\% on IEEE-14 and IEEE-57 smart grids. As shown by several studies, such high level of interdependency and recurred failure sequences exist in most of the critical infrastructures, and hence, this failure prediction approach can be efficiently applied to other domains. In the future of this research, we will take into account the effect of communication failures and consider more advanced ANN architectures in order to incorporate temporal features of the failures as well.
+\end{textblock}
+
+\begin{textblock}{Section 5}
+** NEW **\\
+The research presented in this paper investigates the use of correlation and causation metrics for detection and quantification of the extent of dependency links among the components of a CPS. We provided the interdependency metrics, which seek to capture the effect of the multi-step dependencies as well as the immediate dependency links. These interdependency metrics revealed a number of dependency links among the components which were not in geographical, logical, physical, or cyber reach of each other. This nonlocal property of the fault propagation has been observed in the past and was shown on the test cases in this paper.
+
+We also proposed a neural network approach for prediction of imminent component failures. Partly due to the high level of interdependence among the components of the analyzed systems, the neural network shows excellent predictive performance. This setup could detect the forthcoming failures with a high $F_1$ score of 98\% on IEEE-14 and IEEE-57 smart grids. In the future of this research, we will take into account the effect of communication failures and consider more advanced ANN architectures in order to incorporate temporal features of the failures as well.
+\end{textblock}
+
+\end{response}
+
+\subsection{Reviewer 2}
+\label{sec:reviewer:r2}
+Author(s) have responded the queries satisfactorily. The manuscript may be accepted in current form.
+
+\subsection{Reviewer 3}
+\label{sec:reviewer:r3}
+The authors have addressed some problems. However, the modified content should be highlighted in the manuscript; otherwise, it is very difficult for reviewers to find the location of the modified content. In addition, the reviewer still thinks the authors should employ a large-scale system to verify the effectiveness of the proposed method.
+
+\begin{response}
+We tried to provide both old and new versions of the manuscript where we have made any changes in response to each reviewer's comments to simplify the review process. We apologize if this method has not been effective and appreciate the constructive feedback on the manuscript.
+
+In regards to the comment about verifying the method with larger system, it is worth mentioning that we have performed failure prediction on IEEE-14, IEEE-30, IEEE-57, and IEEE-118, but only included the results from IEEE-14 and IEEE-57 in the paper. The interdependency data for IEEE-118 is very difficult to present and comprehend in the graph forms (as in Figures 6 and 7). Also, we did not find any notable information in the results of IEEE-30 simulations different from the other two systems, and hence, we decided to include only the results for IEEE-14 as the base case and the $3.7 \times$ larger IEEE-57 to analyze the scalability of the method. Since the growth of the system size only caused a linear growth in the complexity of the model (in terms of training data to achieve same performance), we argue that the method is scalable and can be applied to larger systems.
+\end{response}
+
+\subsection{Reviewer 4}
+\label{sec:reviewer:r4}
+The revised version has answered all my concerns. I have no more question.
+
+\end{document}

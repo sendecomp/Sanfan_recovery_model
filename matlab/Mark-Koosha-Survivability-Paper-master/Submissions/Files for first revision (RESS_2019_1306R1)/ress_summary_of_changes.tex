@@ -1,0 +1,200 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newenvironment{response}{
+  \doublespacing
+  \setlength\parindent{0.05\linewidth}
+  \ttfamily
+}{}
+\tcbuselibrary{skins}
+\tcolorboxenvironment{response}{
+  empty, breakable, left = 1em, top = 1ex,
+  bottom = 1ex, borderline west = {2pt} {0pt} {black!20}
+}
+\newsavebox{\mybox}
+\newenvironment{textblock}[1]
+{\begin{tcolorbox}[breakable,enhanced]{#1 \\ \\}}
+{\end{tcolorbox}}
+
+\title{Summary of Changes to Submission RESS\_2019\_1306: \\
+Survivability Evaluation and Importance Analysis \\for Cyber-Physical Smart Grids}
+\date{}
+
+
+\begin{document}
+\maketitle
+\noindent
+We thank the reviewers and the editor-in-chief for the time and expertise they have invested in reviewing our submission. We have carefully revised the paper in response to this constructive feedback.
+
+To facilitate the review process for the second submission of the manuscript, we have included a verbatim copy of the full decision letter, including reviewers' comments. For each concern raised by the reviewers, we have provided our responses directly underneath the respective comments. Where applicable, we have also explained how we have revised the paper to address the concerns raised, and have provided verbatim copies of the revision(s) made in the new submission. \vspace{3em}
+
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+
+\section{Decision Letter}
+\label{sec:decision_letter}
+Dear Dr. Sedigh Sarvestani,
+
+Thank you for submitting your manuscript to Reliability Engineering and System Safety.
+
+I have completed my evaluation of your manuscript. The reviewers recommend \textbf{reconsideration of your manuscript following revision}. I invite you to \textbf{resubmit your manuscript after addressing the comments below}.
+
+When revising your manuscript, please consider all issues mentioned in the reviewers' comments carefully: please outline in a cover letter every change made in response to their comments and provide suitable rebuttals for any comments not addressed. Please note that your revised submission may need to be re-reviewed.
+
+If you would like to revise your manuscript, you first need to accept this invitation:
+
+Log into EVISE® at: \url{http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=RESS;}
+Locate your manuscript under the header My Submissions that need Revisions on your My Author Tasks' view; and
+Click on Agree to Revise.
+Upon agreeing to revise your manuscript, your revision deadline will be displayed in your My Author Tasks view.
+
+When you are ready, please submit your revision by logging into EVISE® at: \url{http://www.evise.com/evise/faces/pages/navigation/NavController.jspx?JRNL_ACR=RESS}
+
+Reliability Engineering and System Safety values your contribution and I look forward to receiving your revised manuscript.
+
+Please remember to sign in to receive the list of contents of next issues of RESS in:
+\url{https://www.sciencedirect.com/science/serial-alerts/save/09518320} \\ \\
+Kind regards \\
+Prof. Carlos Guedes Soares \\
+Editor-in-Chief \\
+Reliability Engineering and System Safety
+
+\section{Editor-in-Chief's Comments}
+\label{sec:editor}
+
+\begin{itemize}
+  \item Please conduct a thorough and careful revision according to reviewers' comments for reconsideration.
+\end{itemize}
+
+\section{Reviewers' Comments}
+\label{sec:reviewers}
+
+\subsection{Reviewer 1}
+\label{sec:reviewer:r1}
+This paper proposed an evaluation method for survivability based on the FoM at first, and then the importance analysis is developed to identify components most frequently involved in system-level failures according to criticality or fragility. This topic is interesting with the scope of RESS, but the organization and presentation of this manuscript is hard to understand. So, I must reject the current version of this manuscript, and I encourage authors to resubmit it again after revising it according to the following suggestions and comments.
+
+\begin{enumerate}
+  \item Please reconsider the structure of Sections 1 and 2. I think the contribution of this topic should be summarized based on the literature review instead of summarizing it before the analysis of the status-of-art. The basis of your motivation and contribution should be illustrated clearly.
+  \item Please check and restate the conceptions of ``survivability'', ``performability'', and ``resilience''. In this paper, I think some descriptions of the definitions are not correct. Such as, ``Resilience is defined as the ability of a system to bounce back from failure [14, 15].'' is not exact because resilience also can evaluate the resistance ability of systems when the disruptive event occurs.
+  \item Table 1 in Section 3 can be placed in Section 1 or Section 2 after the discussion of the mentioned definitions.
+  \item For Section 3, the authors clarify the reasons why the distance between the degradation point and origin can represent the degradation index.
+  \item For the importance analysis, the importance ranks may be different by the criticality or fragility. How to explain the differences of the results?
+  \item Please illustrate the meaning of the symbols or variables clearly. Such as, $M(t)$, $l_{1-2}$ should be revised as $l_{1-5}$ in the second paragraph on Page 21.
+  \item Please unify the style of references. Some references have no authors’ information, such as References 15, 21, 22, 24, 36 and 42.
+  \item Please check and revise the grammar carefully. Such as, ``…to evaluation of …'', ``whose very purpose…'', ``As such, …''.
+\end{enumerate}
+
+\begin{response}
+
+For item 1, our approach has been to briefly describe the gaps present in related work, both as motivation and to provide context to the description of the research contribution of our paper, which we wanted to present early in the paper. To ensure that our paper accurately reflects related literature, we follow the brief gap analysis of Section 1 with a considerably more detailed literature review in Section 2, where we also elaborate on the distinction of our work. Based on this item of the review, we have added the following text to Section 1 to further clarify our motivation. 
+
+\begin{textblock}{Section 1}
+In our review of the relevant literature, we identified a research gap between survivability definitions and means of quantifying a system's survivability. Proposed metrics in the existing studies often fail to capture attributes on which a survivable behavior relies. We aim to address this gap by identifying key elements that indicate a survivable behavior and proposing means of calculating a smart grid system's survivability using its abstracted behavior metrics.
+\end{textblock}
+
+In response to item 2, we again checked related literature, and confirmed our original finding that ``resilience'' and ``reliability'' have on occasion been used interchangeably, as have ``resilience'' and ``survivability.'' The definitions that appear in our paper are based either on seminal, highly-cited papers, or for lesser known measures, the original paper where the concept was introduced. An example of the former is resilience, for which we adopted the definition from sources that align with the dependable computing taxonomy introduced by Avizienis et al. (reference [6]). This paper has been cited in more than 5900 research articles and is a widely accepted reference. An example of the latter is our definition of performability, which comes from reference [13], where performability  was first introduced as a quantitative measure of dependability. 
+
+For item 3, we concur that Table 1 indeed belongs in Section 2, and LaTeX's pagination is the reason that it appears after the section. We will ensure that in the camera-ready version of our paper, all tables and figures stay as close as possible to where they are cited in the paper.
+
+Item 4 asks that we explain the reason for calculating  the degradation index based on a degradation point's distance from the origin. We have addressed this concern by explaining our reasons for choosing a Euclidean distance for measuring the extent to which a failure case negatively impacts system's survivability. A verbatim copy of the updated section is shown below.
+
+\begin{textblock}{Section 3.2}
+** OLD **\\
+Visualization of the FoM, as in Figure 2, facilitates evaluation of survivability. For each failure case, a degradation point, ($\rho_j, \delta_j$), is used to calculate the \emph{degradation index}, defined as the distance from the degradation point to the origin. The single degradation point (failure case) shown in Figure 2 has $\rho = 0.25$, $\delta = 0.6$, and a degradation index of $0.65$. The degradation index facilitates comparison of failure cases and can be averaged across all failure cases to calculate a single survivability index for the system.
+
+\vspace{1em}
+** NEW **\\
+Our proposed evaluation technique relies on the assumption that the extent and rate of degradation collectively capture the ability of a system in continually delivering its essential services during disruptions. Therefore, we model the survivability in a two-dimensional Euclidean plane, where the rate of degradation for each failure case is depicted on the horizontal axis and its extent of degradation is depicted on the vertical axis. A given failure case with a rate of degradation of $\rho_j$ and an extent of degradation of $\delta_j$ is illustrated with a degradation point at coordinates $(\rho_j, \delta_j)$. This visualization of the FoM, as shown in Figure 2, facilitates evaluation of survivability. We further define the \emph{degradation index} as the Euclidean distance from the degradation point to the origin, as shown in Equation (3). The definition of degradation index incorporates $\rho$ and $\delta$ proportionately and normalizes the index to a $[0, 1]$ range.
+\end{textblock}
+
+The question raised in item 5 is answered in Section 4.6, where we also provide examples for each case.
+
+\begin{textblock}{Section 4.6}
+Table 3 lists the top ten lines of the IEEE 57-bus smart grid, ranked by fragility and criticality, respectively. It can be seen that some lines rank similarly by both measures, e.g., lines $l_{4-18}$, $l_{3-4}$, and $l_{4-6}$. In contrast, a few lines, such as $l_{8-9}$ and $l_{6-7}$, are far more critical than they are fragile, i.e., these lines fail in a relatively small fraction of failure cases, but when they do fail, they cause significant degradation of the system FoM. Conversely, a few lines, such as $l_{1-2}$ and $l_{1-15}$, can be considered fragile, but non-critical. These lines fail when a more important line fails, but their failure is relatively insignificant in terms of system survivability.
+\end{textblock}
+
+For item 6, we have ensured that clear definitions are provided for all symbols used throughout the manuscript. Figure 1 describes $M(t)$ by illustrating it for an arbitrary system. We have corrected the typographical error in $l_{1-5}$.
+
+To address items 7 and 8, we have thoroughly proofread the paper, corrected the few typographical and grammatical errors we identified, and have corrected formatting inconsistencies in the bibliography.
+\end{response}
+
+\subsection{Reviewer 2}
+\label{sec:reviewer:r2}
+This paper proposes metrics and an evaluation method for survivability evaluation and importance analysis for cyber-physical systems. Survivability in terms of the extent and rate of degradation of a domain-specific figure-of-merit is quantified. Importance analysis is proposed to identify components most frequently involved in system-level failures, as well as components whose failure has the most severe consequences. Three smart grids are investigated using simulation-based fault injection to provide their survivability in the presence of failures resulting from corrupted data, transmission line outages, and loss of power regulators. The reviewer has the following comments:
+
+\begin{enumerate}
+  \item For cyber-physical systems, the interdependence between the cyber systems and the physical systems is not analyzed. For example, in a power grid, a failure in the cyber system might result in the mis-operation of the physical components leading to the system failure and vice versa.
+  \item In Section 3, these two indices including the full extent of degradation and the most rapid rate of degradation have been utilized to express the survivability in previous references. The importance lies in how to calculate these indices instead of introduce the exiting indices.
+  \item Moreover, the introduced indices as well the importance analysis can be utilized in a general system. It looks like that these indices as well the importance analysis is generally introduced and then was applied to a smart grid with the consideration of cyber failures, without the consideration of critical features of cyber physical systems.
+\end{enumerate}
+
+\begin{response}
+In response to item 1, please note that the analysis of  interdependencies is beyond the scope of this paper, but is an issue that we have investigated and reported on in our other papers (\href{https://doi.org/10.1109/TSUSC.2017.2757911}{10.1109/TSUSC.2017.2757911} and \href{https://doi.org/10.1109/DSN-W.2016.47}{10.1109/DSN-W.2016.47}. We have considered the effects of cyber-physical interdependencies in our simulation platform. To address the review comment, we have added the following explanations in Section 4.3 and have expanded on how our modified version of the PSAT simulation environment reflects cyber-physical interdependencies.
+
+\begin{textblock}{Section 1}
+To improve our verification platform, we take into account a set of predetermined cyber-physical interdependencies in this enhanced version of PSAT. Our simulation environment models stochastic processes that determine state variables of each cyber or physical component based on their dependence graphs. Examples of such interdependencies include inoperative PMU due to power outage at load bus where the PMU is installed, and excessively low power factor due to a malfunctioning FACTS device. Our previous studies appeared in [37, 38] are devoted to analyzing and quantifying the cyber-physical interdependencies and also further elaborate on our cyber-physical power simulation platform.
+\end{textblock}
+
+For item 2, we agree that the rate and extent degradation are not novel concepts, but as described in Section 2, have been previously presented and attributed to survivable behavior. Our contributions are formulating these indices for a system for which failure data is available, consolidating these quantitative metrics as a unified survivability measure, and materializing this approach in a cyber-physical smart grid platform with simulation data. We have reworded the very first item in our list of contributions listed in the manuscript to clarify that our research contribution, as mentioned by the reviewer, is mainly on finding means of calculating the survivability indices.
+
+\begin{textblock}{Section 1}
+** OLD **\\
+More specific contributions of this work are as follows.
+
+\begin{enumerate}
+  \item Introducing quantitative metrics, derived from service provision indices, that are justifiably attributed to the survivability of critical infrastructures.
+  \item ...
+\end{enumerate}
+
+\vspace{1em}
+** NEW **\\
+More specific contributions of this work are as follows.
+
+\begin{enumerate}
+  \item Identifying and calculating quantitative metrics, derived from service provision indices, that are justifiably attributed to the survivability of smart grid systems.
+  \item ...
+\end{enumerate}
+\end{textblock}
+
+To address the concern mentioned in item 3, we have narrowed the scope of the work from generic cyber-physical systems to smart grids. The change is reflected throughout the manuscript and in the new title.
+
+\end{response}
+
+\subsection{Reviewer 3}
+\label{sec:reviewer:r3}
+The manuscript necessitates of further proofreading throughout. The models presented are relatively high level and intuitive but the formulation is clear and the associated simulation case studies are interesting. However, I do not believe that the proposed models applicability is universal in the Cyber-Physical Systems domain (autonomous, intelligent/adaptive and closed-loop human-machine systems). Additionally, the simulation case studies performed are only relative to Smart Grid applications (which is an interesting case but very specific). So, my recommendation is to modify the paper (both the title and the text) to reflect this fact and only referring to Smart Grid applications. Much more efforts should be devoted to identify other practical Cyber-Physical Systems applications and associated recommendations for future research. For instance, there are clear gaps in the area of cyber-physical systems safety and security that this work could support but no recommendations for future research are formulated that reflect these important industry-relevant needs.
+
+\begin{response}
+To address this concern, we have narrowed the scope of the work from generic cyber-physical systems to smart grids, as suggested. The change is reflected throughout the manuscript and in the new title.
+
+We have also added a line to the future work section and have discussed the need for future investment on safety and security aspects.
+
+\begin{textblock}{Section 5}
+In future work, we plan to:
+\begin{enumerate}
+  \item refine our evaluation of survivability by using a multi-dimensional FoM and its Pareto optima,
+  \item improve the scalability of our approach through more strategic selection of failure cases and investigate the use of superposition for evaluating the survivability of systems with independent components,
+  \item study methods for identification and elimination of failure cases with similar failure sequences and common failure propagation paths,
+  \item apply the proposed method to other CPSs, and
+  \item study applicability of FoM abstraction in quantitative modeling of safety and security aspects of a system.
+\end{enumerate}
+\end{textblock}
+
+\end{response}
+
+\subsection{Reviewer 4}
+\label{sec:reviewer:r4}
+This Reviewer wants to compliment the Authors for the work they have done. First of all, it is not common to find a manuscript which presents such complex topics in an easy to comprehend way.
+
+Then, the Authors addressed a significant topic, which will become more and more significant in the future. Finally, the proposed method is well explained, and easy to be applied to real systems.
+
+\begin{response}
+We are very grateful for the kind words and delighted to hear these statements. 
+\end{textblock}
+
+\end{response}
+
+\end{document}

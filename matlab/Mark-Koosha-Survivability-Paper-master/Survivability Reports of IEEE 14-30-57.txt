@@ -1,0 +1,53 @@
+IEEE-57
+
+Total Number of Simulations: 2784
+-----------------------------------
+CSI - No Degradation: 2007 - 0.72
+CSI - Degraded: 777 - 0.28
+CSI - Survived(above 0.90): 2745 - 0.99
+CSI - All Failed: 0 - 0.00
+CSI - Min-Average-Max Rate of Failure: 0.00 - 0.01 - 0.05
+CSI - Min-Average-Max Depth of Failure: 0.00 - 0.01 - 0.21
+-----------------------------------
+ANVE - No Degradation: 1855 - 0.67
+ANVE - Degraded: 929 - 0.33
+ANVE - Survived(below 0.10): 2583 - 0.93
+ANVE - All Failed: 0 - 0.00
+ANVE - Min-Average-Max Rate of Failure: 0.00 - 0.01 - 0.07
+ANVE - Min-Average-Max Depth of Failure: 0.00 - 0.02 - 0.29
+
+IEEE-30
+
+Total Number of Simulations: 828
+-----------------------------------
+CSI - No Degradation: 563 - 0.68
+CSI - Degraded: 265 - 0.32
+CSI - Survived(above 0.90): 788 - 0.95
+CSI - All Failed: 0 - 0.00
+CSI - Min-Average-Max Rate of Failure: 0.00 - 0.01 - 0.10
+CSI - Min-Average-Max Depth of Failure: 0.00 - 0.03 - 0.38
+-----------------------------------
+ANVE - No Degradation: 497 - 0.60
+ANVE - Degraded: 331 - 0.40
+ANVE - Survived(below 0.10): 704 - 0.85
+ANVE - All Failed: 0 - 0.00
+ANVE - Min-Average-Max Rate of Failure: 0.00 - 0.01 - 0.08
+ANVE - Min-Average-Max Depth of Failure: 0.00 - 0.03 - 0.40
+
+IEEE-14
+
+Total Number of Simulations: 230
+-----------------------------------
+CSI - No Degradation: 152 - 0.66
+CSI - Degraded: 77 - 0.33
+CSI - Survived(above 0.90): 196 - 0.85
+CSI - All Failed: 1 - 0.00
+CSI - Min-Average-Max Rate of Failure: 0.00 - 0.02 - 0.18
+CSI - Min-Average-Max Depth of Failure: 0.00 - 0.06 - 1.00
+-----------------------------------
+ANVE - No Degradation: 122 - 0.53
+ANVE - Degraded: 107 - 0.47
+ANVE - Survived(below 0.10): 152 - 0.66
+ANVE - All Failed: 1 - 0.00
+ANVE - Min-Average-Max Rate of Failure: 0.00 - 0.02 - 0.15
+ANVE - Min-Average-Max Depth of Failure: 0.00 - 0.06 - 0.95

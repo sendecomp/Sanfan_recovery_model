@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{tikz,amsmath,siunitx}
+\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,patterns,matrix,shapes,fit,calc,shadows,plotmarks}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{equation*}
+\newlength{\imagewidth}
+\newlength{\imagescale}
+\pagestyle{empty}
+\thispagestyle{empty}
+\begin{document}
+
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=1}]
+% Axis units - axes and label positioning
+\ifx\au\undefined
+  \newlength{\au}
+\fi
+\setlength{\au}{15\unitlength}
+
+\definecolor{dialinecolor}{rgb}{0,0,0}
+\pgfsetstrokecolor{dialinecolor}
+\pgfsetfillcolor{dialinecolor}
+
+\pgfsetbuttcap
+\pgfsetmiterjoin
+\pgfsetlinewidth{0.0800000\au}
+
+{%
+\pgfsetarrowsend{stealth}
+ Y Axis
+\draw (2\au,1\au)--(2\au,12\au);
+ X Axis
+\draw (1\au,2\au)--(12\au,2\au);
+}
+
+{%
+\pgfsetarrowsend{stealth}
+ P1
+\draw [->] (2\au,2\au) -- node[sloped,above] {$s_1$} (6\au,7\au);
+ P2
+\draw [->] (2\au,2\au) -- node[sloped,above] {$s_2$} (10\au,6\au);
+}
+
+% Axis Labels
+\node at (1\au, 11\au){$\delta$};
+\node at (11\au, 1\au){$\rho$};
+
+\end{tikzpicture}
+\end{document} 

@@ -1,0 +1,230 @@
+line[1] pmu[1] > 2 ~
+line[1] pmu[2] > 2 ~
+line[1] pmu[3] > 2 ~
+line[1] ds_facts[1] ~
+line[1] ds_facts[2] ~
+line[1] ds_facts[3] > 2 ~
+line[1] pmu_ds[1] > 2 ~
+line[1] pmu_ds[2] > 2 ~
+line[1] pmu_ds[3] > 2 ~
+line[1] ds[1] > 2 ~
+line[2] pmu[1] > 1 ~
+line[2] pmu[2] > 1 ~
+line[2] pmu[3] > 1 ~
+line[2] ds_facts[1] ~
+line[2] ds_facts[2] ~
+line[2] ds_facts[3] > 1 ~
+line[2] pmu_ds[1] > 1 ~
+line[2] pmu_ds[2] > 1 ~
+line[2] pmu_ds[3] > 1 ~
+line[2] ds[1] > 1 ~
+line[3] pmu[1] > 2 ~
+line[3] pmu[2] > 2 ~
+line[3] pmu[3] > 2 ~
+line[3] ds_facts[1] ~
+line[3] ds_facts[2] ~
+line[3] ds_facts[3] > 2 ~
+line[3] pmu_ds[1] > 2 ~
+line[3] pmu_ds[2] > 2 ~
+line[3] pmu_ds[3] > 2 ~
+line[3] ds[1] > 2 ~
+line[4] pmu[1] .
+line[4] pmu[2] .
+line[4] pmu[3] .
+line[4] ds_facts[1] ~
+line[4] ds_facts[2] ~
+line[4] ds_facts[3] .
+line[4] pmu_ds[1] .
+line[4] pmu_ds[2] .
+line[4] pmu_ds[3] .
+line[4] ds[1] .
+line[5] pmu[1] .
+line[5] pmu[2] .
+line[5] pmu[3] .
+line[5] ds_facts[1] ~
+line[5] ds_facts[2] ~
+line[5] ds_facts[3] .
+line[5] pmu_ds[1] .
+line[5] pmu_ds[2] .
+line[5] pmu_ds[3] .
+line[5] ds[1] .
+line[6] pmu[1] .
+line[6] pmu[2] .
+line[6] pmu[3] .
+line[6] ds_facts[1] ~
+line[6] ds_facts[2] ~
+line[6] ds_facts[3] .
+line[6] pmu_ds[1] .
+line[6] pmu_ds[2] .
+line[6] pmu_ds[3] .
+line[6] ds[1] .
+line[7] pmu[1] > 1 > 2 ~
+line[7] pmu[2] > 1 > 2 ~
+line[7] pmu[3] > 1 > 2 ~
+line[7] ds_facts[1] ~
+line[7] ds_facts[2] ~
+line[7] ds_facts[3] > 1 > 2 ~
+line[7] pmu_ds[1] > 1 > 2 ~
+line[7] pmu_ds[2] > 1 > 2 ~
+line[7] pmu_ds[3] > 1 > 2 ~
+line[7] ds[1] > 1 > 2 ~
+line[8] pmu[1] .
+line[8] pmu[2] .
+line[8] pmu[3] .
+line[8] ds_facts[1] ~
+line[8] ds_facts[2] ~
+line[8] ds_facts[3] .
+line[8] pmu_ds[1] .
+line[8] pmu_ds[2] .
+line[8] pmu_ds[3] .
+line[8] ds[1] .
+line[9] pmu[1] .
+line[9] pmu[2] .
+line[9] pmu[3] .
+line[9] ds_facts[1] ~
+line[9] ds_facts[2] ~
+line[9] ds_facts[3] .
+line[9] pmu_ds[1] .
+line[9] pmu_ds[2] .
+line[9] pmu_ds[3] .
+line[9] ds[1] .
+line[10] pmu[1] .
+line[10] pmu[2] .
+line[10] pmu[3] .
+line[10] ds_facts[1] ~
+line[10] ds_facts[2] ~
+line[10] ds_facts[3] .
+line[10] pmu_ds[1] .
+line[10] pmu_ds[2] .
+line[10] pmu_ds[3] .
+line[10] ds[1] .
+line[11] pmu[1] .
+line[11] pmu[2] .
+line[11] pmu[3] .
+line[11] ds_facts[1] ~
+line[11] ds_facts[2] ~
+line[11] ds_facts[3] .
+line[11] pmu_ds[1] .
+line[11] pmu_ds[2] .
+line[11] pmu_ds[3] .
+line[11] ds[1] .
+line[12] pmu[1] .
+line[12] pmu[2] .
+line[12] pmu[3] .
+line[12] ds_facts[1] ~
+line[12] ds_facts[2] ~
+line[12] ds_facts[3] .
+line[12] pmu_ds[1] .
+line[12] pmu_ds[2] .
+line[12] pmu_ds[3] .
+line[12] ds[1] .
+line[13] pmu[1] .
+line[13] pmu[2] .
+line[13] pmu[3] .
+line[13] ds_facts[1] ~
+line[13] ds_facts[2] ~
+line[13] ds_facts[3] .
+line[13] pmu_ds[1] .
+line[13] pmu_ds[2] .
+line[13] pmu_ds[3] .
+line[13] ds[1] .
+line[14] pmu[1] .
+line[14] pmu[2] .
+line[14] pmu[3] .
+line[14] ds_facts[1] ~
+line[14] ds_facts[2] ~
+line[14] ds_facts[3] .
+line[14] pmu_ds[1] .
+line[14] pmu_ds[2] .
+line[14] pmu_ds[3] .
+line[14] ds[1] .
+line[15] pmu[1] .
+line[15] pmu[2] .
+line[15] pmu[3] .
+line[15] ds_facts[1] ~
+line[15] ds_facts[2] ~
+line[15] ds_facts[3] .
+line[15] pmu_ds[1] .
+line[15] pmu_ds[2] .
+line[15] pmu_ds[3] .
+line[15] ds[1] .
+line[16] pmu[1] .
+line[16] pmu[2] .
+line[16] pmu[3] .
+line[16] ds_facts[1] ~
+line[16] ds_facts[2] ~
+line[16] ds_facts[3] .
+line[16] pmu_ds[1] .
+line[16] pmu_ds[2] .
+line[16] pmu_ds[3] .
+line[16] ds[1] .
+line[17] pmu[1] .
+line[17] pmu[2] .
+line[17] pmu[3] .
+line[17] ds_facts[1] ~
+line[17] ds_facts[2] ~
+line[17] ds_facts[3] .
+line[17] pmu_ds[1] .
+line[17] pmu_ds[2] .
+line[17] pmu_ds[3] .
+line[17] ds[1] .
+line[18] pmu[1] .
+line[18] pmu[2] .
+line[18] pmu[3] .
+line[18] ds_facts[1] ~
+line[18] ds_facts[2] ~
+line[18] ds_facts[3] .
+line[18] pmu_ds[1] .
+line[18] pmu_ds[2] .
+line[18] pmu_ds[3] .
+line[18] ds[1] .
+line[19] pmu[1] .
+line[19] pmu[2] .
+line[19] pmu[3] .
+line[19] ds_facts[1] ~
+line[19] ds_facts[2] ~
+line[19] ds_facts[3] .
+line[19] pmu_ds[1] .
+line[19] pmu_ds[2] .
+line[19] pmu_ds[3] .
+line[19] ds[1] .
+line[20] pmu[1] .
+line[20] pmu[2] .
+line[20] pmu[3] .
+line[20] ds_facts[1] ~
+line[20] ds_facts[2] ~
+line[20] ds_facts[3] .
+line[20] pmu_ds[1] .
+line[20] pmu_ds[2] .
+line[20] pmu_ds[3] .
+line[20] ds[1] .
+facts[1] pmu[1] ~
+facts[1] pmu[2] ~
+facts[1] pmu[3] ~
+facts[1] ds_facts[1] ~
+facts[1] ds_facts[2] ~
+facts[1] ds_facts[3] ~
+facts[1] pmu_ds[1] ~
+facts[1] pmu_ds[2] ~
+facts[1] pmu_ds[3] ~
+facts[1] ds[1] ~
+facts[2] pmu[1] ~
+facts[2] pmu[2] ~
+facts[2] pmu[3] ~
+facts[2] ds_facts[1] ~
+facts[2] ds_facts[2] ~
+facts[2] ds_facts[3] .
+facts[2] pmu_ds[1] ~
+facts[2] pmu_ds[2] ~
+facts[2] pmu_ds[3] ~
+facts[2] ds[1] ~
+facts[3] pmu[1] .
+facts[3] pmu[2] .
+facts[3] pmu[3] .
+facts[3] ds_facts[1] ~
+facts[3] ds_facts[2] .
+facts[3] ds_facts[3] .
+facts[3] pmu_ds[1] .
+facts[3] pmu_ds[2] .
+facts[3] pmu_ds[3] .
+facts[3] ds[1] .

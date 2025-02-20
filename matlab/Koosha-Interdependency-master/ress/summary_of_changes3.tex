@@ -1,0 +1,102 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+\newenvironment{response}{
+  \doublespacing
+  \setlength\parindent{0.05\linewidth}
+  \ttfamily
+}{}
+\tcbuselibrary{skins}
+\tcolorboxenvironment{response}{
+  empty, breakable, left = 1em, top = 1ex,
+  bottom = 1ex, borderline west = {2pt} {0pt} {black!20}
+}
+\newsavebox{\mybox}
+\newenvironment{textblock}[1]
+{\begin{tcolorbox}[breakable,enhanced]{#1 \\ \\}}
+{\end{tcolorbox}}
+
+\title{Summary of Changes to Submission RESS\_2019\_1308R2: \\
+Identification of Interdependencies and Prediction of Fault Propagation for Cyber-Physical Systems}
+\date{}
+
+
+\begin{document}
+\maketitle
+\noindent
+We thank the reviewers and the guest editor for the time and expertise they have invested in reviewing our submission. We have carefully revised the paper in response to this constructive feedback.
+
+To facilitate the review process for the second revision of the manuscript, we have included a verbatim copy of the full decision letter, including reviewers' comments. For each concern raised by the reviewers, we have provided our responses directly underneath the respective comments. Where applicable, we have also explained how we have revised the paper to address the concerns raised, and have provided verbatim copies of the revision(s) made in the new submission. \vspace{3em}
+
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+
+\section{Decision Letter}
+\label{sec:decision_letter}
+Dear Dr. Sedigh Sarvestani,
+
+Thank you for submitting your manuscript to Reliability Engineering and System Safety.
+
+I have completed my evaluation of your manuscript. The reviewers recommend \textbf{reconsideration of your manuscript following minor revision and modification}. I invite you to \textbf{resubmit your manuscript after addressing the comments below}. Please resubmit your revised manuscript by \textbf{Mar 30, 2021}.
+
+When revising your manuscript, please consider all issues mentioned in the reviewers' comments carefully: please outline every change made in response to their comments and provide suitable rebuttals for any comments not addressed. Please note that your revised submission may need to be re-reviewed.
+
+To submit your revised manuscript, please log in as an author at \url{https://www.editorialmanager.com/jress/}, and navigate to the ``Submissions Needing Revision'' folder under the Author Main Menu.
+
+Reliability Engineering and System Safety values your contribution and I look forward to receiving your revised manuscript.
+
+Kind regards \\
+Carlos Guedes Soares \\
+Editor \\
+Reliability Engineering and System Safety
+
+\section{Guest Editor's Comments}
+\label{sec:editor}
+Please conduct further revisions carefully to address the remaining concerns of the reviewers. Discussions on the effectiveness and advantage of the proposed method need to be strengthened.
+
+\begin{response}
+We have improved upon the comparative perspective of the paper by concisely discussing the advantages of our cyber-physical simulation technique in Section 1, as shown below.
+
+%SSS - what do you mean by "predictive performance evaluation"? Evaluation happens after the fact. Prediction is before.
+\begin{textblock}{Section 1}
+This work complements the study of Sturaro et al. in [18] by utilizing a domain-specific cyber-physical simulation tool to provide the resolution required for accurately reflecting the operation of discrete-time cyber components in sensing, decision making, and control roles. The superiority of our method is that our simulation tool models the real-world physics of the underlying physical system, i.e., the interconnected electric delivery system and corresponding power components.  Existing research on applications of machine learning tools and specifically neural network structures to prediction in networked systems largely relies on simplifying physical attributes of the system to the topological configuration. The use of a domain-specific simulation tool lends two advantages to our proposed method: i) validity of the synthesized failure data used for training and tuning of the prediction tool, and ii) correctness of the predictions. Our choice of simulation tool provides a high level of confidence in the overall validity of the proposed method, as it does not rely solely on the topological configuration of the cyber-physical network, but takes into account into account other aspects of the cyber and physical systems. Our research paves the way to better understanding of interdependencies in a system and prediction of its future failures. To illustrate our approach, we have applied it to two smart power grids based on the well-studied IEEE 14--bus and 57--bus test systems.
+\end{textblock}
+
+\end{response}
+
+\section{Reviewers' Comments}
+\label{sec:reviewers}
+
+\subsection{Reviewer 1}
+\label{sec:reviewer:r1}
+Regarding the item 5 in reviewer1's comments, the authors answered that their earlier work [33] is cited, which presents an extensive comparison of our cyber-physical power system simulation technique to other methods. However, the related correction cannot be found in the revised version. Authors are suggested to compare the proposed method with other relevant methods to indicate the superiority of the proposed method. Please illustrate it in detail and revise the manuscript carefully.
+
+Therefore, this paper should be revised.
+
+\begin{response}
+In order to address this concern, we have added the following paragraph to Section 1, where we elaborate on the advantages of the cyber-physical simulation technique we have utilized and articulate the  superiority of our proposed failure prediction method.
+
+\begin{textblock}{Section 1}
+This work complements the study of Sturaro et al. in [18] by utilizing a domain-specific cyber-physical simulation tool to provide the resolution required for accurately reflecting the operation of discrete-time cyber components in sensing, decision making, and control roles. The superiority of our method is that our simulation tool models the real-world physics of the underlying physical system, i.e., the interconnected electric delivery system and corresponding power components.  Existing research on applications of machine learning tools and specifically neural network structures to prediction in networked systems largely relies on simplifying physical attributes of the system to the topological configuration. The use of a domain-specific simulation tool lends two advantages to our proposed method: i) validity of the synthesized failure data used for training and tuning of the prediction tool, and ii) correctness of the predictions. Our choice of simulation tool provides a high level of confidence in the overall validity of the proposed method, as it does not rely solely on the topological configuration of the cyber-physical network, but takes into account into account other aspects of the cyber and physical systems. Our research paves the way to better understanding of interdependencies in a system and prediction of its future failures. To illustrate our approach, we have applied it to two smart power grids based on the well-studied IEEE 14--bus and 57--bus test systems.
+\end{textblock}
+
+\end{response}
+
+\subsection{Reviewer 3}
+\label{sec:reviewer:r3}
+The authors employ the steady-state method to study the cascading failures. Therefore, a large-scale system is necessary to verify the effectiveness of the proposed method. Otherwise, this persuasiveness is not enough.
+
+\begin{response}
+We appreciate the feedback and understand the concern expressed about scalability of the proposed method. According to the definitions provided by M. Sipser\footnotemark{} and A. Bondi\footnotemark{}, scalability is the property of a system to handle a growing amount of ``load'' by adding ``resources'' to the computational system. In the context of computational complexity theory, ``load'' is measured by the size of the problem. Since composition of the neural network model  is a non-real-time task, the most critical ``resource'' is the amount of training data required. 
+
+To  evaluate the scalability of our proposed approach, we have evaluated the additional training data required when we go from a CPS based on the IEEE 14-bus system to a larger CPS based on the IEEE 57-bus system. While the latter has nearly 3.7 times more individual cyber and physical nodes compared to the former, we only need to increase the amount of training data  by a factor of 2 in order to achieve  similar predictive performance (see Tables 3 and 4). We have not demonstrated  our neural network model for a larger system in the interest of clarity. For a system larger than the IEEE-57, visualizing the interdependency data as we have in Figures 6 and 7 would be infeasible - the figures would be too dense to be readable. Our choice of IEEE-14 and IEEE-57 systems allows us to present the interdependency results for these two tractable systems in a clear and comprehensible fashion and enables comparison of the amount of training data required for a relatively small and a relatively large system.
+
+\end{response}
+
+\addtocounter{footnote}{-1}\footnotetext{Sipser, Michael. ``Introduction to the Theory of Computation.'' ACM Sigact News 27.1 (1996): 27-29.}
+\addtocounter{footnote}{+1}\footnotetext{Bondi, Andre B. ``Characteristics of scalability and their impact on performance.'' Proceedings of the 2nd international workshop on Software and performance. 2000.}
+
+\end{document}

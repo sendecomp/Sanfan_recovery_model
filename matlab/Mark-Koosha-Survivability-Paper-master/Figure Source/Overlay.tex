@@ -1,0 +1,23 @@
+\documentclass[11pt]{article}
+
+\usepackage{tikz,amsmath,siunitx}
+\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,patterns,matrix,shapes,fit,calc,shadows,plotmarks}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{equation*}
+\newlength{\imagewidth}
+\newlength{\imagescale}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\textwidth]{Failure_Seq_Graph_IEEE14.pdf}};
+
+\draw (8.5,10) -- (10,13) node[black, yshift=0.2cm] {$Thickness\ Represents\ Fragility$};
+\draw (8.8,4) -- (10,0) node[black, yshift=-0.2cm] {$Color\ Represents\ Criticality$};
+\draw (3,1) -- (3,0) node[black, yshift=-0.2cm] {$Node\ Size\ Represents\ Demand$};
+\end{tikzpicture}
+
+\end{document}

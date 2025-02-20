@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{tikz,amsmath,siunitx}
+\usetikzlibrary{arrows,decorations.pathreplacing,backgrounds,patterns,matrix,shapes,fit,calc,shadows,plotmarks}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{equation*}
+\newlength{\imagewidth}
+\newlength{\imagescale}
+\pagestyle{empty}
+\thispagestyle{empty}
+\begin{document}
+
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=1}]
+% Axis units - axes and label positioning
+\ifx\au\undefined
+  \newlength{\au}
+\fi
+\setlength{\au}{15\unitlength}
+
+\definecolor{dialinecolor}{rgb}{0,0,0}
+\pgfsetstrokecolor{dialinecolor}
+\pgfsetfillcolor{dialinecolor}
+
+\pgfsetbuttcap
+\pgfsetmiterjoin
+\pgfsetlinewidth{0.0800000\au}
+
+\draw [thick,decorate,decoration={brace,amplitude=10pt,mirror}](2\au,0\au) -- (12\au,0\au) node[black,midway,yshift=-0.6cm] {\footnotesize Reliability};
+\draw [thick,decorate,decoration={brace,amplitude=10pt,mirror}](12\au,0\au) -- (17\au,0\au) node[black,midway,yshift=-0.8cm, text width=1.9cm] {\footnotesize Survivability/ Performability};
+\draw [thick,decorate,decoration={brace,amplitude=10pt,mirror}](17\au,0\au) -- (27\au,0\au) node[black,midway,yshift=-0.6cm] {\footnotesize Resilience};
+\draw [thick,decorate,decoration={brace,amplitude=10pt,mirror}](2\au,-5\au) -- (32\au,-5\au) node[black,midway,yshift=-0.6cm] {\footnotesize Availability};
+
+{%
+\pgfsetarrowsend{stealth}
+ Y Axis
+\draw (2\au,1\au)--(2\au,12\au);
+ X Axis
+\draw (1\au,2\au)--(32\au,2\au);
+}
+
+% F(t)
+\draw (2\au,9\au)--(12\au,9\au);
+
+\draw (12\au,9\au) parabola bend (13\au,6\au) (17\au,3.5\au);
+
+%\draw (12\au,9\au)--(17\au,3.5\au);
+
+\draw (17\au,3.5\au)--(22\au,3.5\au);
+\draw (22\au,3.5\au)--(26\au,7\au);
+\draw (26\au,7\au)--(31\au,7\au);
+
+
+% Levels
+\pgfsetlinewidth{0.0400000\au}
+\pgfsetdash{{\pgflinewidth}{0.2\au}{0.2\au}{0\au}}{0cm}
+\draw (12\au,2\au)--(12\au,9\au);
+\draw (17\au,3.5\au)--(17\au,2\au);
+\draw (22\au,3.5\au)--(22\au,2\au);
+\draw (26\au,7\au)--(26\au,2\au);
+\draw (2\au,3.5\au)--(17\au,3.5\au);
+\draw (2\au,7\au)--(26\au,7\au);
+\pgfsetlinewidth{0.0800000\au}
+
+% Axis Labels
+\node at (0\au, 11\au){$M(t)$};
+\node at (30\au, 1\au){time};
+
+% X Scale
+{%
+% Time notations are according to HeR12 and BaR13 and service level notations are according to T1A1
+\tikzstyle{every node}=[scale=1.1]
+\node at (03\au, 1\au)  {$t_0$}; %initial
+\node at (12\au, 1\au)  {$t_e$}; %disruptive event
+\node at (17\au, 1\au)  {$t_d$}; %disrupted
+\node at (22\au, 1\au)  {$t_s$}; %start of resilience action
+\node at (26\au, 0.9\au){$t_f$}; %final
+
+\node at (0\au, 9\au){\scriptsize $m_0$};
+\node at (0\au, 3.5\au){\scriptsize $m_a$};
+\node at (0\au, 7\au){\scriptsize $m_r$};
+}
+
+% Point labels
+{%
+\tikzstyle{every node}=[scale=0.8]
+\node[align=center] at (7\au,  11\au){Fully\\functional\\state};
+\node[align=center] at (14\au, 11\au){Disruption};
+\node[align=center] at (20\au, 11\au){Recovery\\event\\triggered};
+\node[align=center] at (28\au, 11\au){Final\\functional\\state};
+}
+
+%rho
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\draw [red] (11.7\au,10.5\au) -- node [left] {{\Large$\rho$}} (12.9\au,4.5\au);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%delta
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\draw [blue] (15\au,3.5\au)--(17\au,3.5\au);
+\draw [blue] (12\au,9\au)--(15\au,9\au);
+\pgfsetdash{}{0cm}
+\draw [<->,blue] (15\au,9\au) -- node [right] {{\Large$\delta$}} (15\au,3.5\au);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+\end{document} 

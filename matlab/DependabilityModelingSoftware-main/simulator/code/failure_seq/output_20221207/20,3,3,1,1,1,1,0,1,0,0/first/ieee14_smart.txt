@@ -1,0 +1,640 @@
+line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[2] > line[1] facts[1] > line[11] pmu[3] ~
+line[3] > facts[2] .
+line[4] > facts[3] .
+line[5] .
+line[6] .
+line[7] > line[1] > line[5] > line[10] pmu[3] .
+line[8] .
+line[9] .
+line[10] .
+line[11] .
+line[12] .
+line[13] .
+line[14] .
+line[15] .
+line[16] .
+line[17] .
+line[18] .
+line[19] .
+line[20] .
+line[1] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[2] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[3] ds[1] > facts[2] .
+line[4] ds[1] > facts[3] .
+line[5] ds[1] .
+line[6] ds[1] .
+line[7] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[8] ds[1] .
+line[9] ds[1] .
+line[10] ds[1] .
+line[11] ds[1] .
+line[12] ds[1] .
+line[13] ds[1] .
+line[14] ds[1] .
+line[15] ds[1] .
+line[16] ds[1] .
+line[17] ds[1] .
+line[18] ds[1] .
+line[19] ds[1] .
+line[20] ds[1] .
+line[1] pmu[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] pmu[2] > line[7] > line[5] > line[10] pmu[3] .
+line[1] pmu[3] > line[7] > line[5] > line[10] .
+line[2] pmu[1] > line[1] facts[1] > line[11] pmu[3] .
+line[2] pmu[2] > line[1] facts[1] > line[11] pmu[3] > line[16] > line[18] .
+line[2] pmu[3] ~
+line[3] pmu[1] > line[1] facts[2] > line[7] .
+line[3] pmu[2] > line[7] facts[2] > line[1] .
+line[3] pmu[3] > facts[2] .
+line[4] pmu[1] > line[1] facts[3] > line[7] .
+line[4] pmu[2] > facts[3] .
+line[4] pmu[3] > facts[3] .
+line[5] pmu[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] pmu[2] .
+line[5] pmu[3] .
+line[6] pmu[1] > line[1] .
+line[6] pmu[2] .
+line[6] pmu[3] .
+line[7] pmu[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] pmu[2] > line[1] > line[5] > line[10] pmu[3] .
+line[7] pmu[3] > line[1] > line[5] > line[10] .
+line[8] pmu[1] > line[1] .
+line[8] pmu[2] .
+line[8] pmu[3] .
+line[9] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] .
+line[9] pmu[2] .
+line[9] pmu[3] .
+line[10] pmu[1] > line[1] > line[7] > line[5] .
+line[10] pmu[2] .
+line[10] pmu[3] .
+line[11] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[11] pmu[2] .
+line[11] pmu[3] .
+line[12] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[12] pmu[2] .
+line[12] pmu[3] .
+line[13] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] .
+line[13] pmu[2] .
+line[13] pmu[3] .
+line[14] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[14] pmu[2] .
+line[14] pmu[3] .
+line[15] pmu[1] > line[1] .
+line[15] pmu[2] .
+line[15] pmu[3] .
+line[16] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] pmu[2] .
+line[16] pmu[3] .
+line[17] pmu[1] > line[1] > line[7] > line[5] > line[11] pmu[3] .
+line[17] pmu[2] .
+line[17] pmu[3] .
+line[18] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] > line[20] .
+line[18] pmu[2] .
+line[18] pmu[3] .
+line[19] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[19] pmu[2] .
+line[19] pmu[3] .
+line[20] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[16] .
+line[20] pmu[2] .
+line[20] pmu[3] .
+line[1] pmu[1] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] pmu[2] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] pmu[3] ds[1] > line[7] > line[5] > line[10] .
+line[2] pmu[1] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[2] pmu[2] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[2] pmu[3] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[3] pmu[1] ds[1] > facts[2] .
+line[3] pmu[2] ds[1] > facts[2] .
+line[3] pmu[3] ds[1] > facts[2] .
+line[4] pmu[1] ds[1] > facts[3] .
+line[4] pmu[2] ds[1] > facts[3] .
+line[4] pmu[3] ds[1] > facts[3] .
+line[5] pmu[1] ds[1] .
+line[5] pmu[2] ds[1] .
+line[5] pmu[3] ds[1] .
+line[6] pmu[1] ds[1] .
+line[6] pmu[2] ds[1] .
+line[6] pmu[3] ds[1] .
+line[7] pmu[1] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] pmu[2] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] pmu[3] ds[1] > line[1] > line[5] > line[10] .
+line[8] pmu[1] ds[1] .
+line[8] pmu[2] ds[1] .
+line[8] pmu[3] ds[1] .
+line[9] pmu[1] ds[1] .
+line[9] pmu[2] ds[1] .
+line[9] pmu[3] ds[1] .
+line[10] pmu[1] ds[1] .
+line[10] pmu[2] ds[1] .
+line[10] pmu[3] ds[1] .
+line[11] pmu[1] ds[1] .
+line[11] pmu[2] ds[1] .
+line[11] pmu[3] ds[1] .
+line[12] pmu[1] ds[1] .
+line[12] pmu[2] ds[1] .
+line[12] pmu[3] ds[1] .
+line[13] pmu[1] ds[1] .
+line[13] pmu[2] ds[1] .
+line[13] pmu[3] ds[1] .
+line[14] pmu[1] ds[1] .
+line[14] pmu[2] ds[1] .
+line[14] pmu[3] ds[1] .
+line[15] pmu[1] ds[1] .
+line[15] pmu[2] ds[1] .
+line[15] pmu[3] ds[1] .
+line[16] pmu[1] ds[1] .
+line[16] pmu[2] ds[1] .
+line[16] pmu[3] ds[1] .
+line[17] pmu[1] ds[1] .
+line[17] pmu[2] ds[1] .
+line[17] pmu[3] ds[1] .
+line[18] pmu[1] ds[1] .
+line[18] pmu[2] ds[1] .
+line[18] pmu[3] ds[1] .
+line[19] pmu[1] ds[1] .
+line[19] pmu[2] ds[1] .
+line[19] pmu[3] ds[1] .
+line[20] pmu[1] ds[1] .
+line[20] pmu[2] ds[1] .
+line[20] pmu[3] ds[1] .
+line[1] facts[1] > line[7] .
+line[1] facts[2] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[3] > line[7] > line[5] > line[10] pmu[3] .
+line[2] facts[1] > line[1] > line[11] pmu[3] ~
+line[2] facts[2] > line[1] facts[1] > line[7] pmu[3] .
+line[2] facts[3] ~
+line[3] facts[1] > line[1] facts[2] > line[7] .
+line[3] facts[2] .
+line[3] facts[3] > facts[2] .
+line[4] facts[1] > line[1] facts[3] .
+line[4] facts[2] > facts[3] .
+line[4] facts[3] .
+line[5] facts[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[2] .
+line[5] facts[3] .
+line[6] facts[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[13] > line[11] .
+line[6] facts[2] .
+line[6] facts[3] .
+line[7] facts[1] > line[1] .
+line[7] facts[2] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[3] > line[1] > line[5] > line[10] pmu[3] .
+line[8] facts[1] > line[1] .
+line[8] facts[2] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[8] facts[3] .
+line[9] facts[1] > line[1] > line[7] .
+line[9] facts[2] .
+line[9] facts[3] .
+line[10] facts[1] > line[1] > line[7] > line[5] .
+line[10] facts[2] .
+line[10] facts[3] .
+line[11] facts[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[11] facts[2] .
+line[11] facts[3] .
+line[12] facts[1] > line[1] > line[7] .
+line[12] facts[2] .
+line[12] facts[3] .
+line[13] facts[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[13] facts[2] .
+line[13] facts[3] .
+line[14] facts[1] > line[1] > line[7] .
+line[14] facts[2] .
+line[14] facts[3] .
+line[15] facts[1] > line[1] .
+line[15] facts[2] .
+line[15] facts[3] .
+line[16] facts[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[2] .
+line[16] facts[3] .
+line[17] facts[1] > line[1] > line[7] > line[5] > line[11] pmu[3] .
+line[17] facts[2] .
+line[17] facts[3] .
+line[18] facts[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[16] > line[8] > line[15] > line[17] .
+line[18] facts[2] .
+line[18] facts[3] .
+line[19] facts[1] > line[1] > line[7] .
+line[19] facts[2] .
+line[19] facts[3] .
+line[20] facts[1] > line[1] > line[7] > line[5] > line[11] .
+line[20] facts[2] .
+line[20] facts[3] .
+line[1] facts[1] ds[1] > line[7] .
+line[1] facts[2] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[3] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[2] facts[1] ds[1] > line[1] > line[16] > line[7] .
+line[2] facts[2] ds[1] > line[1] facts[1] > line[15] pmu[3] .
+line[2] facts[3] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[3] facts[1] ds[1] > line[1] facts[2] > line[7] .
+line[3] facts[2] ds[1] .
+line[3] facts[3] ds[1] > facts[2] .
+line[4] facts[1] ds[1] > line[1] facts[3] > line[7] .
+line[4] facts[2] ds[1] > facts[3] .
+line[4] facts[3] ds[1] .
+line[5] facts[1] ds[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[2] ds[1] .
+line[5] facts[3] ds[1] .
+line[6] facts[1] ds[1] > line[1] .
+line[6] facts[2] ds[1] .
+line[6] facts[3] ds[1] .
+line[7] facts[1] ds[1] > line[1] .
+line[7] facts[2] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[3] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[8] facts[1] ds[1] > line[1] .
+line[8] facts[2] ds[1] .
+line[8] facts[3] ds[1] .
+line[9] facts[1] ds[1] > line[1] .
+line[9] facts[2] ds[1] .
+line[9] facts[3] ds[1] .
+line[10] facts[1] ds[1] > line[1] > line[7] > line[5] > pmu[3] .
+line[10] facts[2] ds[1] .
+line[10] facts[3] ds[1] .
+line[11] facts[1] ds[1] > line[1] > line[7] > line[5] > line[13] pmu[3] > line[12] > line[15] .
+line[11] facts[2] ds[1] .
+line[11] facts[3] ds[1] .
+line[12] facts[1] ds[1] > line[1] > line[7] .
+line[12] facts[2] ds[1] .
+line[12] facts[3] ds[1] .
+line[13] facts[1] ds[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[11] .
+line[13] facts[2] ds[1] .
+line[13] facts[3] ds[1] .
+line[14] facts[1] ds[1] > line[1] > line[7] .
+line[14] facts[2] ds[1] .
+line[14] facts[3] ds[1] .
+line[15] facts[1] ds[1] > line[1] .
+line[15] facts[2] ds[1] .
+line[15] facts[3] ds[1] .
+line[16] facts[1] ds[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[2] ds[1] .
+line[16] facts[3] ds[1] .
+line[17] facts[1] ds[1] > line[1] > line[7] > line[5] > line[10] > line[15] > line[8] pmu[3] ~
+line[17] facts[2] ds[1] .
+line[17] facts[3] ds[1] .
+line[18] facts[1] ds[1] > line[1] > line[7] > line[5] > line[10] > pmu[3] .
+line[18] facts[2] ds[1] .
+line[18] facts[3] ds[1] .
+line[19] facts[1] ds[1] > line[1] > line[7] .
+line[19] facts[2] ds[1] .
+line[19] facts[3] ds[1] .
+line[20] facts[1] ds[1] > line[1] > line[7] > line[5] > line[10] > pmu[3] .
+line[20] facts[2] ds[1] .
+line[20] facts[3] ds[1] .
+line[1] facts[1] pmu[1] > line[7] .
+line[1] facts[1] pmu[2] > line[7] .
+line[1] facts[1] pmu[3] > line[7] .
+line[1] facts[2] pmu[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[2] pmu[2] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[2] pmu[3] > line[7] > line[5] > line[10] .
+line[1] facts[3] pmu[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[3] pmu[2] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[3] pmu[3] > line[7] > line[5] > line[10] .
+line[2] facts[1] pmu[1] > line[1] > line[11] pmu[3] .
+line[2] facts[1] pmu[2] > line[1] > line[11] pmu[3] > line[16] > line[18] .
+line[2] facts[1] pmu[3] > line[1] > line[11] ~
+line[2] facts[2] pmu[1] > line[1] facts[1] > line[15] pmu[3] .
+line[2] facts[2] pmu[2] > line[1] facts[1] .
+line[2] facts[2] pmu[3] > line[1] facts[1] .
+line[2] facts[3] pmu[1] > line[1] facts[1] > line[15] pmu[3] .
+line[2] facts[3] pmu[2] ~
+line[2] facts[3] pmu[3] ~
+line[3] facts[1] pmu[1] > line[1] facts[2] > line[7] .
+line[3] facts[1] pmu[2] > line[1] facts[2] > line[7] .
+line[3] facts[1] pmu[3] > line[1] facts[2] > line[7] .
+line[3] facts[2] pmu[1] > line[1] > line[7] .
+line[3] facts[2] pmu[2] > line[7] > line[1] .
+line[3] facts[2] pmu[3] .
+line[3] facts[3] pmu[1] > line[1] facts[2] > line[7] .
+line[3] facts[3] pmu[2] > line[7] facts[2] > line[1] .
+line[3] facts[3] pmu[3] > facts[2] .
+line[4] facts[1] pmu[1] > line[1] facts[3] > line[7] .
+line[4] facts[1] pmu[2] > line[1] facts[3] .
+line[4] facts[1] pmu[3] > line[1] facts[3] .
+line[4] facts[2] pmu[1] > line[1] facts[3] > line[7] .
+line[4] facts[2] pmu[2] > facts[3] .
+line[4] facts[2] pmu[3] > facts[3] .
+line[4] facts[3] pmu[1] > line[1] > line[7] .
+line[4] facts[3] pmu[2] .
+line[4] facts[3] pmu[3] .
+line[5] facts[1] pmu[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[1] pmu[2] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[1] pmu[3] > line[1] > line[7] > line[10] .
+line[5] facts[2] pmu[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[2] pmu[2] .
+line[5] facts[2] pmu[3] .
+line[5] facts[3] pmu[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[3] pmu[2] .
+line[5] facts[3] pmu[3] .
+line[6] facts[1] pmu[1] > line[1] .
+line[6] facts[1] pmu[2] > line[1] .
+line[6] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[10] > line[13] > line[11] .
+line[6] facts[2] pmu[1] > line[1] .
+line[6] facts[2] pmu[2] .
+line[6] facts[2] pmu[3] > line[1] > line[7] > line[5] > line[10] .
+line[6] facts[3] pmu[1] > line[1] .
+line[6] facts[3] pmu[2] .
+line[6] facts[3] pmu[3] .
+line[7] facts[1] pmu[1] > line[1] .
+line[7] facts[1] pmu[2] > line[1] .
+line[7] facts[1] pmu[3] > line[1] .
+line[7] facts[2] pmu[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[2] pmu[2] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[2] pmu[3] > line[1] > line[5] > line[10] .
+line[7] facts[3] pmu[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[3] pmu[2] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[3] pmu[3] > line[1] > line[5] > line[10] .
+line[8] facts[1] pmu[1] > line[1] .
+line[8] facts[1] pmu[2] > line[1] .
+line[8] facts[1] pmu[3] > line[1] .
+line[8] facts[2] pmu[1] > line[1] .
+line[8] facts[2] pmu[2] .
+line[8] facts[2] pmu[3] > line[1] > line[7] > line[5] > line[10] .
+line[8] facts[3] pmu[1] > line[1] .
+line[8] facts[3] pmu[2] .
+line[8] facts[3] pmu[3] .
+line[9] facts[1] pmu[1] > line[1] > line[7] .
+line[9] facts[1] pmu[2] > line[1] > line[7] .
+line[9] facts[1] pmu[3] > line[1] > line[7] .
+line[9] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[9] facts[2] pmu[2] .
+line[9] facts[2] pmu[3] > line[1] > line[7] > line[5] > line[10] .
+line[9] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] .
+line[9] facts[3] pmu[2] .
+line[9] facts[3] pmu[3] .
+line[10] facts[1] pmu[1] > line[1] > line[7] > line[5] .
+line[10] facts[1] pmu[2] > line[1] > line[7] > line[5] .
+line[10] facts[1] pmu[3] > line[1] > line[7] > line[5] .
+line[10] facts[2] pmu[1] > line[1] > line[7] > line[5] .
+line[10] facts[2] pmu[2] .
+line[10] facts[2] pmu[3] .
+line[10] facts[3] pmu[1] > line[1] > line[7] > line[5] .
+line[10] facts[3] pmu[2] .
+line[10] facts[3] pmu[3] .
+line[11] facts[1] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[11] facts[1] pmu[2] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[11] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[10] ~
+line[11] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[16] > line[20] > line[18] > line[15] > line[6] .
+line[11] facts[2] pmu[2] .
+line[11] facts[2] pmu[3] > line[1] > line[7] > line[5] > line[10] > line[16] .
+line[11] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[11] facts[3] pmu[2] .
+line[11] facts[3] pmu[3] .
+line[12] facts[1] pmu[1] > line[1] > line[7] .
+line[12] facts[1] pmu[2] > line[1] > line[7] .
+line[12] facts[1] pmu[3] > line[1] > line[7] .
+line[12] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[15] > line[13] .
+line[12] facts[2] pmu[2] .
+line[12] facts[2] pmu[3] .
+line[12] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[12] facts[3] pmu[2] .
+line[12] facts[3] pmu[3] .
+line[13] facts[1] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] .
+line[13] facts[1] pmu[2] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[15] .
+line[13] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[10] .
+line[13] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[11] pmu[3] > line[12] .
+line[13] facts[2] pmu[2] .
+line[13] facts[2] pmu[3] .
+line[13] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] .
+line[13] facts[3] pmu[2] .
+line[13] facts[3] pmu[3] .
+line[14] facts[1] pmu[1] > line[1] > line[7] .
+line[14] facts[1] pmu[2] > line[1] > line[7] .
+line[14] facts[1] pmu[3] > line[1] > line[7] .
+line[14] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[14] facts[2] pmu[2] .
+line[14] facts[2] pmu[3] .
+line[14] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[14] facts[3] pmu[2] .
+line[14] facts[3] pmu[3] .
+line[15] facts[1] pmu[1] > line[1] .
+line[15] facts[1] pmu[2] > line[1] .
+line[15] facts[1] pmu[3] > line[1] .
+line[15] facts[2] pmu[1] > line[1] .
+line[15] facts[2] pmu[2] .
+line[15] facts[2] pmu[3] .
+line[15] facts[3] pmu[1] > line[1] .
+line[15] facts[3] pmu[2] .
+line[15] facts[3] pmu[3] .
+line[16] facts[1] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[1] pmu[2] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[10] ~
+line[16] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[17] > line[8] > line[6] > line[15] .
+line[16] facts[2] pmu[2] .
+line[16] facts[2] pmu[3] .
+line[16] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[3] pmu[2] .
+line[16] facts[3] pmu[3] .
+line[17] facts[1] pmu[1] > line[1] > line[7] > line[5] > line[11] pmu[3] .
+line[17] facts[1] pmu[2] > line[1] > line[7] > line[5] > line[11] pmu[3] .
+line[17] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[11] .
+line[17] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] > line[18] pmu[3] > line[15] .
+line[17] facts[2] pmu[2] .
+line[17] facts[2] pmu[3] > line[1] > line[7] > line[5] > line[10] > line[18] > line[15] > line[20] .
+line[17] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[11] pmu[3] .
+line[17] facts[3] pmu[2] .
+line[17] facts[3] pmu[3] .
+line[18] facts[1] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] > line[20] .
+line[18] facts[1] pmu[2] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] > line[17] .
+line[18] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[10] > line[16] > line[8] > line[15] > line[17] .
+line[18] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] > line[20] .
+line[18] facts[2] pmu[2] .
+line[18] facts[2] pmu[3] > line[1] > line[7] > line[5] > line[10] > line[17] > line[15] > line[20] .
+line[18] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[8] > line[20] .
+line[18] facts[3] pmu[2] .
+line[18] facts[3] pmu[3] .
+line[19] facts[1] pmu[1] > line[1] > line[7] .
+line[19] facts[1] pmu[2] > line[1] > line[7] .
+line[19] facts[1] pmu[3] > line[1] > line[7] .
+line[19] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[19] facts[2] pmu[2] .
+line[19] facts[2] pmu[3] .
+line[19] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[19] facts[3] pmu[2] .
+line[19] facts[3] pmu[3] .
+line[20] facts[1] pmu[1] > line[1] > line[7] > line[5] > line[11] .
+line[20] facts[1] pmu[2] > line[1] > line[7] > line[5] > line[11] .
+line[20] facts[1] pmu[3] > line[1] > line[7] > line[5] > line[11] .
+line[20] facts[2] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] .
+line[20] facts[2] pmu[2] .
+line[20] facts[2] pmu[3] .
+line[20] facts[3] pmu[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[16] .
+line[20] facts[3] pmu[2] .
+line[20] facts[3] pmu[3] .
+line[1] facts[1] pmu[1] ds[1] > line[7] .
+line[1] facts[1] pmu[2] ds[1] > line[7] .
+line[1] facts[1] pmu[3] ds[1] > line[7] .
+line[1] facts[2] pmu[1] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[2] pmu[2] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[2] pmu[3] ds[1] > line[7] > line[5] > line[10] .
+line[1] facts[3] pmu[1] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[3] pmu[2] ds[1] > line[7] > line[5] > line[10] pmu[3] .
+line[1] facts[3] pmu[3] ds[1] > line[7] > line[5] > line[10] .
+line[2] facts[1] pmu[1] ds[1] > line[1] > line[16] > line[7] .
+line[2] facts[1] pmu[2] ds[1] > line[1] > line[16] > line[7] .
+line[2] facts[1] pmu[3] ds[1] > line[1] > line[16] > line[7] .
+line[2] facts[2] pmu[1] ds[1] > line[1] facts[1] > line[15] pmu[3] .
+line[2] facts[2] pmu[2] ds[1] > line[1] facts[1] > line[15] pmu[3] .
+line[2] facts[2] pmu[3] ds[1] > line[1] facts[1] > line[15] .
+line[2] facts[3] pmu[1] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[2] facts[3] pmu[2] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[2] facts[3] pmu[3] ds[1] > line[1] facts[1] > line[16] > line[7] .
+line[3] facts[1] pmu[1] ds[1] > line[1] facts[2] > line[7] .
+line[3] facts[1] pmu[2] ds[1] > line[1] facts[2] > line[7] .
+line[3] facts[1] pmu[3] ds[1] > line[1] facts[2] > line[7] .
+line[3] facts[2] pmu[1] ds[1] .
+line[3] facts[2] pmu[2] ds[1] .
+line[3] facts[2] pmu[3] ds[1] .
+line[3] facts[3] pmu[1] ds[1] > facts[2] .
+line[3] facts[3] pmu[2] ds[1] > facts[2] .
+line[3] facts[3] pmu[3] ds[1] > facts[2] .
+line[4] facts[1] pmu[1] ds[1] > line[1] facts[3] > line[7] .
+line[4] facts[1] pmu[2] ds[1] > line[1] facts[3] > line[7] .
+line[4] facts[1] pmu[3] ds[1] > line[1] facts[3] > line[7] .
+line[4] facts[2] pmu[1] ds[1] > facts[3] .
+line[4] facts[2] pmu[2] ds[1] > facts[3] .
+line[4] facts[2] pmu[3] ds[1] > facts[3] .
+line[4] facts[3] pmu[1] ds[1] .
+line[4] facts[3] pmu[2] ds[1] .
+line[4] facts[3] pmu[3] ds[1] .
+line[5] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[10] pmu[3] .
+line[5] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[10] .
+line[5] facts[2] pmu[1] ds[1] .
+line[5] facts[2] pmu[2] ds[1] .
+line[5] facts[2] pmu[3] ds[1] .
+line[5] facts[3] pmu[1] ds[1] .
+line[5] facts[3] pmu[2] ds[1] .
+line[5] facts[3] pmu[3] ds[1] .
+line[6] facts[1] pmu[1] ds[1] > line[1] .
+line[6] facts[1] pmu[2] ds[1] > line[1] .
+line[6] facts[1] pmu[3] ds[1] > line[1] .
+line[6] facts[2] pmu[1] ds[1] .
+line[6] facts[2] pmu[2] ds[1] .
+line[6] facts[2] pmu[3] ds[1] .
+line[6] facts[3] pmu[1] ds[1] .
+line[6] facts[3] pmu[2] ds[1] .
+line[6] facts[3] pmu[3] ds[1] .
+line[7] facts[1] pmu[1] ds[1] > line[1] .
+line[7] facts[1] pmu[2] ds[1] > line[1] .
+line[7] facts[1] pmu[3] ds[1] > line[1] .
+line[7] facts[2] pmu[1] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[2] pmu[2] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[2] pmu[3] ds[1] > line[1] > line[5] > line[10] .
+line[7] facts[3] pmu[1] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[3] pmu[2] ds[1] > line[1] > line[5] > line[10] pmu[3] .
+line[7] facts[3] pmu[3] ds[1] > line[1] > line[5] > line[10] .
+line[8] facts[1] pmu[1] ds[1] > line[1] .
+line[8] facts[1] pmu[2] ds[1] > line[1] .
+line[8] facts[1] pmu[3] ds[1] > line[1] .
+line[8] facts[2] pmu[1] ds[1] .
+line[8] facts[2] pmu[2] ds[1] .
+line[8] facts[2] pmu[3] ds[1] .
+line[8] facts[3] pmu[1] ds[1] .
+line[8] facts[3] pmu[2] ds[1] .
+line[8] facts[3] pmu[3] ds[1] .
+line[9] facts[1] pmu[1] ds[1] > line[1] .
+line[9] facts[1] pmu[2] ds[1] > line[1] .
+line[9] facts[1] pmu[3] ds[1] > line[1] .
+line[9] facts[2] pmu[1] ds[1] .
+line[9] facts[2] pmu[2] ds[1] .
+line[9] facts[2] pmu[3] ds[1] .
+line[9] facts[3] pmu[1] ds[1] .
+line[9] facts[3] pmu[2] ds[1] .
+line[9] facts[3] pmu[3] ds[1] .
+line[10] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > pmu[3] .
+line[10] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > pmu[3] .
+line[10] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] .
+line[10] facts[2] pmu[1] ds[1] .
+line[10] facts[2] pmu[2] ds[1] .
+line[10] facts[2] pmu[3] ds[1] .
+line[10] facts[3] pmu[1] ds[1] .
+line[10] facts[3] pmu[2] ds[1] .
+line[10] facts[3] pmu[3] ds[1] .
+line[11] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > line[13] pmu[3] > line[12] > line[15] .
+line[11] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > line[13] pmu[3] > line[12] > line[15] .
+line[11] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] > line[13] > line[12] > line[15] .
+line[11] facts[2] pmu[1] ds[1] .
+line[11] facts[2] pmu[2] ds[1] .
+line[11] facts[2] pmu[3] ds[1] .
+line[11] facts[3] pmu[1] ds[1] .
+line[11] facts[3] pmu[2] ds[1] .
+line[11] facts[3] pmu[3] ds[1] .
+line[12] facts[1] pmu[1] ds[1] > line[1] > line[7] .
+line[12] facts[1] pmu[2] ds[1] > line[1] > line[7] .
+line[12] facts[1] pmu[3] ds[1] > line[1] > line[7] .
+line[12] facts[2] pmu[1] ds[1] .
+line[12] facts[2] pmu[2] ds[1] .
+line[12] facts[2] pmu[3] ds[1] .
+line[12] facts[3] pmu[1] ds[1] .
+line[12] facts[3] pmu[2] ds[1] .
+line[12] facts[3] pmu[3] ds[1] .
+line[13] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[11] .
+line[13] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > line[10] pmu[3] > line[11] .
+line[13] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] > line[10] > line[11] .
+line[13] facts[2] pmu[1] ds[1] .
+line[13] facts[2] pmu[2] ds[1] .
+line[13] facts[2] pmu[3] ds[1] .
+line[13] facts[3] pmu[1] ds[1] .
+line[13] facts[3] pmu[2] ds[1] .
+line[13] facts[3] pmu[3] ds[1] .
+line[14] facts[1] pmu[1] ds[1] > line[1] > line[7] .
+line[14] facts[1] pmu[2] ds[1] > line[1] > line[7] .
+line[14] facts[1] pmu[3] ds[1] > line[1] > line[7] .
+line[14] facts[2] pmu[1] ds[1] .
+line[14] facts[2] pmu[2] ds[1] .
+line[14] facts[2] pmu[3] ds[1] .
+line[14] facts[3] pmu[1] ds[1] .
+line[14] facts[3] pmu[2] ds[1] .
+line[14] facts[3] pmu[3] ds[1] .
+line[15] facts[1] pmu[1] ds[1] > line[1] .
+line[15] facts[1] pmu[2] ds[1] > line[1] .
+line[15] facts[1] pmu[3] ds[1] > line[1] .
+line[15] facts[2] pmu[1] ds[1] .
+line[15] facts[2] pmu[2] ds[1] .
+line[15] facts[2] pmu[3] ds[1] .
+line[15] facts[3] pmu[1] ds[1] .
+line[15] facts[3] pmu[2] ds[1] .
+line[15] facts[3] pmu[3] ds[1] .
+line[16] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > line[10] pmu[3] ~
+line[16] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] > line[10] ~
+line[16] facts[2] pmu[1] ds[1] .
+line[16] facts[2] pmu[2] ds[1] .
+line[16] facts[2] pmu[3] ds[1] .
+line[16] facts[3] pmu[1] ds[1] .
+line[16] facts[3] pmu[2] ds[1] .
+line[16] facts[3] pmu[3] ds[1] .
+line[17] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > line[10] > line[15] > line[8] pmu[3] ~
+line[17] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > line[10] > line[15] > line[8] pmu[3] ~
+line[17] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] > line[10] > line[15] > line[8] ~
+line[17] facts[2] pmu[1] ds[1] .
+line[17] facts[2] pmu[2] ds[1] .
+line[17] facts[2] pmu[3] ds[1] .
+line[17] facts[3] pmu[1] ds[1] .
+line[17] facts[3] pmu[2] ds[1] .
+line[17] facts[3] pmu[3] ds[1] .
+line[18] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > line[10] > pmu[3] .
+line[18] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > line[10] > pmu[3] .
+line[18] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] > line[10] .
+line[18] facts[2] pmu[1] ds[1] .
+line[18] facts[2] pmu[2] ds[1] .
+line[18] facts[2] pmu[3] ds[1] .
+line[18] facts[3] pmu[1] ds[1] .
+line[18] facts[3] pmu[2] ds[1] .
+line[18] facts[3] pmu[3] ds[1] .
+line[19] facts[1] pmu[1] ds[1] > line[1] > line[7] .
+line[19] facts[1] pmu[2] ds[1] > line[1] > line[7] .
+line[19] facts[1] pmu[3] ds[1] > line[1] > line[7] .
+line[19] facts[2] pmu[1] ds[1] .
+line[19] facts[2] pmu[2] ds[1] .
+line[19] facts[2] pmu[3] ds[1] .
+line[19] facts[3] pmu[1] ds[1] .
+line[19] facts[3] pmu[2] ds[1] .
+line[19] facts[3] pmu[3] ds[1] .
+line[20] facts[1] pmu[1] ds[1] > line[1] > line[7] > line[5] > line[10] > pmu[3] .
+line[20] facts[1] pmu[2] ds[1] > line[1] > line[7] > line[5] > line[10] > pmu[3] .
+line[20] facts[1] pmu[3] ds[1] > line[1] > line[7] > line[5] > line[10] .
+line[20] facts[2] pmu[1] ds[1] .
+line[20] facts[2] pmu[2] ds[1] .
+line[20] facts[2] pmu[3] ds[1] .
+line[20] facts[3] pmu[1] ds[1] .
+line[20] facts[3] pmu[2] ds[1] .
+line[20] facts[3] pmu[3] ds[1] .
