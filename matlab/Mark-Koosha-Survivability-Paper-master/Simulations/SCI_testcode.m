@@ -1,5 +1,5 @@
 clear all
-addpath('D:\matlab\psat\')%get psat
+addpath('D:\GitHub\Sanfan_recovery_model\matlab\psat\') %get psat
 file_name = 'ieee14'%using ieee 14 smart
 MIN_VOLTAGE = 0.9; % Minimum acceptable voltage for loads (in p.u.)
 MAX_VOLTAGE = 1.1; % Maximum acceptable voltage for loads (in p.u.)
@@ -22,30 +22,27 @@ line_flow_limits = FLOW_THRESHOLD * max(ones(Line.n, 1), ...
     abs(line_flows_normal));
 
 
-num_components = 23; % number of components
+num_components = 23; % number of components 20line + 3 FACTS
 
 %construct dataspace for each possible state
-All_states = zeros(2^num_components, num_components);
-for i = 0:(2^num_components - 1) 
+%All_states = zeros(2^num_components, num_components);
+%for i = 0:(2^num_components - 1) 
 
 %following lines are for temperoy testing
-%All_states = zeros(50, num_components)
-%for i = 0:50
+All_states = zeros(50, num_components)
+for i = 0:50
     binary_string = dec2bin(i, num_components);
-    All_states(i + 1, :) = arrayfun(@str2double, binary_string);
+    All_states(i + 1, :) = 1-arrayfun(@str2double, binary_string);
 end
 csi = zeros(length(All_states),1)
 anve = zeros(length(All_states),1)
-for state_case = 71684:length(All_states)
+for state_case = 1:length(All_states)
     j = 1;
     sssc_state = ones(Sssc.n, 1);
     if sum(All_states(state_case, 1:20)) <17
                 continue;
             end
     while j <= FOM_LENGTH
-            if sum(All_states(state_case, 1:20)) >3
-                j = FOM_LENGTH;
-            end
             %% Inject failures:
             % Transmission lines
             Line.store(1:20, end) = All_states(state_case, 1:20);

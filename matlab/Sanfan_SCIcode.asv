@@ -1,0 +1,54 @@
+file_name = 'ieee14'
+%% Define Constants
+FAILURE_SEQ_PATH = 'failure_seq';
+NN_PATH = 'nn';
+LIB_PATH = 'lib';
+addpath(LIB_PATH);
+MIN_VOLTAGE = 0.9; % Minimum acceptable voltage for loads (in p.u.)
+MAX_VOLTAGE = 1.1; % Maximum acceptable voltage for loads (in p.u.)
+FLOW_THRESHOLD = 1.25; % Maximum capacity of lines (in p.u.)
+% To override out-of-range outputs of neural network
+FACTS_MIN_SETTING = 0;
+FACTS_MAX_SETTING = 70;
+FOM_LENGTH = 25;
+T_E = round(FOM_LENGTH / 10); % Time when initial failures are injected
+
+%% Initialize PSAT
+warning off all
+initpsat
+clpsat.mesg = 0; % Do not display message on MATLAB workspace
+clpsat.readfile = 0; % Do not read input before running power flow
+runpsat(file_name, 'data'); % Load data file
+Settings.pfsolver = 6; % Simple robust method
+runpsat pf % Run powr flow analysis
+[line_flows_normal, ~, ~, ~] = fm_flows('bus');
+sssc_default_settings = Sssc.con(:, 6);
+line_flow_limits = FLOW_THRESHOLD * max(ones(Line.n, 1), ...
+    abs(line_flows_normal));
+
+%% Specify output 
+% fid:
+%-----
+% 0: No text output
+% 1: Print output to the workspace
+% fopen('OUTPUT_FILE_NAME', 'w'): Print output to specified file
+fid = fopen(fullfile(FAILURE_SEQ_PATH, [file_name, '.txt']), 'w');
+
+%% Initialize failure sequences
+fields = {'line', 'facts', 'pmu', 'ds_facts', 'pmu_ds', 'ds'};
+if ~all(isfield(initial_failures, fields))
+    closepsat
+    if (fid ~= 0 && fid ~= 1)
+        fclose(fid);
+    end
+    error('Missing fields in initial failures structure');
+end
+failure_seq = struct();
+fprintf('Constructing failure cases ...\n');
+for i = 1 : length(initial_failures)
+    for j = 1 : length(fields)
+        failure_seq(i).(fields{j}) = [repmat({[]}, 1, T_E - 1), ...
+            initial_failures(i).(fields{j}), ...
+            repmat({[]}, 1, FOM_LENGTH - T_E)];
+    end
+end
