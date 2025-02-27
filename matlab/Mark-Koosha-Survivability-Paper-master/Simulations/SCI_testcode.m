@@ -75,3 +75,7 @@ for state_case = 1:length(All_states)
     Line.store(:, end) = ones(20, 1);
     Sssc.store(:, end) = ones(3, 1);
 end
+
+
+writematrix(anve, 'anve.txt')
+writematrix(csi, 'csi.txt')
