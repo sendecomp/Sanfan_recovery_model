@@ -1,0 +1,1722 @@
+line[1] > line[2] > pmu[1  3] .
+line[2] > line[1] > pmu[1  3] .
+line[3] .
+line[4] > line[1] .
+line[5] > line[9] > line[8] > pmu[2] .
+line[6] .
+line[7] .
+line[8] .
+line[9] .
+line[10] > facts[1] .
+line[11] .
+line[12] .
+line[13] .
+line[14] .
+line[15] .
+line[16] .
+line[17] .
+line[18] .
+line[19] .
+line[20] .
+line[21] .
+line[22] .
+line[23] .
+line[24] .
+line[25] .
+line[26] .
+line[27] .
+line[28] .
+line[29] .
+line[30] .
+line[31] .
+line[32] .
+line[33] .
+line[34] .
+line[35] .
+line[36] > facts[2] .
+line[37] .
+line[38] > facts[3] .
+line[39] .
+line[40] > facts[4] .
+line[41] > facts[5] .
+line[1] pmu[1] > line[2] .
+line[1] pmu[2] > line[2] ~
+line[1] pmu[3] > line[2] ~
+line[1] pmu[4] > line[2] > pmu[1] .
+line[1] pmu[5] > line[2] > line[10] pmu[1  3] > facts[1] pmu[4  6] .
+line[1] pmu[6] > line[2] > pmu[1] > line[29] pmu[3] .
+line[2] pmu[1] > line[1] .
+line[2] pmu[2] > line[1] ~
+line[2] pmu[3] > line[1] ~
+line[2] pmu[4] > line[1] > pmu[1] .
+line[2] pmu[5] > line[1] > line[10] pmu[1  3] > facts[1] pmu[4  6] .
+line[2] pmu[6] > line[1] > pmu[1] > line[29] pmu[3] .
+line[3] pmu[1] .
+line[3] pmu[2] .
+line[3] pmu[3] .
+line[3] pmu[4] .
+line[3] pmu[5] .
+line[3] pmu[6] .
+line[4] pmu[1] > line[1] ~
+line[4] pmu[2] > line[1] .
+line[4] pmu[3] > line[1] .
+line[4] pmu[4] > line[1] > line[7] pmu[3  5  6] ~
+line[4] pmu[5] > line[1] .
+line[4] pmu[6] > line[1] .
+line[5] pmu[1] > line[9] > line[8] > pmu[2] .
+line[5] pmu[2] > line[9] > line[8] .
+line[5] pmu[3] > line[9] > line[8] > pmu[2] .
+line[5] pmu[4] > line[9] > line[8] > pmu[2] .
+line[5] pmu[5] > line[9] > line[8] > pmu[2] .
+line[5] pmu[6] > line[9] > line[8] > pmu[2] .
+line[6] pmu[1] .
+line[6] pmu[2] .
+line[6] pmu[3] .
+line[6] pmu[4] .
+line[6] pmu[5] .
+line[6] pmu[6] .
+line[7] pmu[1] .
+line[7] pmu[2] .
+line[7] pmu[3] .
+line[7] pmu[4] .
+line[7] pmu[5] .
+line[7] pmu[6] .
+line[8] pmu[1] .
+line[8] pmu[2] .
+line[8] pmu[3] .
+line[8] pmu[4] .
+line[8] pmu[5] .
+line[8] pmu[6] .
+line[9] pmu[1] .
+line[9] pmu[2] .
+line[9] pmu[3] .
+line[9] pmu[4] .
+line[9] pmu[5] .
+line[9] pmu[6] .
+line[10] pmu[1] > facts[1] .
+line[10] pmu[2] > facts[1] .
+line[10] pmu[3] > facts[1] .
+line[10] pmu[4] > facts[1] .
+line[10] pmu[5] > facts[1] .
+line[10] pmu[6] > facts[1] .
+line[11] pmu[1] .
+line[11] pmu[2] .
+line[11] pmu[3] .
+line[11] pmu[4] .
+line[11] pmu[5] .
+line[11] pmu[6] .
+line[12] pmu[1] .
+line[12] pmu[2] .
+line[12] pmu[3] .
+line[12] pmu[4] .
+line[12] pmu[5] .
+line[12] pmu[6] .
+line[13] pmu[1] .
+line[13] pmu[2] .
+line[13] pmu[3] .
+line[13] pmu[4] .
+line[13] pmu[5] .
+line[13] pmu[6] .
+line[14] pmu[1] .
+line[14] pmu[2] .
+line[14] pmu[3] .
+line[14] pmu[4] .
+line[14] pmu[5] .
+line[14] pmu[6] .
+line[15] pmu[1] .
+line[15] pmu[2] .
+line[15] pmu[3] .
+line[15] pmu[4] .
+line[15] pmu[5] .
+line[15] pmu[6] .
+line[16] pmu[1] .
+line[16] pmu[2] .
+line[16] pmu[3] .
+line[16] pmu[4] .
+line[16] pmu[5] .
+line[16] pmu[6] .
+line[17] pmu[1] .
+line[17] pmu[2] .
+line[17] pmu[3] .
+line[17] pmu[4] .
+line[17] pmu[5] .
+line[17] pmu[6] .
+line[18] pmu[1] .
+line[18] pmu[2] .
+line[18] pmu[3] .
+line[18] pmu[4] .
+line[18] pmu[5] .
+line[18] pmu[6] .
+line[19] pmu[1] .
+line[19] pmu[2] .
+line[19] pmu[3] .
+line[19] pmu[4] .
+line[19] pmu[5] .
+line[19] pmu[6] .
+line[20] pmu[1] .
+line[20] pmu[2] .
+line[20] pmu[3] .
+line[20] pmu[4] .
+line[20] pmu[5] .
+line[20] pmu[6] .
+line[21] pmu[1] .
+line[21] pmu[2] .
+line[21] pmu[3] .
+line[21] pmu[4] .
+line[21] pmu[5] .
+line[21] pmu[6] .
+line[22] pmu[1] .
+line[22] pmu[2] .
+line[22] pmu[3] .
+line[22] pmu[4] .
+line[22] pmu[5] .
+line[22] pmu[6] .
+line[23] pmu[1] .
+line[23] pmu[2] .
+line[23] pmu[3] .
+line[23] pmu[4] .
+line[23] pmu[5] .
+line[23] pmu[6] .
+line[24] pmu[1] .
+line[24] pmu[2] .
+line[24] pmu[3] .
+line[24] pmu[4] .
+line[24] pmu[5] .
+line[24] pmu[6] .
+line[25] pmu[1] .
+line[25] pmu[2] .
+line[25] pmu[3] .
+line[25] pmu[4] .
+line[25] pmu[5] .
+line[25] pmu[6] .
+line[26] pmu[1] .
+line[26] pmu[2] .
+line[26] pmu[3] .
+line[26] pmu[4] .
+line[26] pmu[5] .
+line[26] pmu[6] .
+line[27] pmu[1] .
+line[27] pmu[2] .
+line[27] pmu[3] .
+line[27] pmu[4] .
+line[27] pmu[5] .
+line[27] pmu[6] .
+line[28] pmu[1] .
+line[28] pmu[2] .
+line[28] pmu[3] .
+line[28] pmu[4] .
+line[28] pmu[5] .
+line[28] pmu[6] .
+line[29] pmu[1] .
+line[29] pmu[2] .
+line[29] pmu[3] .
+line[29] pmu[4] .
+line[29] pmu[5] .
+line[29] pmu[6] .
+line[30] pmu[1] .
+line[30] pmu[2] .
+line[30] pmu[3] .
+line[30] pmu[4] .
+line[30] pmu[5] .
+line[30] pmu[6] .
+line[31] pmu[1] .
+line[31] pmu[2] .
+line[31] pmu[3] .
+line[31] pmu[4] .
+line[31] pmu[5] .
+line[31] pmu[6] .
+line[32] pmu[1] .
+line[32] pmu[2] .
+line[32] pmu[3] .
+line[32] pmu[4] .
+line[32] pmu[5] .
+line[32] pmu[6] .
+line[33] pmu[1] .
+line[33] pmu[2] .
+line[33] pmu[3] .
+line[33] pmu[4] .
+line[33] pmu[5] .
+line[33] pmu[6] .
+line[34] pmu[1] .
+line[34] pmu[2] .
+line[34] pmu[3] .
+line[34] pmu[4] .
+line[34] pmu[5] .
+line[34] pmu[6] .
+line[35] pmu[1] .
+line[35] pmu[2] .
+line[35] pmu[3] .
+line[35] pmu[4] .
+line[35] pmu[5] .
+line[35] pmu[6] .
+line[36] pmu[1] > facts[2] .
+line[36] pmu[2] > facts[2] .
+line[36] pmu[3] > facts[2] .
+line[36] pmu[4] > facts[2] .
+line[36] pmu[5] > facts[2] .
+line[36] pmu[6] > facts[2] .
+line[37] pmu[1] .
+line[37] pmu[2] .
+line[37] pmu[3] .
+line[37] pmu[4] .
+line[37] pmu[5] .
+line[37] pmu[6] .
+line[38] pmu[1] > facts[3] .
+line[38] pmu[2] > facts[3] .
+line[38] pmu[3] > facts[3] .
+line[38] pmu[4] > facts[3] .
+line[38] pmu[5] > facts[3] .
+line[38] pmu[6] > facts[3] .
+line[39] pmu[1] .
+line[39] pmu[2] .
+line[39] pmu[3] .
+line[39] pmu[4] .
+line[39] pmu[5] .
+line[39] pmu[6] .
+line[40] pmu[1] > facts[4] .
+line[40] pmu[2] > facts[4] .
+line[40] pmu[3] > facts[4] .
+line[40] pmu[4] > facts[4] .
+line[40] pmu[5] > facts[4] .
+line[40] pmu[6] > facts[4] .
+line[41] pmu[1] > facts[5] .
+line[41] pmu[2] > facts[5] .
+line[41] pmu[3] > facts[5] .
+line[41] pmu[4] > facts[5] .
+line[41] pmu[5] > facts[5] .
+line[41] pmu[6] > facts[5] .
+line[1] facts[1] > line[2] > pmu[1  3  4  5  6] .
+line[1] facts[2] > line[2] > pmu[1  3  4  5  6] .
+line[1] facts[3] > line[2] ~
+line[1] facts[4] > line[2] > pmu[1  3] > line[29] pmu[6] .
+line[1] facts[5] > line[2] ~
+line[2] facts[1] > line[1] > pmu[1  3  4  5  6] .
+line[2] facts[2] > line[1] > pmu[1  3  4  5  6] .
+line[2] facts[3] > line[1] ~
+line[2] facts[4] > line[1] > pmu[1  3] > line[29] pmu[6] .
+line[2] facts[5] > line[1] ~
+line[3] facts[1] .
+line[3] facts[2] .
+line[3] facts[3] .
+line[3] facts[4] .
+line[3] facts[5] .
+line[4] facts[1] > line[1] > line[9] pmu[3] .
+line[4] facts[2] > line[1] .
+line[4] facts[3] > line[1] > line[29] .
+line[4] facts[4] > line[1] > pmu[3  4  5  6] .
+line[4] facts[5] > line[1] > line[7] .
+line[5] facts[1] > line[9] > line[8] > pmu[2] .
+line[5] facts[2] > line[9] > line[8] > pmu[2] .
+line[5] facts[3] > line[9] > line[8] > pmu[2] .
+line[5] facts[4] > line[9] > line[8] > pmu[2] .
+line[5] facts[5] > line[9] > line[8] > pmu[2] .
+line[6] facts[1] .
+line[6] facts[2] .
+line[6] facts[3] .
+line[6] facts[4] .
+line[6] facts[5] .
+line[7] facts[1] .
+line[7] facts[2] .
+line[7] facts[3] .
+line[7] facts[4] .
+line[7] facts[5] .
+line[8] facts[1] .
+line[8] facts[2] .
+line[8] facts[3] .
+line[8] facts[4] .
+line[8] facts[5] .
+line[9] facts[1] .
+line[9] facts[2] .
+line[9] facts[3] .
+line[9] facts[4] .
+line[9] facts[5] .
+line[10] facts[1] .
+line[10] facts[2] > facts[1] .
+line[10] facts[3] > facts[1] .
+line[10] facts[4] > facts[1] .
+line[10] facts[5] > facts[1] .
+line[11] facts[1] .
+line[11] facts[2] .
+line[11] facts[3] .
+line[11] facts[4] .
+line[11] facts[5] .
+line[12] facts[1] .
+line[12] facts[2] .
+line[12] facts[3] .
+line[12] facts[4] .
+line[12] facts[5] .
+line[13] facts[1] .
+line[13] facts[2] .
+line[13] facts[3] .
+line[13] facts[4] .
+line[13] facts[5] .
+line[14] facts[1] .
+line[14] facts[2] .
+line[14] facts[3] .
+line[14] facts[4] .
+line[14] facts[5] .
+line[15] facts[1] .
+line[15] facts[2] .
+line[15] facts[3] .
+line[15] facts[4] .
+line[15] facts[5] .
+line[16] facts[1] .
+line[16] facts[2] .
+line[16] facts[3] .
+line[16] facts[4] .
+line[16] facts[5] .
+line[17] facts[1] .
+line[17] facts[2] .
+line[17] facts[3] .
+line[17] facts[4] .
+line[17] facts[5] .
+line[18] facts[1] .
+line[18] facts[2] .
+line[18] facts[3] .
+line[18] facts[4] .
+line[18] facts[5] .
+line[19] facts[1] .
+line[19] facts[2] .
+line[19] facts[3] .
+line[19] facts[4] .
+line[19] facts[5] .
+line[20] facts[1] .
+line[20] facts[2] .
+line[20] facts[3] .
+line[20] facts[4] .
+line[20] facts[5] .
+line[21] facts[1] .
+line[21] facts[2] .
+line[21] facts[3] .
+line[21] facts[4] .
+line[21] facts[5] .
+line[22] facts[1] .
+line[22] facts[2] .
+line[22] facts[3] .
+line[22] facts[4] .
+line[22] facts[5] .
+line[23] facts[1] .
+line[23] facts[2] .
+line[23] facts[3] .
+line[23] facts[4] .
+line[23] facts[5] .
+line[24] facts[1] .
+line[24] facts[2] .
+line[24] facts[3] .
+line[24] facts[4] .
+line[24] facts[5] .
+line[25] facts[1] .
+line[25] facts[2] .
+line[25] facts[3] .
+line[25] facts[4] .
+line[25] facts[5] .
+line[26] facts[1] .
+line[26] facts[2] .
+line[26] facts[3] .
+line[26] facts[4] .
+line[26] facts[5] .
+line[27] facts[1] .
+line[27] facts[2] .
+line[27] facts[3] .
+line[27] facts[4] .
+line[27] facts[5] .
+line[28] facts[1] .
+line[28] facts[2] .
+line[28] facts[3] .
+line[28] facts[4] .
+line[28] facts[5] .
+line[29] facts[1] .
+line[29] facts[2] .
+line[29] facts[3] .
+line[29] facts[4] .
+line[29] facts[5] .
+line[30] facts[1] .
+line[30] facts[2] .
+line[30] facts[3] .
+line[30] facts[4] .
+line[30] facts[5] .
+line[31] facts[1] .
+line[31] facts[2] .
+line[31] facts[3] .
+line[31] facts[4] .
+line[31] facts[5] .
+line[32] facts[1] .
+line[32] facts[2] .
+line[32] facts[3] .
+line[32] facts[4] .
+line[32] facts[5] .
+line[33] facts[1] .
+line[33] facts[2] .
+line[33] facts[3] .
+line[33] facts[4] .
+line[33] facts[5] .
+line[34] facts[1] .
+line[34] facts[2] .
+line[34] facts[3] .
+line[34] facts[4] .
+line[34] facts[5] .
+line[35] facts[1] .
+line[35] facts[2] .
+line[35] facts[3] .
+line[35] facts[4] .
+line[35] facts[5] .
+line[36] facts[1] > facts[2] .
+line[36] facts[2] .
+line[36] facts[3] > facts[2] .
+line[36] facts[4] > facts[2] .
+line[36] facts[5] > facts[2] .
+line[37] facts[1] .
+line[37] facts[2] .
+line[37] facts[3] .
+line[37] facts[4] .
+line[37] facts[5] .
+line[38] facts[1] > facts[3] .
+line[38] facts[2] > facts[3] .
+line[38] facts[3] .
+line[38] facts[4] > facts[3] .
+line[38] facts[5] > facts[3] .
+line[39] facts[1] .
+line[39] facts[2] .
+line[39] facts[3] .
+line[39] facts[4] .
+line[39] facts[5] .
+line[40] facts[1] > facts[4] .
+line[40] facts[2] > facts[4] .
+line[40] facts[3] > facts[4] .
+line[40] facts[4] .
+line[40] facts[5] > facts[4] .
+line[41] facts[1] > facts[5] .
+line[41] facts[2] > facts[5] .
+line[41] facts[3] > facts[5] .
+line[41] facts[4] > facts[5] .
+line[41] facts[5] .
+line[1] facts[1] pmu[1] > line[2] > pmu[3  4  5  6] .
+line[1] facts[1] pmu[2] > line[2] > pmu[1  3  4  5  6] .
+line[1] facts[1] pmu[3] > line[2] > pmu[1  4  5  6] .
+line[1] facts[1] pmu[4] > line[2] > pmu[1  3  5  6] .
+line[1] facts[1] pmu[5] > line[2] > pmu[1  3  4  6] .
+line[1] facts[1] pmu[6] > line[2] > pmu[1  3  4  5] .
+line[1] facts[2] pmu[1] > line[2] > line[10] pmu[3  4  5  6] > facts[1] .
+line[1] facts[2] pmu[2] > line[2] > line[10] pmu[1] ~
+line[1] facts[2] pmu[3] > line[2] > line[7] pmu[1  4  5  6] > line[29] .
+line[1] facts[2] pmu[4] > line[2] > line[29] pmu[1  3  5  6] .
+line[1] facts[2] pmu[5] > line[2] > pmu[1  3] ~
+line[1] facts[2] pmu[6] > line[2] > line[27] pmu[1  3  5] .
+line[1] facts[3] pmu[1] > line[2] ~
+line[1] facts[3] pmu[2] > line[2] ~
+line[1] facts[3] pmu[3] > line[2] ~
+line[1] facts[3] pmu[4] > line[2] ~
+line[1] facts[3] pmu[5] > line[2] ~
+line[1] facts[3] pmu[6] > line[2] > pmu[1] > line[14] > line[31] pmu[3  4  5] .
+line[1] facts[4] pmu[1] > line[2] > line[10] > line[41] facts[1] > facts[5] pmu[3  4  5] .
+line[1] facts[4] pmu[2] > line[2] > line[23] pmu[1  3  4  5  6] .
+line[1] facts[4] pmu[3] > line[2] > line[24] pmu[1  4  5  6] ~
+line[1] facts[4] pmu[4] > line[2] > line[27] pmu[1  3  5] ~
+line[1] facts[4] pmu[5] > line[2] > line[18] pmu[1  3  4  6] ~
+line[1] facts[4] pmu[6] > line[2] > pmu[1] ~
+line[1] facts[5] pmu[1] > line[2] ~
+line[1] facts[5] pmu[2] > line[2] ~
+line[1] facts[5] pmu[3] > line[2] ~
+line[1] facts[5] pmu[4] > line[2] ~
+line[1] facts[5] pmu[5] > line[2] ~
+line[1] facts[5] pmu[6] > line[2] ~
+line[2] facts[1] pmu[1] > line[1] > pmu[3  4  5  6] .
+line[2] facts[1] pmu[2] > line[1] > pmu[1  3  4  5  6] .
+line[2] facts[1] pmu[3] > line[1] > pmu[1  4  5  6] .
+line[2] facts[1] pmu[4] > line[1] > pmu[1  3  5  6] .
+line[2] facts[1] pmu[5] > line[1] > pmu[1  3  4  6] .
+line[2] facts[1] pmu[6] > line[1] > pmu[1  3  4  5] .
+line[2] facts[2] pmu[1] > line[1] > line[10] pmu[3  4  5  6] > facts[1] .
+line[2] facts[2] pmu[2] > line[1] > line[10] pmu[1] ~
+line[2] facts[2] pmu[3] > line[1] > line[7] pmu[1  4  5  6] > line[29] .
+line[2] facts[2] pmu[4] > line[1] > line[29] pmu[1  3  5  6] .
+line[2] facts[2] pmu[5] > line[1] > pmu[1  3] ~
+line[2] facts[2] pmu[6] > line[1] > line[27] pmu[1  3  5] .
+line[2] facts[3] pmu[1] > line[1] ~
+line[2] facts[3] pmu[2] > line[1] ~
+line[2] facts[3] pmu[3] > line[1] ~
+line[2] facts[3] pmu[4] > line[1] ~
+line[2] facts[3] pmu[5] > line[1] ~
+line[2] facts[3] pmu[6] > line[1] > pmu[1] > line[14] > line[31] pmu[3  4  5] .
+line[2] facts[4] pmu[1] > line[1] > line[10] > line[41] facts[1] > facts[5] pmu[3  4  5] .
+line[2] facts[4] pmu[2] > line[1] > line[23] pmu[1  3  4  5  6] .
+line[2] facts[4] pmu[3] > line[1] > line[24] pmu[1  4  5  6] ~
+line[2] facts[4] pmu[4] > line[1] > line[27] pmu[1  3  5] ~
+line[2] facts[4] pmu[5] > line[1] > line[18] pmu[1  3  4  6] ~
+line[2] facts[4] pmu[6] > line[1] > pmu[1] ~
+line[2] facts[5] pmu[1] > line[1] ~
+line[2] facts[5] pmu[2] > line[1] ~
+line[2] facts[5] pmu[3] > line[1] ~
+line[2] facts[5] pmu[4] > line[1] ~
+line[2] facts[5] pmu[5] > line[1] ~
+line[2] facts[5] pmu[6] > line[1] ~
+line[3] facts[1] pmu[1] .
+line[3] facts[1] pmu[2] .
+line[3] facts[1] pmu[3] .
+line[3] facts[1] pmu[4] .
+line[3] facts[1] pmu[5] .
+line[3] facts[1] pmu[6] .
+line[3] facts[2] pmu[1] .
+line[3] facts[2] pmu[2] .
+line[3] facts[2] pmu[3] .
+line[3] facts[2] pmu[4] .
+line[3] facts[2] pmu[5] .
+line[3] facts[2] pmu[6] .
+line[3] facts[3] pmu[1] .
+line[3] facts[3] pmu[2] .
+line[3] facts[3] pmu[3] .
+line[3] facts[3] pmu[4] .
+line[3] facts[3] pmu[5] .
+line[3] facts[3] pmu[6] .
+line[3] facts[4] pmu[1] .
+line[3] facts[4] pmu[2] .
+line[3] facts[4] pmu[3] .
+line[3] facts[4] pmu[4] .
+line[3] facts[4] pmu[5] .
+line[3] facts[4] pmu[6] .
+line[3] facts[5] pmu[1] .
+line[3] facts[5] pmu[2] .
+line[3] facts[5] pmu[3] .
+line[3] facts[5] pmu[4] .
+line[3] facts[5] pmu[5] .
+line[3] facts[5] pmu[6] .
+line[4] facts[1] pmu[1] > line[1] > line[29] pmu[3  4  5  6] .
+line[4] facts[1] pmu[2] > line[1] > line[9] pmu[3] .
+line[4] facts[1] pmu[3] > line[1] .
+line[4] facts[1] pmu[4] > line[1] .
+line[4] facts[1] pmu[5] > line[1] > line[26] pmu[3  4  6] > line[29] ~
+line[4] facts[1] pmu[6] > line[1] .
+line[4] facts[2] pmu[1] > line[1] > line[10] > facts[1] pmu[3  4  5  6] .
+line[4] facts[2] pmu[2] > line[1] > line[29] .
+line[4] facts[2] pmu[3] > line[1] .
+line[4] facts[2] pmu[4] > line[1] > line[10] > facts[1] pmu[3  5  6] .
+line[4] facts[2] pmu[5] > line[1] > line[10] pmu[3  4] > facts[1] pmu[6] .
+line[4] facts[2] pmu[6] > line[1] > line[10] > facts[1] pmu[3  4  5] .
+line[4] facts[3] pmu[1] > line[1] ~
+line[4] facts[3] pmu[2] > line[1] .
+line[4] facts[3] pmu[3] > line[1] > line[10] > facts[1] pmu[4  5  6] .
+line[4] facts[3] pmu[4] > line[1] > line[14] pmu[3  5  6] > line[29] .
+line[4] facts[3] pmu[5] > line[1] > line[10] pmu[3] > facts[1] pmu[4  6] .
+line[4] facts[3] pmu[6] > line[1] > pmu[3] > line[10] > facts[1] pmu[4  5] .
+line[4] facts[4] pmu[1] > line[1] .
+line[4] facts[4] pmu[2] > line[1] > line[7] ~
+line[4] facts[4] pmu[3] > line[1] .
+line[4] facts[4] pmu[4] > line[1] .
+line[4] facts[4] pmu[5] > line[1] > pmu[3] > line[5] pmu[4  6] ~
+line[4] facts[4] pmu[6] > line[1] .
+line[4] facts[5] pmu[1] > line[1] > line[29] > pmu[3  4  5  6] .
+line[4] facts[5] pmu[2] > line[1] > pmu[3] .
+line[4] facts[5] pmu[3] > line[1] .
+line[4] facts[5] pmu[4] > line[1] .
+line[4] facts[5] pmu[5] > line[1] .
+line[4] facts[5] pmu[6] > line[1] > line[10] pmu[3] > line[29] facts[1] pmu[4  5] > line[7] > line[41] .
+line[5] facts[1] pmu[1] > line[9] > line[8] > pmu[2] .
+line[5] facts[1] pmu[2] > line[9] > line[8] .
+line[5] facts[1] pmu[3] > line[9] > line[8] > pmu[2] .
+line[5] facts[1] pmu[4] > line[9] > line[8] > pmu[2] .
+line[5] facts[1] pmu[5] > line[9] > line[8] > pmu[2] .
+line[5] facts[1] pmu[6] > line[9] > line[8] > pmu[2] .
+line[5] facts[2] pmu[1] > line[9] > line[8] > pmu[2] .
+line[5] facts[2] pmu[2] > line[9] > line[8] .
+line[5] facts[2] pmu[3] > line[9] > line[8] > pmu[2] .
+line[5] facts[2] pmu[4] > line[9] > line[8] > pmu[2] .
+line[5] facts[2] pmu[5] > line[9] > line[8] > pmu[2] .
+line[5] facts[2] pmu[6] > line[9] > line[8] > pmu[2] .
+line[5] facts[3] pmu[1] > line[9] > line[8] > pmu[2] .
+line[5] facts[3] pmu[2] > line[9] > line[8] .
+line[5] facts[3] pmu[3] > line[9] > line[8] > pmu[2] .
+line[5] facts[3] pmu[4] > line[9] > line[8] > pmu[2] .
+line[5] facts[3] pmu[5] > line[9] > line[8] > pmu[2] .
+line[5] facts[3] pmu[6] > line[9] > line[8] > pmu[2] .
+line[5] facts[4] pmu[1] > line[9] > line[8] > pmu[2] .
+line[5] facts[4] pmu[2] > line[9] > line[8] .
+line[5] facts[4] pmu[3] > line[9] > line[8] > pmu[2] .
+line[5] facts[4] pmu[4] > line[9] > line[8] > pmu[2] .
+line[5] facts[4] pmu[5] > line[9] > line[8] > pmu[2] .
+line[5] facts[4] pmu[6] > line[9] > line[8] > pmu[2] .
+line[5] facts[5] pmu[1] > line[9] > line[8] > pmu[2] .
+line[5] facts[5] pmu[2] > line[9] > line[8] .
+line[5] facts[5] pmu[3] > line[9] > line[8] > pmu[2] .
+line[5] facts[5] pmu[4] > line[9] > line[8] > pmu[2] .
+line[5] facts[5] pmu[5] > line[9] > line[8] > pmu[2] .
+line[5] facts[5] pmu[6] > line[9] > line[8] > pmu[2] .
+line[6] facts[1] pmu[1] .
+line[6] facts[1] pmu[2] .
+line[6] facts[1] pmu[3] .
+line[6] facts[1] pmu[4] .
+line[6] facts[1] pmu[5] .
+line[6] facts[1] pmu[6] .
+line[6] facts[2] pmu[1] .
+line[6] facts[2] pmu[2] .
+line[6] facts[2] pmu[3] .
+line[6] facts[2] pmu[4] .
+line[6] facts[2] pmu[5] .
+line[6] facts[2] pmu[6] .
+line[6] facts[3] pmu[1] .
+line[6] facts[3] pmu[2] .
+line[6] facts[3] pmu[3] .
+line[6] facts[3] pmu[4] .
+line[6] facts[3] pmu[5] .
+line[6] facts[3] pmu[6] .
+line[6] facts[4] pmu[1] .
+line[6] facts[4] pmu[2] .
+line[6] facts[4] pmu[3] .
+line[6] facts[4] pmu[4] .
+line[6] facts[4] pmu[5] .
+line[6] facts[4] pmu[6] .
+line[6] facts[5] pmu[1] .
+line[6] facts[5] pmu[2] .
+line[6] facts[5] pmu[3] .
+line[6] facts[5] pmu[4] .
+line[6] facts[5] pmu[5] .
+line[6] facts[5] pmu[6] .
+line[7] facts[1] pmu[1] .
+line[7] facts[1] pmu[2] .
+line[7] facts[1] pmu[3] .
+line[7] facts[1] pmu[4] .
+line[7] facts[1] pmu[5] .
+line[7] facts[1] pmu[6] .
+line[7] facts[2] pmu[1] .
+line[7] facts[2] pmu[2] .
+line[7] facts[2] pmu[3] .
+line[7] facts[2] pmu[4] .
+line[7] facts[2] pmu[5] .
+line[7] facts[2] pmu[6] .
+line[7] facts[3] pmu[1] .
+line[7] facts[3] pmu[2] .
+line[7] facts[3] pmu[3] .
+line[7] facts[3] pmu[4] .
+line[7] facts[3] pmu[5] .
+line[7] facts[3] pmu[6] .
+line[7] facts[4] pmu[1] .
+line[7] facts[4] pmu[2] .
+line[7] facts[4] pmu[3] .
+line[7] facts[4] pmu[4] .
+line[7] facts[4] pmu[5] .
+line[7] facts[4] pmu[6] .
+line[7] facts[5] pmu[1] .
+line[7] facts[5] pmu[2] .
+line[7] facts[5] pmu[3] .
+line[7] facts[5] pmu[4] .
+line[7] facts[5] pmu[5] .
+line[7] facts[5] pmu[6] .
+line[8] facts[1] pmu[1] .
+line[8] facts[1] pmu[2] .
+line[8] facts[1] pmu[3] .
+line[8] facts[1] pmu[4] .
+line[8] facts[1] pmu[5] .
+line[8] facts[1] pmu[6] .
+line[8] facts[2] pmu[1] .
+line[8] facts[2] pmu[2] .
+line[8] facts[2] pmu[3] .
+line[8] facts[2] pmu[4] .
+line[8] facts[2] pmu[5] .
+line[8] facts[2] pmu[6] .
+line[8] facts[3] pmu[1] .
+line[8] facts[3] pmu[2] .
+line[8] facts[3] pmu[3] .
+line[8] facts[3] pmu[4] .
+line[8] facts[3] pmu[5] .
+line[8] facts[3] pmu[6] .
+line[8] facts[4] pmu[1] .
+line[8] facts[4] pmu[2] .
+line[8] facts[4] pmu[3] .
+line[8] facts[4] pmu[4] .
+line[8] facts[4] pmu[5] .
+line[8] facts[4] pmu[6] .
+line[8] facts[5] pmu[1] .
+line[8] facts[5] pmu[2] .
+line[8] facts[5] pmu[3] .
+line[8] facts[5] pmu[4] .
+line[8] facts[5] pmu[5] .
+line[8] facts[5] pmu[6] .
+line[9] facts[1] pmu[1] .
+line[9] facts[1] pmu[2] .
+line[9] facts[1] pmu[3] .
+line[9] facts[1] pmu[4] .
+line[9] facts[1] pmu[5] .
+line[9] facts[1] pmu[6] .
+line[9] facts[2] pmu[1] .
+line[9] facts[2] pmu[2] .
+line[9] facts[2] pmu[3] .
+line[9] facts[2] pmu[4] .
+line[9] facts[2] pmu[5] .
+line[9] facts[2] pmu[6] .
+line[9] facts[3] pmu[1] .
+line[9] facts[3] pmu[2] .
+line[9] facts[3] pmu[3] .
+line[9] facts[3] pmu[4] .
+line[9] facts[3] pmu[5] .
+line[9] facts[3] pmu[6] .
+line[9] facts[4] pmu[1] .
+line[9] facts[4] pmu[2] .
+line[9] facts[4] pmu[3] .
+line[9] facts[4] pmu[4] .
+line[9] facts[4] pmu[5] .
+line[9] facts[4] pmu[6] .
+line[9] facts[5] pmu[1] .
+line[9] facts[5] pmu[2] .
+line[9] facts[5] pmu[3] .
+line[9] facts[5] pmu[4] .
+line[9] facts[5] pmu[5] .
+line[9] facts[5] pmu[6] .
+line[10] facts[1] pmu[1] .
+line[10] facts[1] pmu[2] .
+line[10] facts[1] pmu[3] .
+line[10] facts[1] pmu[4] .
+line[10] facts[1] pmu[5] .
+line[10] facts[1] pmu[6] .
+line[10] facts[2] pmu[1] > facts[1] .
+line[10] facts[2] pmu[2] > facts[1] .
+line[10] facts[2] pmu[3] > facts[1] .
+line[10] facts[2] pmu[4] > facts[1] .
+line[10] facts[2] pmu[5] > facts[1] .
+line[10] facts[2] pmu[6] > facts[1] .
+line[10] facts[3] pmu[1] > facts[1] .
+line[10] facts[3] pmu[2] > facts[1] .
+line[10] facts[3] pmu[3] > facts[1] .
+line[10] facts[3] pmu[4] > facts[1] .
+line[10] facts[3] pmu[5] > facts[1] .
+line[10] facts[3] pmu[6] > facts[1] .
+line[10] facts[4] pmu[1] > facts[1] .
+line[10] facts[4] pmu[2] > facts[1] .
+line[10] facts[4] pmu[3] > facts[1] .
+line[10] facts[4] pmu[4] > facts[1] .
+line[10] facts[4] pmu[5] > facts[1] .
+line[10] facts[4] pmu[6] > facts[1] .
+line[10] facts[5] pmu[1] > facts[1] .
+line[10] facts[5] pmu[2] > facts[1] .
+line[10] facts[5] pmu[3] > facts[1] .
+line[10] facts[5] pmu[4] > facts[1] .
+line[10] facts[5] pmu[5] > facts[1] .
+line[10] facts[5] pmu[6] > facts[1] .
+line[11] facts[1] pmu[1] .
+line[11] facts[1] pmu[2] .
+line[11] facts[1] pmu[3] .
+line[11] facts[1] pmu[4] .
+line[11] facts[1] pmu[5] .
+line[11] facts[1] pmu[6] .
+line[11] facts[2] pmu[1] .
+line[11] facts[2] pmu[2] .
+line[11] facts[2] pmu[3] .
+line[11] facts[2] pmu[4] .
+line[11] facts[2] pmu[5] .
+line[11] facts[2] pmu[6] .
+line[11] facts[3] pmu[1] .
+line[11] facts[3] pmu[2] .
+line[11] facts[3] pmu[3] .
+line[11] facts[3] pmu[4] .
+line[11] facts[3] pmu[5] .
+line[11] facts[3] pmu[6] .
+line[11] facts[4] pmu[1] .
+line[11] facts[4] pmu[2] .
+line[11] facts[4] pmu[3] .
+line[11] facts[4] pmu[4] .
+line[11] facts[4] pmu[5] .
+line[11] facts[4] pmu[6] .
+line[11] facts[5] pmu[1] .
+line[11] facts[5] pmu[2] .
+line[11] facts[5] pmu[3] .
+line[11] facts[5] pmu[4] .
+line[11] facts[5] pmu[5] .
+line[11] facts[5] pmu[6] .
+line[12] facts[1] pmu[1] .
+line[12] facts[1] pmu[2] .
+line[12] facts[1] pmu[3] .
+line[12] facts[1] pmu[4] .
+line[12] facts[1] pmu[5] .
+line[12] facts[1] pmu[6] .
+line[12] facts[2] pmu[1] .
+line[12] facts[2] pmu[2] .
+line[12] facts[2] pmu[3] .
+line[12] facts[2] pmu[4] .
+line[12] facts[2] pmu[5] .
+line[12] facts[2] pmu[6] .
+line[12] facts[3] pmu[1] .
+line[12] facts[3] pmu[2] .
+line[12] facts[3] pmu[3] .
+line[12] facts[3] pmu[4] .
+line[12] facts[3] pmu[5] .
+line[12] facts[3] pmu[6] .
+line[12] facts[4] pmu[1] .
+line[12] facts[4] pmu[2] .
+line[12] facts[4] pmu[3] .
+line[12] facts[4] pmu[4] .
+line[12] facts[4] pmu[5] .
+line[12] facts[4] pmu[6] .
+line[12] facts[5] pmu[1] .
+line[12] facts[5] pmu[2] .
+line[12] facts[5] pmu[3] .
+line[12] facts[5] pmu[4] .
+line[12] facts[5] pmu[5] .
+line[12] facts[5] pmu[6] .
+line[13] facts[1] pmu[1] .
+line[13] facts[1] pmu[2] .
+line[13] facts[1] pmu[3] .
+line[13] facts[1] pmu[4] .
+line[13] facts[1] pmu[5] .
+line[13] facts[1] pmu[6] .
+line[13] facts[2] pmu[1] .
+line[13] facts[2] pmu[2] .
+line[13] facts[2] pmu[3] .
+line[13] facts[2] pmu[4] .
+line[13] facts[2] pmu[5] .
+line[13] facts[2] pmu[6] .
+line[13] facts[3] pmu[1] .
+line[13] facts[3] pmu[2] .
+line[13] facts[3] pmu[3] .
+line[13] facts[3] pmu[4] .
+line[13] facts[3] pmu[5] .
+line[13] facts[3] pmu[6] .
+line[13] facts[4] pmu[1] .
+line[13] facts[4] pmu[2] .
+line[13] facts[4] pmu[3] .
+line[13] facts[4] pmu[4] .
+line[13] facts[4] pmu[5] .
+line[13] facts[4] pmu[6] .
+line[13] facts[5] pmu[1] .
+line[13] facts[5] pmu[2] .
+line[13] facts[5] pmu[3] .
+line[13] facts[5] pmu[4] .
+line[13] facts[5] pmu[5] .
+line[13] facts[5] pmu[6] .
+line[14] facts[1] pmu[1] .
+line[14] facts[1] pmu[2] .
+line[14] facts[1] pmu[3] .
+line[14] facts[1] pmu[4] .
+line[14] facts[1] pmu[5] .
+line[14] facts[1] pmu[6] .
+line[14] facts[2] pmu[1] .
+line[14] facts[2] pmu[2] .
+line[14] facts[2] pmu[3] .
+line[14] facts[2] pmu[4] .
+line[14] facts[2] pmu[5] .
+line[14] facts[2] pmu[6] .
+line[14] facts[3] pmu[1] .
+line[14] facts[3] pmu[2] .
+line[14] facts[3] pmu[3] .
+line[14] facts[3] pmu[4] .
+line[14] facts[3] pmu[5] .
+line[14] facts[3] pmu[6] .
+line[14] facts[4] pmu[1] .
+line[14] facts[4] pmu[2] .
+line[14] facts[4] pmu[3] .
+line[14] facts[4] pmu[4] .
+line[14] facts[4] pmu[5] .
+line[14] facts[4] pmu[6] .
+line[14] facts[5] pmu[1] .
+line[14] facts[5] pmu[2] .
+line[14] facts[5] pmu[3] .
+line[14] facts[5] pmu[4] .
+line[14] facts[5] pmu[5] .
+line[14] facts[5] pmu[6] .
+line[15] facts[1] pmu[1] .
+line[15] facts[1] pmu[2] .
+line[15] facts[1] pmu[3] .
+line[15] facts[1] pmu[4] .
+line[15] facts[1] pmu[5] .
+line[15] facts[1] pmu[6] .
+line[15] facts[2] pmu[1] .
+line[15] facts[2] pmu[2] .
+line[15] facts[2] pmu[3] .
+line[15] facts[2] pmu[4] .
+line[15] facts[2] pmu[5] .
+line[15] facts[2] pmu[6] .
+line[15] facts[3] pmu[1] .
+line[15] facts[3] pmu[2] .
+line[15] facts[3] pmu[3] .
+line[15] facts[3] pmu[4] .
+line[15] facts[3] pmu[5] .
+line[15] facts[3] pmu[6] .
+line[15] facts[4] pmu[1] .
+line[15] facts[4] pmu[2] .
+line[15] facts[4] pmu[3] .
+line[15] facts[4] pmu[4] .
+line[15] facts[4] pmu[5] .
+line[15] facts[4] pmu[6] .
+line[15] facts[5] pmu[1] .
+line[15] facts[5] pmu[2] .
+line[15] facts[5] pmu[3] .
+line[15] facts[5] pmu[4] .
+line[15] facts[5] pmu[5] .
+line[15] facts[5] pmu[6] .
+line[16] facts[1] pmu[1] .
+line[16] facts[1] pmu[2] .
+line[16] facts[1] pmu[3] .
+line[16] facts[1] pmu[4] .
+line[16] facts[1] pmu[5] .
+line[16] facts[1] pmu[6] .
+line[16] facts[2] pmu[1] .
+line[16] facts[2] pmu[2] .
+line[16] facts[2] pmu[3] .
+line[16] facts[2] pmu[4] .
+line[16] facts[2] pmu[5] .
+line[16] facts[2] pmu[6] .
+line[16] facts[3] pmu[1] .
+line[16] facts[3] pmu[2] .
+line[16] facts[3] pmu[3] .
+line[16] facts[3] pmu[4] .
+line[16] facts[3] pmu[5] .
+line[16] facts[3] pmu[6] .
+line[16] facts[4] pmu[1] .
+line[16] facts[4] pmu[2] .
+line[16] facts[4] pmu[3] .
+line[16] facts[4] pmu[4] .
+line[16] facts[4] pmu[5] .
+line[16] facts[4] pmu[6] .
+line[16] facts[5] pmu[1] .
+line[16] facts[5] pmu[2] .
+line[16] facts[5] pmu[3] .
+line[16] facts[5] pmu[4] .
+line[16] facts[5] pmu[5] .
+line[16] facts[5] pmu[6] .
+line[17] facts[1] pmu[1] .
+line[17] facts[1] pmu[2] .
+line[17] facts[1] pmu[3] .
+line[17] facts[1] pmu[4] .
+line[17] facts[1] pmu[5] .
+line[17] facts[1] pmu[6] .
+line[17] facts[2] pmu[1] .
+line[17] facts[2] pmu[2] .
+line[17] facts[2] pmu[3] .
+line[17] facts[2] pmu[4] .
+line[17] facts[2] pmu[5] .
+line[17] facts[2] pmu[6] .
+line[17] facts[3] pmu[1] .
+line[17] facts[3] pmu[2] .
+line[17] facts[3] pmu[3] .
+line[17] facts[3] pmu[4] .
+line[17] facts[3] pmu[5] .
+line[17] facts[3] pmu[6] .
+line[17] facts[4] pmu[1] .
+line[17] facts[4] pmu[2] .
+line[17] facts[4] pmu[3] .
+line[17] facts[4] pmu[4] .
+line[17] facts[4] pmu[5] .
+line[17] facts[4] pmu[6] .
+line[17] facts[5] pmu[1] .
+line[17] facts[5] pmu[2] .
+line[17] facts[5] pmu[3] .
+line[17] facts[5] pmu[4] .
+line[17] facts[5] pmu[5] .
+line[17] facts[5] pmu[6] .
+line[18] facts[1] pmu[1] .
+line[18] facts[1] pmu[2] .
+line[18] facts[1] pmu[3] .
+line[18] facts[1] pmu[4] .
+line[18] facts[1] pmu[5] .
+line[18] facts[1] pmu[6] .
+line[18] facts[2] pmu[1] .
+line[18] facts[2] pmu[2] .
+line[18] facts[2] pmu[3] .
+line[18] facts[2] pmu[4] .
+line[18] facts[2] pmu[5] .
+line[18] facts[2] pmu[6] .
+line[18] facts[3] pmu[1] .
+line[18] facts[3] pmu[2] .
+line[18] facts[3] pmu[3] .
+line[18] facts[3] pmu[4] .
+line[18] facts[3] pmu[5] .
+line[18] facts[3] pmu[6] .
+line[18] facts[4] pmu[1] .
+line[18] facts[4] pmu[2] .
+line[18] facts[4] pmu[3] .
+line[18] facts[4] pmu[4] .
+line[18] facts[4] pmu[5] .
+line[18] facts[4] pmu[6] .
+line[18] facts[5] pmu[1] .
+line[18] facts[5] pmu[2] .
+line[18] facts[5] pmu[3] .
+line[18] facts[5] pmu[4] .
+line[18] facts[5] pmu[5] .
+line[18] facts[5] pmu[6] .
+line[19] facts[1] pmu[1] .
+line[19] facts[1] pmu[2] .
+line[19] facts[1] pmu[3] .
+line[19] facts[1] pmu[4] .
+line[19] facts[1] pmu[5] .
+line[19] facts[1] pmu[6] .
+line[19] facts[2] pmu[1] .
+line[19] facts[2] pmu[2] .
+line[19] facts[2] pmu[3] .
+line[19] facts[2] pmu[4] .
+line[19] facts[2] pmu[5] .
+line[19] facts[2] pmu[6] .
+line[19] facts[3] pmu[1] .
+line[19] facts[3] pmu[2] .
+line[19] facts[3] pmu[3] .
+line[19] facts[3] pmu[4] .
+line[19] facts[3] pmu[5] .
+line[19] facts[3] pmu[6] .
+line[19] facts[4] pmu[1] .
+line[19] facts[4] pmu[2] .
+line[19] facts[4] pmu[3] .
+line[19] facts[4] pmu[4] .
+line[19] facts[4] pmu[5] .
+line[19] facts[4] pmu[6] .
+line[19] facts[5] pmu[1] .
+line[19] facts[5] pmu[2] .
+line[19] facts[5] pmu[3] .
+line[19] facts[5] pmu[4] .
+line[19] facts[5] pmu[5] .
+line[19] facts[5] pmu[6] .
+line[20] facts[1] pmu[1] .
+line[20] facts[1] pmu[2] .
+line[20] facts[1] pmu[3] .
+line[20] facts[1] pmu[4] .
+line[20] facts[1] pmu[5] .
+line[20] facts[1] pmu[6] .
+line[20] facts[2] pmu[1] .
+line[20] facts[2] pmu[2] .
+line[20] facts[2] pmu[3] .
+line[20] facts[2] pmu[4] .
+line[20] facts[2] pmu[5] .
+line[20] facts[2] pmu[6] .
+line[20] facts[3] pmu[1] .
+line[20] facts[3] pmu[2] .
+line[20] facts[3] pmu[3] .
+line[20] facts[3] pmu[4] .
+line[20] facts[3] pmu[5] .
+line[20] facts[3] pmu[6] .
+line[20] facts[4] pmu[1] .
+line[20] facts[4] pmu[2] .
+line[20] facts[4] pmu[3] .
+line[20] facts[4] pmu[4] .
+line[20] facts[4] pmu[5] .
+line[20] facts[4] pmu[6] .
+line[20] facts[5] pmu[1] .
+line[20] facts[5] pmu[2] .
+line[20] facts[5] pmu[3] .
+line[20] facts[5] pmu[4] .
+line[20] facts[5] pmu[5] .
+line[20] facts[5] pmu[6] .
+line[21] facts[1] pmu[1] .
+line[21] facts[1] pmu[2] .
+line[21] facts[1] pmu[3] .
+line[21] facts[1] pmu[4] .
+line[21] facts[1] pmu[5] .
+line[21] facts[1] pmu[6] .
+line[21] facts[2] pmu[1] .
+line[21] facts[2] pmu[2] .
+line[21] facts[2] pmu[3] .
+line[21] facts[2] pmu[4] .
+line[21] facts[2] pmu[5] .
+line[21] facts[2] pmu[6] .
+line[21] facts[3] pmu[1] .
+line[21] facts[3] pmu[2] .
+line[21] facts[3] pmu[3] .
+line[21] facts[3] pmu[4] .
+line[21] facts[3] pmu[5] .
+line[21] facts[3] pmu[6] .
+line[21] facts[4] pmu[1] .
+line[21] facts[4] pmu[2] .
+line[21] facts[4] pmu[3] .
+line[21] facts[4] pmu[4] .
+line[21] facts[4] pmu[5] .
+line[21] facts[4] pmu[6] .
+line[21] facts[5] pmu[1] .
+line[21] facts[5] pmu[2] .
+line[21] facts[5] pmu[3] .
+line[21] facts[5] pmu[4] .
+line[21] facts[5] pmu[5] .
+line[21] facts[5] pmu[6] .
+line[22] facts[1] pmu[1] .
+line[22] facts[1] pmu[2] .
+line[22] facts[1] pmu[3] .
+line[22] facts[1] pmu[4] .
+line[22] facts[1] pmu[5] .
+line[22] facts[1] pmu[6] .
+line[22] facts[2] pmu[1] .
+line[22] facts[2] pmu[2] .
+line[22] facts[2] pmu[3] .
+line[22] facts[2] pmu[4] .
+line[22] facts[2] pmu[5] .
+line[22] facts[2] pmu[6] .
+line[22] facts[3] pmu[1] .
+line[22] facts[3] pmu[2] .
+line[22] facts[3] pmu[3] .
+line[22] facts[3] pmu[4] .
+line[22] facts[3] pmu[5] .
+line[22] facts[3] pmu[6] .
+line[22] facts[4] pmu[1] .
+line[22] facts[4] pmu[2] .
+line[22] facts[4] pmu[3] .
+line[22] facts[4] pmu[4] .
+line[22] facts[4] pmu[5] .
+line[22] facts[4] pmu[6] .
+line[22] facts[5] pmu[1] .
+line[22] facts[5] pmu[2] .
+line[22] facts[5] pmu[3] .
+line[22] facts[5] pmu[4] .
+line[22] facts[5] pmu[5] .
+line[22] facts[5] pmu[6] .
+line[23] facts[1] pmu[1] .
+line[23] facts[1] pmu[2] .
+line[23] facts[1] pmu[3] .
+line[23] facts[1] pmu[4] .
+line[23] facts[1] pmu[5] .
+line[23] facts[1] pmu[6] .
+line[23] facts[2] pmu[1] .
+line[23] facts[2] pmu[2] .
+line[23] facts[2] pmu[3] .
+line[23] facts[2] pmu[4] .
+line[23] facts[2] pmu[5] .
+line[23] facts[2] pmu[6] .
+line[23] facts[3] pmu[1] .
+line[23] facts[3] pmu[2] .
+line[23] facts[3] pmu[3] .
+line[23] facts[3] pmu[4] .
+line[23] facts[3] pmu[5] .
+line[23] facts[3] pmu[6] .
+line[23] facts[4] pmu[1] .
+line[23] facts[4] pmu[2] .
+line[23] facts[4] pmu[3] .
+line[23] facts[4] pmu[4] .
+line[23] facts[4] pmu[5] .
+line[23] facts[4] pmu[6] .
+line[23] facts[5] pmu[1] .
+line[23] facts[5] pmu[2] .
+line[23] facts[5] pmu[3] .
+line[23] facts[5] pmu[4] .
+line[23] facts[5] pmu[5] .
+line[23] facts[5] pmu[6] .
+line[24] facts[1] pmu[1] .
+line[24] facts[1] pmu[2] .
+line[24] facts[1] pmu[3] .
+line[24] facts[1] pmu[4] .
+line[24] facts[1] pmu[5] .
+line[24] facts[1] pmu[6] .
+line[24] facts[2] pmu[1] .
+line[24] facts[2] pmu[2] .
+line[24] facts[2] pmu[3] .
+line[24] facts[2] pmu[4] .
+line[24] facts[2] pmu[5] .
+line[24] facts[2] pmu[6] .
+line[24] facts[3] pmu[1] .
+line[24] facts[3] pmu[2] .
+line[24] facts[3] pmu[3] .
+line[24] facts[3] pmu[4] .
+line[24] facts[3] pmu[5] .
+line[24] facts[3] pmu[6] .
+line[24] facts[4] pmu[1] .
+line[24] facts[4] pmu[2] .
+line[24] facts[4] pmu[3] .
+line[24] facts[4] pmu[4] .
+line[24] facts[4] pmu[5] .
+line[24] facts[4] pmu[6] .
+line[24] facts[5] pmu[1] .
+line[24] facts[5] pmu[2] .
+line[24] facts[5] pmu[3] .
+line[24] facts[5] pmu[4] .
+line[24] facts[5] pmu[5] .
+line[24] facts[5] pmu[6] .
+line[25] facts[1] pmu[1] .
+line[25] facts[1] pmu[2] .
+line[25] facts[1] pmu[3] .
+line[25] facts[1] pmu[4] .
+line[25] facts[1] pmu[5] .
+line[25] facts[1] pmu[6] .
+line[25] facts[2] pmu[1] .
+line[25] facts[2] pmu[2] .
+line[25] facts[2] pmu[3] .
+line[25] facts[2] pmu[4] .
+line[25] facts[2] pmu[5] .
+line[25] facts[2] pmu[6] .
+line[25] facts[3] pmu[1] .
+line[25] facts[3] pmu[2] .
+line[25] facts[3] pmu[3] .
+line[25] facts[3] pmu[4] .
+line[25] facts[3] pmu[5] .
+line[25] facts[3] pmu[6] .
+line[25] facts[4] pmu[1] .
+line[25] facts[4] pmu[2] .
+line[25] facts[4] pmu[3] .
+line[25] facts[4] pmu[4] .
+line[25] facts[4] pmu[5] .
+line[25] facts[4] pmu[6] .
+line[25] facts[5] pmu[1] .
+line[25] facts[5] pmu[2] .
+line[25] facts[5] pmu[3] .
+line[25] facts[5] pmu[4] .
+line[25] facts[5] pmu[5] .
+line[25] facts[5] pmu[6] .
+line[26] facts[1] pmu[1] .
+line[26] facts[1] pmu[2] .
+line[26] facts[1] pmu[3] .
+line[26] facts[1] pmu[4] .
+line[26] facts[1] pmu[5] .
+line[26] facts[1] pmu[6] .
+line[26] facts[2] pmu[1] .
+line[26] facts[2] pmu[2] .
+line[26] facts[2] pmu[3] .
+line[26] facts[2] pmu[4] .
+line[26] facts[2] pmu[5] .
+line[26] facts[2] pmu[6] .
+line[26] facts[3] pmu[1] .
+line[26] facts[3] pmu[2] .
+line[26] facts[3] pmu[3] .
+line[26] facts[3] pmu[4] .
+line[26] facts[3] pmu[5] .
+line[26] facts[3] pmu[6] .
+line[26] facts[4] pmu[1] .
+line[26] facts[4] pmu[2] .
+line[26] facts[4] pmu[3] .
+line[26] facts[4] pmu[4] .
+line[26] facts[4] pmu[5] .
+line[26] facts[4] pmu[6] .
+line[26] facts[5] pmu[1] .
+line[26] facts[5] pmu[2] .
+line[26] facts[5] pmu[3] .
+line[26] facts[5] pmu[4] .
+line[26] facts[5] pmu[5] .
+line[26] facts[5] pmu[6] .
+line[27] facts[1] pmu[1] .
+line[27] facts[1] pmu[2] .
+line[27] facts[1] pmu[3] .
+line[27] facts[1] pmu[4] .
+line[27] facts[1] pmu[5] .
+line[27] facts[1] pmu[6] .
+line[27] facts[2] pmu[1] .
+line[27] facts[2] pmu[2] .
+line[27] facts[2] pmu[3] .
+line[27] facts[2] pmu[4] .
+line[27] facts[2] pmu[5] .
+line[27] facts[2] pmu[6] .
+line[27] facts[3] pmu[1] .
+line[27] facts[3] pmu[2] .
+line[27] facts[3] pmu[3] .
+line[27] facts[3] pmu[4] .
+line[27] facts[3] pmu[5] .
+line[27] facts[3] pmu[6] .
+line[27] facts[4] pmu[1] .
+line[27] facts[4] pmu[2] .
+line[27] facts[4] pmu[3] .
+line[27] facts[4] pmu[4] .
+line[27] facts[4] pmu[5] .
+line[27] facts[4] pmu[6] .
+line[27] facts[5] pmu[1] .
+line[27] facts[5] pmu[2] .
+line[27] facts[5] pmu[3] .
+line[27] facts[5] pmu[4] .
+line[27] facts[5] pmu[5] .
+line[27] facts[5] pmu[6] .
+line[28] facts[1] pmu[1] .
+line[28] facts[1] pmu[2] .
+line[28] facts[1] pmu[3] .
+line[28] facts[1] pmu[4] .
+line[28] facts[1] pmu[5] .
+line[28] facts[1] pmu[6] .
+line[28] facts[2] pmu[1] .
+line[28] facts[2] pmu[2] .
+line[28] facts[2] pmu[3] .
+line[28] facts[2] pmu[4] .
+line[28] facts[2] pmu[5] .
+line[28] facts[2] pmu[6] .
+line[28] facts[3] pmu[1] .
+line[28] facts[3] pmu[2] .
+line[28] facts[3] pmu[3] .
+line[28] facts[3] pmu[4] .
+line[28] facts[3] pmu[5] .
+line[28] facts[3] pmu[6] .
+line[28] facts[4] pmu[1] .
+line[28] facts[4] pmu[2] .
+line[28] facts[4] pmu[3] .
+line[28] facts[4] pmu[4] .
+line[28] facts[4] pmu[5] .
+line[28] facts[4] pmu[6] .
+line[28] facts[5] pmu[1] .
+line[28] facts[5] pmu[2] .
+line[28] facts[5] pmu[3] .
+line[28] facts[5] pmu[4] .
+line[28] facts[5] pmu[5] .
+line[28] facts[5] pmu[6] .
+line[29] facts[1] pmu[1] .
+line[29] facts[1] pmu[2] .
+line[29] facts[1] pmu[3] .
+line[29] facts[1] pmu[4] .
+line[29] facts[1] pmu[5] .
+line[29] facts[1] pmu[6] .
+line[29] facts[2] pmu[1] .
+line[29] facts[2] pmu[2] .
+line[29] facts[2] pmu[3] .
+line[29] facts[2] pmu[4] .
+line[29] facts[2] pmu[5] .
+line[29] facts[2] pmu[6] .
+line[29] facts[3] pmu[1] .
+line[29] facts[3] pmu[2] .
+line[29] facts[3] pmu[3] .
+line[29] facts[3] pmu[4] .
+line[29] facts[3] pmu[5] .
+line[29] facts[3] pmu[6] .
+line[29] facts[4] pmu[1] .
+line[29] facts[4] pmu[2] .
+line[29] facts[4] pmu[3] .
+line[29] facts[4] pmu[4] .
+line[29] facts[4] pmu[5] .
+line[29] facts[4] pmu[6] .
+line[29] facts[5] pmu[1] .
+line[29] facts[5] pmu[2] .
+line[29] facts[5] pmu[3] .
+line[29] facts[5] pmu[4] .
+line[29] facts[5] pmu[5] .
+line[29] facts[5] pmu[6] .
+line[30] facts[1] pmu[1] .
+line[30] facts[1] pmu[2] .
+line[30] facts[1] pmu[3] .
+line[30] facts[1] pmu[4] .
+line[30] facts[1] pmu[5] .
+line[30] facts[1] pmu[6] .
+line[30] facts[2] pmu[1] .
+line[30] facts[2] pmu[2] .
+line[30] facts[2] pmu[3] .
+line[30] facts[2] pmu[4] .
+line[30] facts[2] pmu[5] .
+line[30] facts[2] pmu[6] .
+line[30] facts[3] pmu[1] .
+line[30] facts[3] pmu[2] .
+line[30] facts[3] pmu[3] .
+line[30] facts[3] pmu[4] .
+line[30] facts[3] pmu[5] .
+line[30] facts[3] pmu[6] .
+line[30] facts[4] pmu[1] .
+line[30] facts[4] pmu[2] .
+line[30] facts[4] pmu[3] .
+line[30] facts[4] pmu[4] .
+line[30] facts[4] pmu[5] .
+line[30] facts[4] pmu[6] .
+line[30] facts[5] pmu[1] .
+line[30] facts[5] pmu[2] .
+line[30] facts[5] pmu[3] .
+line[30] facts[5] pmu[4] .
+line[30] facts[5] pmu[5] .
+line[30] facts[5] pmu[6] .
+line[31] facts[1] pmu[1] .
+line[31] facts[1] pmu[2] .
+line[31] facts[1] pmu[3] .
+line[31] facts[1] pmu[4] .
+line[31] facts[1] pmu[5] .
+line[31] facts[1] pmu[6] .
+line[31] facts[2] pmu[1] .
+line[31] facts[2] pmu[2] .
+line[31] facts[2] pmu[3] .
+line[31] facts[2] pmu[4] .
+line[31] facts[2] pmu[5] .
+line[31] facts[2] pmu[6] .
+line[31] facts[3] pmu[1] .
+line[31] facts[3] pmu[2] .
+line[31] facts[3] pmu[3] .
+line[31] facts[3] pmu[4] .
+line[31] facts[3] pmu[5] .
+line[31] facts[3] pmu[6] .
+line[31] facts[4] pmu[1] .
+line[31] facts[4] pmu[2] .
+line[31] facts[4] pmu[3] .
+line[31] facts[4] pmu[4] .
+line[31] facts[4] pmu[5] .
+line[31] facts[4] pmu[6] .
+line[31] facts[5] pmu[1] .
+line[31] facts[5] pmu[2] .
+line[31] facts[5] pmu[3] .
+line[31] facts[5] pmu[4] .
+line[31] facts[5] pmu[5] .
+line[31] facts[5] pmu[6] .
+line[32] facts[1] pmu[1] .
+line[32] facts[1] pmu[2] .
+line[32] facts[1] pmu[3] .
+line[32] facts[1] pmu[4] .
+line[32] facts[1] pmu[5] .
+line[32] facts[1] pmu[6] .
+line[32] facts[2] pmu[1] .
+line[32] facts[2] pmu[2] .
+line[32] facts[2] pmu[3] .
+line[32] facts[2] pmu[4] .
+line[32] facts[2] pmu[5] .
+line[32] facts[2] pmu[6] .
+line[32] facts[3] pmu[1] .
+line[32] facts[3] pmu[2] .
+line[32] facts[3] pmu[3] .
+line[32] facts[3] pmu[4] .
+line[32] facts[3] pmu[5] .
+line[32] facts[3] pmu[6] .
+line[32] facts[4] pmu[1] .
+line[32] facts[4] pmu[2] .
+line[32] facts[4] pmu[3] .
+line[32] facts[4] pmu[4] .
+line[32] facts[4] pmu[5] .
+line[32] facts[4] pmu[6] .
+line[32] facts[5] pmu[1] .
+line[32] facts[5] pmu[2] .
+line[32] facts[5] pmu[3] .
+line[32] facts[5] pmu[4] .
+line[32] facts[5] pmu[5] .
+line[32] facts[5] pmu[6] .
+line[33] facts[1] pmu[1] .
+line[33] facts[1] pmu[2] .
+line[33] facts[1] pmu[3] .
+line[33] facts[1] pmu[4] .
+line[33] facts[1] pmu[5] .
+line[33] facts[1] pmu[6] .
+line[33] facts[2] pmu[1] .
+line[33] facts[2] pmu[2] .
+line[33] facts[2] pmu[3] .
+line[33] facts[2] pmu[4] .
+line[33] facts[2] pmu[5] .
+line[33] facts[2] pmu[6] .
+line[33] facts[3] pmu[1] .
+line[33] facts[3] pmu[2] .
+line[33] facts[3] pmu[3] .
+line[33] facts[3] pmu[4] .
+line[33] facts[3] pmu[5] .
+line[33] facts[3] pmu[6] .
+line[33] facts[4] pmu[1] .
+line[33] facts[4] pmu[2] .
+line[33] facts[4] pmu[3] .
+line[33] facts[4] pmu[4] .
+line[33] facts[4] pmu[5] .
+line[33] facts[4] pmu[6] .
+line[33] facts[5] pmu[1] .
+line[33] facts[5] pmu[2] .
+line[33] facts[5] pmu[3] .
+line[33] facts[5] pmu[4] .
+line[33] facts[5] pmu[5] .
+line[33] facts[5] pmu[6] .
+line[34] facts[1] pmu[1] .
+line[34] facts[1] pmu[2] .
+line[34] facts[1] pmu[3] .
+line[34] facts[1] pmu[4] .
+line[34] facts[1] pmu[5] .
+line[34] facts[1] pmu[6] .
+line[34] facts[2] pmu[1] .
+line[34] facts[2] pmu[2] .
+line[34] facts[2] pmu[3] .
+line[34] facts[2] pmu[4] .
+line[34] facts[2] pmu[5] .
+line[34] facts[2] pmu[6] .
+line[34] facts[3] pmu[1] .
+line[34] facts[3] pmu[2] .
+line[34] facts[3] pmu[3] .
+line[34] facts[3] pmu[4] .
+line[34] facts[3] pmu[5] .
+line[34] facts[3] pmu[6] .
+line[34] facts[4] pmu[1] .
+line[34] facts[4] pmu[2] .
+line[34] facts[4] pmu[3] .
+line[34] facts[4] pmu[4] .
+line[34] facts[4] pmu[5] .
+line[34] facts[4] pmu[6] .
+line[34] facts[5] pmu[1] .
+line[34] facts[5] pmu[2] .
+line[34] facts[5] pmu[3] .
+line[34] facts[5] pmu[4] .
+line[34] facts[5] pmu[5] .
+line[34] facts[5] pmu[6] .
+line[35] facts[1] pmu[1] .
+line[35] facts[1] pmu[2] .
+line[35] facts[1] pmu[3] .
+line[35] facts[1] pmu[4] .
+line[35] facts[1] pmu[5] .
+line[35] facts[1] pmu[6] .
+line[35] facts[2] pmu[1] .
+line[35] facts[2] pmu[2] .
+line[35] facts[2] pmu[3] .
+line[35] facts[2] pmu[4] .
+line[35] facts[2] pmu[5] .
+line[35] facts[2] pmu[6] .
+line[35] facts[3] pmu[1] .
+line[35] facts[3] pmu[2] .
+line[35] facts[3] pmu[3] .
+line[35] facts[3] pmu[4] .
+line[35] facts[3] pmu[5] .
+line[35] facts[3] pmu[6] .
+line[35] facts[4] pmu[1] .
+line[35] facts[4] pmu[2] .
+line[35] facts[4] pmu[3] .
+line[35] facts[4] pmu[4] .
+line[35] facts[4] pmu[5] .
+line[35] facts[4] pmu[6] .
+line[35] facts[5] pmu[1] .
+line[35] facts[5] pmu[2] .
+line[35] facts[5] pmu[3] .
+line[35] facts[5] pmu[4] .
+line[35] facts[5] pmu[5] .
+line[35] facts[5] pmu[6] .
+line[36] facts[1] pmu[1] > facts[2] .
+line[36] facts[1] pmu[2] > facts[2] .
+line[36] facts[1] pmu[3] > facts[2] .
+line[36] facts[1] pmu[4] > facts[2] .
+line[36] facts[1] pmu[5] > facts[2] .
+line[36] facts[1] pmu[6] > facts[2] .
+line[36] facts[2] pmu[1] .
+line[36] facts[2] pmu[2] .
+line[36] facts[2] pmu[3] .
+line[36] facts[2] pmu[4] .
+line[36] facts[2] pmu[5] .
+line[36] facts[2] pmu[6] .
+line[36] facts[3] pmu[1] > facts[2] .
+line[36] facts[3] pmu[2] > facts[2] .
+line[36] facts[3] pmu[3] > facts[2] .
+line[36] facts[3] pmu[4] > facts[2] .
+line[36] facts[3] pmu[5] > facts[2] .
+line[36] facts[3] pmu[6] > facts[2] .
+line[36] facts[4] pmu[1] > facts[2] .
+line[36] facts[4] pmu[2] > facts[2] .
+line[36] facts[4] pmu[3] > facts[2] .
+line[36] facts[4] pmu[4] > facts[2] .
+line[36] facts[4] pmu[5] > facts[2] .
+line[36] facts[4] pmu[6] > facts[2] .
+line[36] facts[5] pmu[1] > facts[2] .
+line[36] facts[5] pmu[2] > facts[2] .
+line[36] facts[5] pmu[3] > facts[2] .
+line[36] facts[5] pmu[4] > facts[2] .
+line[36] facts[5] pmu[5] > facts[2] .
+line[36] facts[5] pmu[6] > facts[2] .
+line[37] facts[1] pmu[1] .
+line[37] facts[1] pmu[2] .
+line[37] facts[1] pmu[3] .
+line[37] facts[1] pmu[4] .
+line[37] facts[1] pmu[5] .
+line[37] facts[1] pmu[6] .
+line[37] facts[2] pmu[1] .
+line[37] facts[2] pmu[2] .
+line[37] facts[2] pmu[3] .
+line[37] facts[2] pmu[4] .
+line[37] facts[2] pmu[5] .
+line[37] facts[2] pmu[6] .
+line[37] facts[3] pmu[1] .
+line[37] facts[3] pmu[2] .
+line[37] facts[3] pmu[3] .
+line[37] facts[3] pmu[4] .
+line[37] facts[3] pmu[5] .
+line[37] facts[3] pmu[6] .
+line[37] facts[4] pmu[1] .
+line[37] facts[4] pmu[2] .
+line[37] facts[4] pmu[3] .
+line[37] facts[4] pmu[4] .
+line[37] facts[4] pmu[5] .
+line[37] facts[4] pmu[6] .
+line[37] facts[5] pmu[1] .
+line[37] facts[5] pmu[2] .
+line[37] facts[5] pmu[3] .
+line[37] facts[5] pmu[4] .
+line[37] facts[5] pmu[5] .
+line[37] facts[5] pmu[6] .
+line[38] facts[1] pmu[1] > facts[3] .
+line[38] facts[1] pmu[2] > facts[3] .
+line[38] facts[1] pmu[3] > facts[3] .
+line[38] facts[1] pmu[4] > facts[3] .
+line[38] facts[1] pmu[5] > facts[3] .
+line[38] facts[1] pmu[6] > facts[3] .
+line[38] facts[2] pmu[1] > facts[3] .
+line[38] facts[2] pmu[2] > facts[3] .
+line[38] facts[2] pmu[3] > facts[3] .
+line[38] facts[2] pmu[4] > facts[3] .
+line[38] facts[2] pmu[5] > facts[3] .
+line[38] facts[2] pmu[6] > facts[3] .
+line[38] facts[3] pmu[1] .
+line[38] facts[3] pmu[2] .
+line[38] facts[3] pmu[3] .
+line[38] facts[3] pmu[4] .
+line[38] facts[3] pmu[5] .
+line[38] facts[3] pmu[6] .
+line[38] facts[4] pmu[1] > facts[3] .
+line[38] facts[4] pmu[2] > facts[3] .
+line[38] facts[4] pmu[3] > facts[3] .
+line[38] facts[4] pmu[4] > facts[3] .
+line[38] facts[4] pmu[5] > facts[3] .
+line[38] facts[4] pmu[6] > facts[3] .
+line[38] facts[5] pmu[1] > facts[3] .
+line[38] facts[5] pmu[2] > facts[3] .
+line[38] facts[5] pmu[3] > facts[3] .
+line[38] facts[5] pmu[4] > facts[3] .
+line[38] facts[5] pmu[5] > facts[3] .
+line[38] facts[5] pmu[6] > facts[3] .
+line[39] facts[1] pmu[1] .
+line[39] facts[1] pmu[2] .
+line[39] facts[1] pmu[3] .
+line[39] facts[1] pmu[4] .
+line[39] facts[1] pmu[5] .
+line[39] facts[1] pmu[6] .
+line[39] facts[2] pmu[1] .
+line[39] facts[2] pmu[2] .
+line[39] facts[2] pmu[3] .
+line[39] facts[2] pmu[4] .
+line[39] facts[2] pmu[5] .
+line[39] facts[2] pmu[6] .
+line[39] facts[3] pmu[1] .
+line[39] facts[3] pmu[2] .
+line[39] facts[3] pmu[3] .
+line[39] facts[3] pmu[4] .
+line[39] facts[3] pmu[5] .
+line[39] facts[3] pmu[6] .
+line[39] facts[4] pmu[1] .
+line[39] facts[4] pmu[2] .
+line[39] facts[4] pmu[3] .
+line[39] facts[4] pmu[4] .
+line[39] facts[4] pmu[5] .
+line[39] facts[4] pmu[6] .
+line[39] facts[5] pmu[1] .
+line[39] facts[5] pmu[2] .
+line[39] facts[5] pmu[3] .
+line[39] facts[5] pmu[4] .
+line[39] facts[5] pmu[5] .
+line[39] facts[5] pmu[6] .
+line[40] facts[1] pmu[1] > facts[4] .
+line[40] facts[1] pmu[2] > facts[4] .
+line[40] facts[1] pmu[3] > facts[4] .
+line[40] facts[1] pmu[4] > facts[4] .
+line[40] facts[1] pmu[5] > facts[4] .
+line[40] facts[1] pmu[6] > facts[4] .
+line[40] facts[2] pmu[1] > facts[4] .
+line[40] facts[2] pmu[2] > facts[4] .
+line[40] facts[2] pmu[3] > facts[4] .
+line[40] facts[2] pmu[4] > facts[4] .
+line[40] facts[2] pmu[5] > facts[4] .
+line[40] facts[2] pmu[6] > facts[4] .
+line[40] facts[3] pmu[1] > facts[4] .
+line[40] facts[3] pmu[2] > facts[4] .
+line[40] facts[3] pmu[3] > facts[4] .
+line[40] facts[3] pmu[4] > facts[4] .
+line[40] facts[3] pmu[5] > facts[4] .
+line[40] facts[3] pmu[6] > facts[4] .
+line[40] facts[4] pmu[1] .
+line[40] facts[4] pmu[2] .
+line[40] facts[4] pmu[3] .
+line[40] facts[4] pmu[4] .
+line[40] facts[4] pmu[5] .
+line[40] facts[4] pmu[6] .
+line[40] facts[5] pmu[1] > facts[4] .
+line[40] facts[5] pmu[2] > facts[4] .
+line[40] facts[5] pmu[3] > facts[4] .
+line[40] facts[5] pmu[4] > facts[4] .
+line[40] facts[5] pmu[5] > facts[4] .
+line[40] facts[5] pmu[6] > facts[4] .
+line[41] facts[1] pmu[1] > facts[5] .
+line[41] facts[1] pmu[2] > facts[5] .
+line[41] facts[1] pmu[3] > facts[5] .
+line[41] facts[1] pmu[4] > facts[5] .
+line[41] facts[1] pmu[5] > facts[5] .
+line[41] facts[1] pmu[6] > facts[5] .
+line[41] facts[2] pmu[1] > facts[5] .
+line[41] facts[2] pmu[2] > facts[5] .
+line[41] facts[2] pmu[3] > facts[5] .
+line[41] facts[2] pmu[4] > facts[5] .
+line[41] facts[2] pmu[5] > facts[5] .
+line[41] facts[2] pmu[6] > facts[5] .
+line[41] facts[3] pmu[1] > facts[5] .
+line[41] facts[3] pmu[2] > facts[5] .
+line[41] facts[3] pmu[3] > facts[5] .
+line[41] facts[3] pmu[4] > facts[5] .
+line[41] facts[3] pmu[5] > facts[5] .
+line[41] facts[3] pmu[6] > facts[5] .
+line[41] facts[4] pmu[1] > facts[5] .
+line[41] facts[4] pmu[2] > facts[5] .
+line[41] facts[4] pmu[3] > facts[5] .
+line[41] facts[4] pmu[4] > facts[5] .
+line[41] facts[4] pmu[5] > facts[5] .
+line[41] facts[4] pmu[6] > facts[5] .
+line[41] facts[5] pmu[1] .
+line[41] facts[5] pmu[2] .
+line[41] facts[5] pmu[3] .
+line[41] facts[5] pmu[4] .
+line[41] facts[5] pmu[5] .
+line[41] facts[5] pmu[6] .

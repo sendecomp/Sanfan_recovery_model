@@ -27,7 +27,7 @@ function d = identify_dep(file_name, method)
 warning off all
 %% Headers
 DATA_PATH = 'data';
-FAILURE_SEQ_PATH = 'failure_seq\output_20221207\20,3,3,1,1,1,1,0,1,0,0\first';
+FAILURE_SEQ_PATH = 'failure_seq';
 LIB_PATH = 'lib';
 addpath(LIB_PATH);
 
@@ -136,7 +136,9 @@ switch method
             for j = 1 : n
                 cor = zeros(n);
                 for k = intersect(s{i}, s{j})
-                    sv = failure_seq(k).sv.comp;
+                    if k < length(failure_seq)
+                        sv = failure_seq(k).sv.comp;
+                    end
                     try
                         xcor = xcorr(sv([i, j], :)', 1, 'coeff');
                         if ~isnan(xcor(1, 2))
