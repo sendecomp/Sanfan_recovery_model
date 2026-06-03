@@ -90,15 +90,9 @@
 \begin{document}
 %\input{ieeetrancover}
 
-\title{RACE: Recovery Analysis for Cascading Events in Complex Networked Systems}
+\title{RACE: Recovery Analysis for Cascading Events in Complex Networked Systems\\\noindent \thanks{\hspace{-1em}Funding from NSF DUE-2221559 and DEd P200A210121 is gratefully acknowledged.}}
 
 
-
-%SSS - add funding source for camera-ready
-%\title{Personalizing Student Graduation Paths Using Expressed Student Interests
-%{\footnotesize
-%\thanks{Funding source redacted for double-blind review.}
-%}}
 
 %
 %\titlerunning{Abbreviated paper title}
@@ -106,40 +100,45 @@
 % an abbreviated paper title here
 
 
- %SSS - add in author info for camera-ready using COMPSAC template
+\author{\IEEEauthorblockN{Sanfan Liu, Sahra {Sedigh Sarvestani}, and  Ali R. Hurson}
+\IEEEauthorblockA{\textit{Department of Electrical and Computer Engineering} \\
+\textit{Missouri University of Science and Technology}\\
+Rolla, MO, USA \\
+0000-0002-5089-3500, 0000-0002-2917-5643, 0000-0002-9510-0762}
+}
 
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-This paper proposes a stochastic model that elucidates the race between fault propagation and recovery actions in a networked system. The basis of the model is a time-dependent Markov decision process model that predicts the failure and recovery of components and enables comparison of different recovery schemes with respect to one or more aspects of system survivability. 
-Efficacy of the proposed method is illustrated through case studies on smart grids based on the IEEE-14 and IEEE-30 test systems, using high-fidelity digital twins that accurately reflect component states and cascading dynamics. The results demonstrate that the model supports objective comparison of recovery strategies under consistent survivability criteria.
+This paper proposes a stochastic model that elucidates the race between failure propagation and recovery actions in a networked system. The basis of the model is a time-dependent Markov decision process model that predicts the failure and recovery of components and enables comparison of different recovery schemes with respect to one or more aspects of system survivability. 
+Efficacy of the proposed method is illustrated through case studies on smart grids based on the IEEE-14 and IEEE-30 test systems, using high-fidelity digital twins that accurately reflect component states and cascading dynamics. The results demonstrate that the model supports objective comparison of recovery strategies under consistent survivability criteria.
 \end{abstract}
 
 \begin{IEEEkeywords}
-stochastic recovery model, Markov decision process, failure propagation, decision support, cascading failure, survivability
+stochastic model, Markov decision process, failure propagation, decision support, cascading failure, survivability
 \end{IEEEkeywords}
 
 \section{Introduction}\label{sec:intro}
-Cascading failures pose a significant hazard to the survivability of interconnected complex systems. They can delay restoration, increase costs, and cause extended service interruptions. Predicting these consequences requires analytical frameworks that capture the dynamics of failure propagation and reflect the progression of repair. This paper seeks to elucidate the race between failure propagation and recovery actions intended to restore the system's functionality. We propose a mathematical model that helps identify the most prudent sequence of recovery actions given a specific objective, such as maximizing service capacity.
+Cascading failures pose a significant hazard to the survivability of interconnected complex systems. They can delay restoration, increase costs, and cause extended service interruptions. Predicting these consequences requires analytical frameworks that capture the dynamics of failure propagation and reflect the progression of repair. This paper seeks to elucidate the race between failure propagation and recovery actions intended to restore system functionality. We propose a mathematical model that helps identify the most prudent sequence of recovery actions given a specific objective, such as maximizing service capacity.
 
 %An effective way to plan system recovery is to view it as a battle against the spread of failure. 
 
 %Poorly conceived recovery schemes, as illustrated by the 2023 Kenya blackout described below, have shown that the valuable time and effort spent on restoring non-critical components can lead to an otherwise preventable catastrophic failure. In contrast, the 2025 Spain blackout (also described below) demonstrates the value of a rapid and prudent recovery scheme.
 
-The nationwide blackout in Kenya in 2023 underscores the severe consequences of ineffective recovery decisions. An error message at the Lake Turkana wind facility triggered the sudden loss of 270 MW of power, roughly 15\% of national demand. The recovery strategy was to stabilize the grid by importing power (incorrectly) assumed to be available in Uganda, rather than focusing on recovery of local systems. Uganda's inability to deliver allowed the outage to spread and affect close to 50 million people ~\cite{apkenya_aug23, mwangi_kenya_2023}. 
+The 2023 nationwide blackout in Kenya underscores the severe consequences of ineffective recovery decisions. An error message at the Lake Turkana wind facility triggered the sudden loss of 270 MW of power, roughly 15\% of national demand. The recovery strategy was to stabilize the grid by importing power (incorrectly) assumed to be available in Uganda, rather than focusing on recovery of local systems. Uganda's inability to deliver allowed the outage to spread and affect nearly 50 million people ~\cite{apkenya_aug23, mwangi_kenya_2023}. 
 
 %SSS - Let's revisit this. In the final reading, it occurred to me that this strategy could have backfired just like Kenya. The Spaniards got lucky because their neighbors had power to give them. 
 %SL: We can emphasis on how they restart the hydropower and coordinating with other gas turbine which leads to a steady recovery
 In contrast, the 2025 Iberian Peninsula blackout highlights the value of a coordinated, knowledge-driven response. Operators activated cross-border interconnections to import 2 GW of power from  France and 900 MW from Morocco, used to restore power to northern and southern areas of Spain, respectively. These  imports facilitated the reactivation of hydropower and gas turbine generators in Spain, enabling progressive restoration of power generation, limiting failure propagation, and expediting recovery ~\cite{cetinkaya_technical_2025}. 
 
-Functional interdependencies enable a failed component to bring down others. Every additional failure can reduce survivability and increase the likelihood of system collapse or catastrophic failure. Countermeasures such as redundancy, capacity enhancement, or load redistribution can improve survivability by slowing or halting cascades ~\cite{zhang_effects_2017}, but are often impractical due to environmental constraints and the complex nature of actual systems. Effective system recovery depends not only on rapid response, but also on identifying and prioritizing ``critical'' components - those whose function or location in the system make their failure especially consequential \cite{redacted}. 
+Functional interdependencies enable a failed component to bring down others. Every additional failure can reduce survivability and increase the likelihood of system collapse or catastrophic failure. Countermeasures such as redundancy, capacity enhancement, or load redistribution can improve survivability by slowing or halting cascades ~\cite{zhang_effects_2017}, but are often impractical due to environmental constraints and the complex nature of actual systems. Effective system recovery depends not only on rapid response, but also on identifying and prioritizing ``critical'' components - those whose function or location in the system make their failure especially consequential \cite{marashi_identification_2021}. 
 
- \emph{The original research contribution of this paper is a mathematical model that reflects the operation of a complex networked system where recovery efforts are competing with failure propagation.} The basis is a Markov decision process (MDP) that reflects the state of both the system and the crews that can be dispatched to replace or repair failed components. 
-As depicted in Figure \ref{fig:bigpic}, the model requires knowledge of the system's functional topology and component-level information about failure and recovery, respectively. Given this information, it can reflect a variety of recovery schemes and enable identification of the ``best'' scheme, as evaluated by a quantitative measure of system-level functionality, e.g., survivability, that changes as components fail or are recovered. 
+ \emph{This paper's primary contribution is a mathematical model that reflects the operation of a complex networked system where recovery efforts are competing with failure propagation.} The basis is a Markov decision process (MDP) that reflects the state of both the system and the crews that can be dispatched to replace or repair failed components. 
+As depicted in Fig.  \ref{fig:bigpic}, the model requires knowledge of the system's functional topology and component-level information about failure and recovery, respectively. Given this information, it can reflect a variety of recovery schemes and enable identification of the ``best'' scheme, as evaluated by a quantitative measure of system-level functionality, e.g., survivability, that changes as components fail or are recovered. 
 
 \begin{figure}
     \centering
-    \includegraphics[width=.8\linewidth]{images/BigPic.png}
+    \includegraphics[width=.75\linewidth]{images/BigPic.png}
     \caption{Information flow in our proposed model.}
     \label{fig:bigpic}
 \end{figure}
@@ -163,14 +162,6 @@ The second category encompasses studies that share our goal of predicting the ef
 
 Studies in this category of related work aim to identify and quantify dependencies within complex networked systems, and to use this information to predict failure propagation. 
 
-%Common measures of dependency include Pearson correlation ~\cite{modarres_measures_2011}, which is a measure of the mutual dependence between two variables; it captures the linear association between the occurrence of two events. Similarly, Spearman's rank correlation ~\cite{modarres_measures_2011} measures the monotonic relationship by using rank values between two variables and is often compared with Pearson correlation, as it captures nonlinear relationships that Pearson correlation cannot. The randomized dependence coefficient ~\cite{lopez-paz_randomized_2013} is another measure of nonlinear dependence between random variables that can apply to arbitrary dimensions, with a low computational cost for large systems with many components. 
-%%measure in specific system
-%Specialized research has been conducted to quantify dependencies in various types of systems. For instance, hydraulic criticality measures~\cite{marlim_hydraulic_2024, jeong_comparative_2020} quantitatively assess failure propagation within water distribution networks using pipeline water pressure measurements, which can help detect uneven pressure distribution and potential pipe bursts.
-%
-%In traffic systems, spatial-temporal correlation~\cite{du_novel_2021} and Granger causality~\cite{hasan_analysing_2016} are employed to evaluate traffic conditions, considering meteorological factors, vehicular speed, traffic flow, and vehicle density. These factors affect the likelihood of traffic congestion and vehicular accidents.
-%
-%Research in this group aims to identify and quantify vulnerabilities and coupling effects within complex networked systems, with the goal of understanding the dynamic effects of disruption. 
-
 A notable example is by 
 X. Zhang et al. \cite{zhang_effects_2017}, who investigated the effect of cyber coupling on cascading failures in power systems, demonstrating that the coupling lowers the system's robustness and increases the extent and rate of failure propagation. 
 Similarly, G. Zhang et al. \cite{zhang_cascading_2021} investigated coupling effects on the communication layer of a cyber-physical power system and analyzed the relationship between the coupling strength and the load loss rate on smart grids of different sizes. Xu and Ding \cite{xu_cascading_2024} have proposed a model to investigate the effect of inter-network correlation on cascading failure in a cyber-physical system. They discovered that increasing interconnectivity can help enhance robustness against cascading failures in symmetrical networks, but has minimal effect in asymmetrical network systems.
@@ -178,31 +169,19 @@ Nyberg and Westman \cite{nyberg_failure_2015} have created a framework to analyz
 
 
 These four studies, among others, show that tweaking the 
-strength of coupling and/or enhancing the system with redundancy are key methods of preventing and mitigating the effects of cascading failures. Our proposed model goes further by reflecting and enabling analysis of the effects of recovery efforts undertaken concurrently with a cascading failure. We build on earlier work \cite{redacted}, where we created a dependency index to represent the conditional probability of failure propagation in a cyber-physical system. 
+strength of coupling and/or enhancing the system with redundancy are key methods of preventing and mitigating the effects of cascading failures. Our proposed model goes further by reflecting and enabling analysis of the effects of recovery efforts undertaken concurrently with a cascading failure. We build on earlier work \cite{marashi_identification_2021}, where we created a dependency index to represent the conditional probability of failure propagation in a cyber-physical system. 
 
-%Cascading failures in electrical power systems, particularly those caused by capacity overload, have been analyzed using graph theory and heuristic models~\cite{xu_cascading_2024, yan_dynamic_2021, zhang_effects_2017, zhang_cascading_2021, nyberg_failure_2015, redacted}. These failures occur when redistributed subsystem loads exceed component capacities, triggering automatic shutdowns or even transformer fires. Similar approaches have been applied to port logistics systems, where demand exceeding capacity can result in significant operational disruptions~\cite{wang_resilience_2026}.
-%
-%%conclusion and why is our work useful (I got it from QEST paper)
-%These studies, among others, show that the dependencies between components are measurable, which gives us a chance to predict and prevent the cascading failure from happening. However, due to the complexity of the system, cascading failure will still happen to the system. Therefore, our proposed model goes further by reflecting on and enabling analysis of the effects of recovery efforts undertaken concurrently with a cascading failure. This work builds on the method proposed in \cite{redacted} that created a dependency index to represent the conditional probability of failure propagation between components of a cyber-physical system. 
 
 \subsection{Related work in recovery modeling}
 
 The second category of related literature is comprised of studies that propose, evaluate, or compare recovery schemes for complex networked systems, with the ultimate goal of identifying the quickest, least costly, or otherwise ``best'' scheme. Notable work in this category includes studies by Yan et al. \cite{yan_dynamic_2021} and Sarkale et al. \cite{sarkale_solving_2018}, where an MDP model has been applied to physical (not cyber-physical) power and water systems, respectively, with the goal of identifying the dynamic recovery scheme with the highest recovery rate.  
 In the former method, the extent of lost functionality is the basis for estimating the performance, and the scheme chosen is the one that recovers the most functionality. In the latter, the number of users who continue to receive service is the basis for comparison. A related model by Biswas et al. \cite{biswas_repair_2025} assumes a post-hazard scenario where the exact location of the failure is unknown and crews have to search approximate failure areas before they can begin repair. This adds a path-finding problem to the recovery scheme. Lin et al. \cite{lin_condition-based_2022} propose an  MDP model for the maintenance of power supply equipment, where the goal is to minimize the sum of penalties and repair costs and reduce the cost of upkeep in the long run.
 
-The closest work to ours is by Wang et al. \cite{wang_q-learning-based_2025}, who propose a model and a Q-learning-based recovery method for a cyber-physical power system. Their model was developed to analyze the coupling between components within a Cyber-Physical Production System and to forecast potential failures before the initiation of recovery protocols. The work identifies potential cascading failures, but allows the cascade to complete before beginning recovery efforts. This approach delays recovery and fails to capture the race that is the focus of our work. 
+The closest work to ours is by Wang et al. \cite{wang_q-learning-based_2025}, who propose a model and a Q-learning-based recovery method for a cyber-physical power system. Their model was developed to analyze the coupling between components within a Cyber-Physical Production System and to forecast potential failures before the initiation of recovery protocols. The work identifies potential cascading failures but allows the cascade to complete before beginning recovery efforts. This approach delays recovery and fails to capture the race that is the focus of our work. 
 
-%SSS - you haven't argued that recovery durations are not memoryless. Why is quick recovery ok with exponential distribution?
-%SL: Yes, I should've argue that in here. And I do have references [l_c_cadwallader_review_2012] to show the exponential isn't alawys right for repair duration
-A fundamental distinction of our work is in recognizing the non-deterministic nature of recovery times, yet allowing for any probability distribution to be assumed. The model by Wang et al. \cite{wang_q-learning-based_2025} makes the unrealistic assumption of equal duration for all recovery tasks. Biswas et al. \cite{biswas_repair_2025} model assume fixed, known recovery times, which are similarly unlikely. These simplistic assumptions may be adequate for coarse time scales (measured in days). The urgency of preventing failure propagation necessitates a finer timescale (minutes or hours), where recovery actions are unlikely to be of deterministic duration. The model by Sarkale et al. ~\cite{sarkale_solving_2018} acknowledges this uncertainty but assumes exponentially distributed recovery times. Given that a complex system can include diverse cyber and physical components, it is likely that recovery time distributions for different components will be similarly diverse. For example, for electrical components that deliver power to the physical layer of a smart grid, recovery times typically reflect a lognormal ~\cite{l_c_cadwallader_review_2012} distributions. However, in the same smart grid, failed cyber components such as smart meters are typically recovered by rebooting, which is quick (<5 mins) enough that the recovery time can be approximated with an exponential distribution. Our model allows for inhomogeneous recovery‑time distributions, affording the flexibility necessary to represent structurally and functionally complex networked systems across diverse domains. 
+A fundamental distinction of our work is in recognizing the non-deterministic nature of recovery times, yet allowing for any probability distribution to be assumed. The model by Wang et al. \cite{wang_q-learning-based_2025} makes the unrealistic assumption of equal duration for all recovery tasks. The model by Biswas et al. \cite{biswas_repair_2025} assumes fixed, known recovery times, which are similarly unlikely. These simplistic assumptions may be adequate for coarse time scales (measured in days). The urgency of preventing failure propagation necessitates a finer timescale (minutes or hours), where recovery actions are unlikely to be of deterministic duration. The model by Sarkale et al. ~\cite{sarkale_solving_2018} acknowledges this uncertainty but assumes exponentially distributed recovery times. Given that a complex system can include diverse cyber and physical components, it is likely that recovery time distributions for different components will be similarly diverse. For example, for electrical components that deliver power to the physical layer of a smart grid, recovery times typically reflect a lognormal distribution ~\cite{l_c_cadwallader_review_2012}. However, in the same smart grid, failed cyber components such as smart meters are typically recovered by rebooting, which is quick (<5 mins) enough that the recovery time can be approximated with an exponential distribution. Our model allows for inhomogeneous recovery‑time distributions, affording the flexibility necessary to represent structurally and functionally complex networked systems across diverse domains. 
 
-%Add a final wrap up of this section
-%Ultimately, this modeling framework aims to establish a mathematical foundation for decision support in recovery operations, facilitating the identification of optimal recovery strategies under varying failure scenarios and resource constraints.
 
-%SSS - I replaced multi-layer with cyber-physical. I assume that is what you mean. 
-%SL: yes, some model has only 1 layer (phyiscal only) which I want to extinguish our work from that
-%SSS - try to figure out how bibtex is ordering the citations. It looks weird for the numbers in the title to be in random order. 
-%SL:: I can reorder the table to make them ascending 
 
 Table \ref{tb:relatedModels} highlights the distinction of our work by comparing it to the aforementioned studies. 
 
@@ -264,26 +243,21 @@ Ref\cite{wang_q-learning-based_2025} &
 \end{table*}
 
 \section{Methodology}\label{sec:methodology}
-%SSS - our text sounded like something that came from chatgpt. If I can recognize it, so can the reviewers. 
-%SL: I will double check for writings too similar to chatGPT 
-%SSS - all of your reasons for choosing a Markov model, MDP, TI, specific prob distr need to be crystal clear. Basically address the QEST comments with surgical precision. 
-%SL: choosing Markov for capturing the system component's stochastic transitions between up & down state, as the failure propagations are driven by probabilities and recovery is driven by uncertain durations. choosing TI because the propagation probabilities will change over time, and recovery is not memoryless. Choosing MDP as we need to test the recovery schemes when implement into different networks in a fair competetion. 
+
 
 This section articulates the formulation of our Markov Decision Process (MDP) recovery model, where time‑dependent transitions allow for accurate reflection of  interdependencies and enable consideration of recovery efforts of uncertain duration. The goal is to characterize failure and recovery efforts in complex networked systems by predicting the respective states of components and repair crews, tracking failure propagation and recovery, assessing impacts on system survivability, and evaluating competing recovery schemes. 
 
 \subsection{Assumptions}
 
-The following assumptions underlie our model:
-
 \begin{enumerate}
     
-    \item \textbf{Failure Dynamics:} In each decision epoch, multiple components may fail or recover as failures occur, propagate through network interdependencies, and are resolved through recovery efforts. Failure propagation is represented as a stochastic process determined by component-specific failure rates and interdependencies among system elements,  enabling a realistic depiction of cascading failures at the system level. \label{assumption failure}
+    \item \textbf{Failure dynamics:} In each decision epoch, multiple components may fail or recover as failures occur, propagate through network interdependencies, and are resolved through recovery efforts. Failure propagation is represented as a stochastic process determined by component-specific failure rates and interdependencies among system elements,  enabling a realistic depiction of cascading failures at the system level. \label{assumption failure}
 
-    \item \textbf{Failure Scope:} At the current stage, the model focuses exclusively on cascading failure dynamics triggered by specific initial failure scenarios. Random component failures that are independent of but concurrent with an ongoing cascade are outside the scope of the present study and may be incorporated in future work.\label{assumption scope}
+    \item \textbf{Failure scope:} At the current stage, the model focuses exclusively on cascading failure dynamics triggered by specific initial failure scenarios. Random component failures that are independent of but concurrent with an ongoing cascade are outside the scope of the present study and may be incorporated in future work.\label{assumption scope}
     
-    \item \textbf{Observability of components:} The state (operational or failed) of each system component is assumed to be observable to the decision maker, either directly or through sensor outputs transmitted to the control center. This is a reasonable assumption in modern systems with adequate diagnostics in place. Several recent studies have demonstrated the utility of wireless communication, sensors, and monitoring systems in detecting component-level failures in a smart system \cite{aust_performance_2012, verma_wireless_2014, tashtarian_distributed_2018}. \label{assumption:obser}
+    \item \textbf{Component observability:} The state (operational or failed) of each system component is assumed to be observable to the decision maker, either directly or through sensor outputs transmitted to the control center. This is a reasonable assumption in modern systems with adequate diagnostics in place. Several recent studies have demonstrated the utility of wireless communication, sensors, and monitoring systems in detecting component-level failures in a smart system \cite{aust_performance_2012, verma_wireless_2014, tashtarian_distributed_2018}. \label{assumption:obser}
 
-    \item \textbf{General distribution for recovery times:} The duration of a given recovery action is estimated using empirical distributions derived from historical maintenance records, incident reports, and operational logs. Our model does not constrain the probability distribution of any recovery action, and allow for variability arising from severity of failure, efficiency of resource allocation, and environmental conditions. Recovery time for a given component includes logistics, repair, boot‑up, verification, and testing, as all steps require the continued presence of crews at the component site.
+    \item \textbf{General distribution for recovery times:} The duration of a given recovery action is estimated using empirical distributions derived from historical maintenance records, incident reports, and operational logs. Our model does not constrain the probability distribution of any recovery action, and captures variability arising from failure severity, resource allocation efficiency, and environmental conditions. Recovery time for a given component includes logistics, repair, boot‑up, verification, and testing, as all steps are assumed to require the continued allocation of a crew to the component.
      \label{assumption:repairt}
     
     \item \textbf{Success of recovery:} Any failed component is assumed to be recoverable, with restoration always succeeding through either repair or replacement. This simplifying assumption enables clear interpretation of results and can be relaxed in future extensions to the work.
@@ -299,14 +273,14 @@ The foundation of our recovery model is an MDP, which is a state-based model tha
 \subsubsection{System state, \texorpdfstring{$\mathbf{s}$}{S}}
 In our model, the state occupied by the MDP at a given decision epoch is determined by the respective states of the components and the crews.
 
-The \emph{components} are defined at a granularity that allows the state — either \emph{operational} or \emph{failed} -  of each component to be directly observable, consistent with Assumption \ref{assumption:obser} (Observability of Components). If a component has failed, the failure time is recorded in the state of the component. This enables calculation of time-dependent transitions. The state variable, $x_i$, of a given component, $i$, is assigned as in Equation \ref{eq:xs}. All components are assumed to be functional at startup, i.e., $t_{fi}>0$ for all $i$.
+The \emph{components} are defined at a granularity that allows the state — either \emph{operational} or \emph{failed} -  of each component to be directly observable, consistent with Assumption \ref{assumption:obser} (Observability of Components). If a component has failed, the failure time is recorded in the state of the component. This enables calculation of time-dependent transitions. The state variable, $x_i$, of a given component, $i$, is assigned as shown in Equation \ref{eq:xs}. All components are assumed to be functional at startup, i.e., $t_{fi}>0$ for all $i$.
 \begin{equation} x_i (t)= \begin{cases}
     0 & \text{if component \textit{i} is operational}  \\
     t_{fi} & \text{if component \textit{i} has failed at time $t_{fi}$}
     \label{eq:xs}
 \end{cases}\end{equation}
 
-For a complex networked system with a total of $N$ components, the set of component states is represented by the vector $\mathbf{x}$, as in Equation \ref{eq:X}, where $x_i(t)$ is the state of component $i$ at time $t$. 
+For a complex networked system with a total of $N$ components, the set of component states is represented by the vector $\mathbf{x}$, as shown in Equation \ref{eq:X}, where $x_i(t)$ is the state of component $i$ at time $t$. 
 \begin{equation}
 \mathbf{x} (t) = \{ x_1(t), x_2(t), \ldots , x_N(t) \}
 \label{eq:X}
@@ -319,14 +293,14 @@ Recovery crews are the second aspect involved in identifying the state of the re
     \label{eq:ys}
 \end{cases}\end{equation}
 
-Assuming $M$ crews are available for dispatch, the status of the crews is collectively represented by the vector $\mathbf{y}$, as in Equation \ref{eq:Y}, where $y_k(t)$ is the status of crew $k$ at time $t$. 
+Assuming $M$ crews are available for dispatch, the status of the crews is collectively represented by the vector $\mathbf{y}$, as shown in Equation \ref{eq:Y}, where $y_k(t)$ is the status of crew $k$ at time $t$. 
 
 \begin{equation}
 \mathbf{y}(t) = \{ y_1(t), y_2(t), \ldots , y_M(t) \}
 \label{eq:Y}
 \end{equation}
 
-Other than tracking the failed component that each crew is recovering, the time remaining to complete the recovery task is also tracked in a vector, $\mathbf{z}$, of length $M$. Each $z_k$ is an integer that represents the remaining recovery time for crew $k$, as in Equation \ref{eq:z}:
+Other than tracking the failed component that each crew is recovering, the time remaining to complete the recovery task is also tracked in a vector, $\mathbf{z}$, of length $M$. Each $z_k$ is an integer that represents the remaining recovery time for crew $k$, as shown in Equation \ref{eq:z}:
 \begin{equation}
     \mathbf{z}(t) = \{z_1(t), z_2(t), z_3(t), .., z_M(t)\}
     \label{eq:z}
@@ -346,17 +320,17 @@ The action space, $\mathbf{A}$ is the set of actions available to the system at 
 At each decision epoch, recovery of one failed component will be assigned to each idle crew, based on the given recovery scheme. In this paper, we assume that recovery of a component involves exactly one crew, i.e., for every $x_i \in \mathbf{x}$ where $x_i \neq 0$, there is at most one $y_k \in \mathbf{y}$ where $y_k = i$. The assignment of component $i$ to crew $k$ will cause $y_k$ to transition in the next time step from ``idle'' to $i$, reflecting the assignment. The corresponding recovery time tracker, $z_k$, will be assigned a new value drawn from the recovery time distribution of $i$. Scheduling of recovery actions is non-preemptive; i.e., a crew will remain on a given task until it is complete. 
 
 \subsubsection{Time-dependent transition probabilities, \texorpdfstring{$P_a$}{P}}
-In an MDP, transition $p_{a_t}(s,s')$ represents the probability that taking action $a$ in state $s$ at time $t$ will cause the system to transition to state $s'$ at the next decision epoch (time $t+1$). In our model, the transitions are governed by two different processes: failure propagation and recovery efforts. Each type of transition, respectively, is explained described below.
+In an MDP, transition $p_{a_t}(s,s')$ represents the probability that taking action $a$ in state $s$ at time $t$ will cause the system to transition to state $s'$ at the next decision epoch (time $t+1$). In our model, the transitions are governed by two different processes: failure propagation and recovery efforts. Each type of transition is described below.
 
 \paragraph{Failure propagation} 
-A component can transition from ``operational''  to  ``failed'' due to independent failure or dependency on a failed component. The probability of the latter can be quantified by a \emph{dependency index}. For a system with $N$ components, the dependency indices can be represented by a matrix, $\mathbf{D}$, as in Equation \ref{eq:D}, where $d_{ij}$ represents the conditional probability of component $j$ failing one time step after component $i$ has failed. :
+A component can transition from ``operational''  to  ``failed'' due to independent failure or dependency on a failed component. The probability of the latter can be quantified by a \emph{dependency index}. For a system with $N$ components, the dependency indices can be represented by a matrix, $\mathbf{D}$, as shown in Equation \ref{eq:D}, where $d_{ij}$ represents the conditional probability of component $j$ failing one time step after component $i$ has failed. :
 \begin{equation}
 \mathbf{D}=[d_{ij} ] \in [0,1]^{N \times N}  \label{eq:D}
 \end{equation}
 $$i \in [1, N], j \in [1, N]$$ 
-In earlier work \cite{redacted}, we proposed a method based on heuristic causation analysis to compute the value of each element of $\mathbf{D}$. Other measures of dependency include Pearson correlation ~\cite{modarres_measures_2011}, Spearman's rank correlation ~\cite{modarres_measures_2011} , and the randomized dependence coefficient ~\cite{lopez-paz_randomized_2013}, among others. The recovery model we propose in this paper is agnostic to the measure chosen to quantify dependency. 
+In earlier work \cite{marashi_identification_2021}, we proposed a method based on heuristic causation analysis to compute the value of each element of $\mathbf{D}$. Other measures of dependency include Pearson correlation ~\cite{modarres_measures_2011}, Spearman's rank correlation ~\cite{modarres_measures_2011} , and the randomized dependence coefficient ~\cite{lopez-paz_randomized_2013}, among others. The recovery model we propose in this paper is agnostic to the measure chosen to quantify dependency. 
 
-Proceeding with the method proposed in \cite{redacted}, we normalize $\mathbf{D}$ by dividing it by $N$ to ensure that $\sum^{n}_{j=1}d_{ij} \leq 1$. The matrix $\left( \frac{1}{N} \mathbf{D} \right)^l$ is then used to predict the probability of failure propagation from each component to every other component after $l$ time steps. Given the state of component $i$, the probability that component $j$ will fail in the next time step in a cascade from $i$ is the conditional probability shown in Equation \ref{eq:pij}.
+Proceeding with the method proposed in \cite{marashi_identification_2021}, we normalize $\mathbf{D}$ by dividing it by $N$ to ensure that $\sum^{n}_{j=1}d_{ij} \leq 1$. The matrix $\left( \frac{1}{N} \mathbf{D} \right)^l$ is then used to predict the probability of failure propagation from each component to every other component after $l$ time steps. Given the state of component $i$, the probability that component $j$ will fail in the next time step in a cascade from $i$ is the conditional probability shown in Equation \ref{eq:pij}.
 \begin{equation}
 p_{ij}(t) = \begin{cases}
     0 & x_i = 0 \\
@@ -380,7 +354,7 @@ The remaining recovery time for the component, $z_k$, is decremented at each dec
 \label{sec:rewards}
 The set of rewards, $\mathbf{R_a}$, represent the ``value'' or ``cost'' associated with the actions available in an MDP. $r_a(s,s')$ represents the reward received after action $a$ causes the system to transition from state $s$ to state $s'$ at the next decision epoch. The goal of an MDP is to identify a ``policy'',  i.e., a sequence of actions, that optimizes a given cumulative function of rewards. 
 
-One goal of our model is to enable comparison of different recovery schemes (policies) based on one or more measures associated with system resilience. One commonly used measure is \emph{recovery time} \cite{biswas_repair_2025}, which refers to the duration of recovery efforts required for every system component to become operational. Another measure is the extent of \emph{failure propagation} \cite{wang_q-learning-based_2025}, assessed by calculating the total number of additional failures triggered by the initial failure. Yet another measure is the fraction of full \emph{service capacity} \cite{redacted3,yan_dynamic_2021,sarkale_solving_2018} delivered by the system in a given state. Full service capacity is assumed to be delivered when all components are operational. Finally, recovery schemes can be compared based on their ability to meet specified \emph{recovery deadlines}. This measure often applies to critical systems such as power grids, where prolonged service outage can carry severe consequences. Perishable food items in supermarkets may begin to spoil within a few hours. Residential buildings can lose their internal thermal stability within approximately 8–12 hours in cold climates \cite{noauthor_how_nodate}. Under extreme conditions, such loss of heating can be life-threatening, as evidenced by the fatalities reported during the 2021 Texas power crisis~\cite{svitek_texas_2022}.
+One goal of our model is to enable comparison of different recovery schemes (policies) based on one or more measures associated with system resilience. One commonly used measure is \emph{recovery time} \cite{biswas_repair_2025}, which refers to the duration of recovery efforts required for every system component to become operational. Another measure is the extent of \emph{failure propagation} \cite{wang_q-learning-based_2025}, assessed by calculating the total number of additional failures triggered by the initial failure. Yet another measure is the fraction of full \emph{service capacity} \cite{alobaidi_survivability_2016,yan_dynamic_2021,sarkale_solving_2018} delivered by the system in a given state. Full service capacity is assumed to be delivered when all components are operational. Finally, recovery schemes can be compared based on their ability to meet specified \emph{recovery deadlines}. This measure often applies to critical systems such as power grids, where prolonged service outage can carry severe consequences. Perishable food items in supermarkets may begin to spoil within a few hours. Residential buildings can lose their internal thermal stability within approximately 8–12 hours in cold climates \cite{noauthor_how_nodate}. Under extreme conditions, such loss of heating can be life-threatening, as evidenced by the fatalities reported during the 2021 Texas power crisis~\cite{svitek_texas_2022}.
 
 
 %SSS - this is appropriate for explaining how to write the code
@@ -400,7 +374,7 @@ One goal of our model is to enable comparison of different recovery schemes (pol
 \section{Design of Case Study and Experimental Setup}\label{sec:design}
 To demonstrate that our recovery model effectively captures the dynamics of a complex networked system, particularly the competition between failure propagation and recovery efforts, we present case studies involving smart grids. This application domain was selected to build on our previous work, and because of its relevance, clarity, and scalability. Our experiments involve respective smart grids created from the IEEE-14 and IEEE-30 test systems, which include physical components such as power generators, buses, and transmission lines. To convert each conventional grid to its smart counterpart, we supplemented it with a cyber layer that incorporates phasor measurement units (PMUs) that are high-speed sensors for monitoring of voltages and currents \cite{asprou_optimal_2011}, flexible AC transmission systems (FACTS) that control power flow and increase stability \cite{sosnina_assessment_2022, garrido_location_2019}, and  decision support that determines optimal settings for the FACTS device based on data from the PMUs. 
 
-We evaluated four recovery schemes against representative failure scenarios commonly observed in these test systems. Among the physical components, the focus of our case studies is on  transmission lines, as they typically have higher failure rates than other components and are often the cause of power outages \cite{song_survey_2013}. Our failure scenarios involve all three types of cyber components, i.e., PMUs, FACTS devices, and the decision support system, as our previous work has demonstrated that their malfunction can lead to cascading failure in an otherwise stable grid \cite{redacted2}. In the remainder of this section, we describe the design and setup of the experiments in detail. 
+We evaluated four recovery schemes against representative failure scenarios commonly observed in these test systems. Among the physical components, our case studies focus on  transmission lines, as they typically have higher failure rates than other components and are often the cause of power outages \cite{song_survey_2013}. Our failure scenarios involve all three types of cyber components, i.e., PMUs, FACTS devices, and the decision support system, as our previous work has demonstrated that their malfunction can lead to cascading failure in an otherwise stable grid \cite{FaS10a}. In the remainder of this section, we describe the design and setup of the experiments in detail. 
 
 \subsection{Recovery schemes}
 We demonstrate the utility of our model by using it to compare the four recovery schemes summarized in Table \ref{table:recovery} and described below. These schemes differ in how they prioritize components for recovery. 
@@ -428,7 +402,7 @@ We demonstrate the utility of our model by using it to compare the four recovery
 \begin{description}
     \item[Randomized:] At each decision epoch, a failed component is selected at random and assigned to an available crew for recovery. 
     
-    \item[Pre-computed:] Components are prioritized for recovery based on their rank in a static list that is computed beforehand. Measures commonly used for ranking components include the number of functional dependencies on a component or the service capacity lost as a result of its failure. The importance measure used in our case studies is its \emph{criticality}, defined as the cumulative effect of its failure on other components \cite{redacted5} and computed from the dependency matrix, $\mathbf{D}$, as in Equation \ref{eq:precomputed}.
+    \item[Pre-computed:] Components are prioritized for recovery based on their rank in a static list that is computed beforehand. Measures commonly used for ranking components include the number of functional dependencies on a component or the service capacity lost as a result of its failure. The importance measure used in our case studies is its \emph{criticality}, defined as the cumulative effect of its failure on other components \cite{woodard_survivability_2021} and computed from the dependency matrix, $\mathbf{D}$, as shown in Equation \ref{eq:precomputed}.
     \begin{equation}
         \text{criticality of component } i = \mathbf{D}_i = \sum_{j=1}^{N} d_{ij}
         \label{eq:precomputed}
@@ -436,7 +410,7 @@ We demonstrate the utility of our model by using it to compare the four recovery
     
     \item[Max-capacity:] Components are dynamically prioritized based on a method we adapted from Yan at el. \cite{yan_dynamic_2021}. Our scheme aims to increase service resilience by prioritizing components whose recovery leaves the system with the highest survivability. In this context, survivability is defined as the fraction of full service capacity delivered by the system during degraded operation. 
     
-    \item[Min-cascade:] This scheme aims to lower the overall dependencies in the system by recovering components that have a high likelihood of causing other failures, yet can typically be recovered quickly. Components are dynamically prioritized for recovery based on their \emph{cascading index}, which is computed as in Equation \ref{eq:min_cascade}.
+    \item[Min-cascade:] This scheme aims to lower the overall dependencies in the system by recovering components that have a high likelihood of causing other failures, yet can typically be recovered quickly. Components are dynamically prioritized for recovery based on their \emph{cascading index}, which is computed as shown in Equation \ref{eq:min_cascade}.
     \begin{equation}
     \label{eq:min_cascade}
     \text{cascading index of } i 
@@ -448,11 +422,11 @@ We demonstrate the utility of our model by using it to compare the four recovery
 
 \subsection{Simulation environment}
 %SSS - mention that data sets, code, etc. are publicly available for reuse
-Our experiments were carried out using fault injection on PSAT ~\cite{psat_2005}, an open-source MATLAB-based toolbox for power system analysis, which we have modified to allow simulation of interactions between cyber components such as PMUs and the decision support algorithm that identifies the settings for the FACTS devices. Paper \cite{redacted4, redacted}  describes the simulation environment and explains how cyber-physical interdependencies are quantified. 
+Our experiments were carried out using fault injection on PSAT ~\cite{psat_2005}, an open-source MATLAB-based toolbox for power system analysis, which we have modified to allow simulation of interactions between cyber components such as PMUs and the decision support algorithm that identifies the settings for the FACTS devices. Paper \cite{MaS17c, marashi_identification_2021}  describes the simulation environment and explains how cyber-physical interdependencies are quantified. 
 
 The recovery model was implemented in Python 3 on Google Colab \cite{colab}, with three inputs: i) the dependency matrix, ii) the recovery time distribution for each component, and iii) a means of assessing system survivability. 
 
-The \emph{dependency matrix}, $(\mathbf{D})$, governs the transition probabilities and reflects cascading failure. As described earlier, dependency indices can be computed using a variety of methods. For our experiment, the respective dependency matrices for the IEEE-14 and 30 smart grids were calculated using the method we proposed in \cite{redacted}. %For better observe of the failure propagation in the system, we amplify the matrix calculated by $\mathbf{D} = \mathbf{D}^\frac{1}{2.5}$, so the value will exceed 1.
+The \emph{dependency matrix}, $(\mathbf{D})$, governs the transition probabilities and reflects cascading failure. As described earlier, dependency indices can be computed using a variety of methods. For our experiment, the respective dependency matrices for the IEEE-14 and 30 smart grids were calculated using the method we proposed in \cite{marashi_identification_2021}. %For better observe of the failure propagation in the system, we amplify the matrix calculated by $\mathbf{D} = \mathbf{D}^\frac{1}{2.5}$, so the value will exceed 1.
 
 The \emph{recovery time} for transmission lines was assumed to range from three to seven hours, following a lognormal distribution. This is based on recent studies on the repair time of physical components \cite{zapata_repair_2008, arif_optimizing_2018}. For smart devices, the total recovery duration is assumed to be exponentially distributed between 1 and 3 hours. The US Department of Energy reports that such components can be remotely rebooted in fewer than five minutes \cite{noauthor_recovery_nodate}. Our larger values account for overhead time in preparation, travel, and installation for cases where remote recovery is impossible or the component has to be replaced \cite{arif_optimizing_2018}.
 
@@ -469,13 +443,13 @@ Of the two smart grids analyzed in our case studies, the IEEE‑14 test system i
 For scenarios involving up to three failures, a lookup table was used to determine system survivability. If more than three components have failed, the smart grid was assumed to have zero survivability, as multiple line outages are likely to cause the grid to collapse. Given that the average home stays warm for 8 to 12 hours after a power outage \cite{noauthor_how_nodate}), a recovery deadline of 12 hours was set for reaching 90\% survivability. 
 
 
-The original IEEE-14 test system includes five generators, 20 transmission lines, 14 buses, and 11 loads. We have created an IEEE-14 smart grid from the original physical system by adding three PMUs, three FACTS devices, and one decision support system. The PMUs were placed on buses 2, 6, and 9, respectively. Based on a study by Asprou and Kyriakides ~\cite{asprou_optimal_2011}, these locations lead to the most accurate estimates of the state of the grid. We added FACTS devices to the lines between buses 1 and 5, 2 and 3, 3 and 4, respectively. The locations were identified by Acharya and Mithulananthan  ~\cite{acharya_locating_2007} as achieving the highest stability in voltage and power factor. Finally, the decision support system was added to bus 1, which connects to the generator that typically provides the largest fraction of the power. The resulting IEEE-14 smart grid is depicted in Figure \ref{fig:IEEE14BUS}. 
+The original IEEE-14 test system includes five generators, 20 transmission lines, 14 buses, and 11 loads. We have created an IEEE-14 smart grid from the original physical system by adding three PMUs, three FACTS devices, and one decision support system. The PMUs were placed on buses 2, 6, and 9. Based on a study by Asprou and Kyriakides ~\cite{asprou_optimal_2011}, these locations lead to the most accurate estimates of the state of the grid. We added FACTS devices to the lines between buses 1 and 5, 2 and 3, 3 and 4, respectively. The locations were identified by Acharya and Mithulananthan  ~\cite{acharya_locating_2007} as achieving the highest stability in voltage and power factor. Finally, the decision support system was added to bus 1, which connects to the generator that typically provides the largest fraction of the power. The resulting IEEE-14 smart grid is depicted in Fig.  \ref{fig:IEEE14BUS}. 
 
 
 \begin{figure*}[!htbp]
     \centering
     \includegraphics[width=.65\linewidth]{images/IEEE-14 smart}
-    \caption{IEEE-14 smart grid (adapted from \cite{redacted})}
+    \caption{IEEE-14 smart grid (adapted from \cite{marashi_identification_2021})}
     \label{fig:IEEE14BUS}
 \end{figure*}
 
@@ -562,7 +536,7 @@ For the first experiment, we began with 27 failure cases, each of which correspo
 \end{tabular}
 \end{table}
 
-Figure \ref{fig:singleFail} depicts the recovered system survivability during the simulation process. The axes are adjusted to show the most significant differences between the schemes. 
+Fig.  \ref{fig:singleFail} depicts the recovered system survivability during the simulation process. The axes are adjusted to show the most significant differences between the schemes. 
 
 \begin{figure}[!htbp]
     \centering
@@ -592,15 +566,14 @@ Figure \ref{fig:singleFail} depicts the recovered system survivability during th
     \label{fig:singleFail}
 \end{figure}
 
-As expected, the Pre-computed and Min-cascade schemes were able to reduce the number of additional failures during the recovery stage. Reducing failures can improve the earliest restoration time, especially when fewer repair crews are available. The Pre-computed scheme takes the lead in survivability within 20 time steps (Figure \ref{fig:singleFail}. 
+As expected, the Pre-computed and Min-cascade schemes were able to reduce the number of additional failures during the recovery stage. Reducing failures can improve the earliest restoration time, especially when fewer repair crews are available. The Pre-computed scheme achieves the highest survivability after approximately 20 time steps (Fig.  \ref{fig:singleFail}). 
 
-%SSS - are you using survivability and performance interchangeably?
-%SL: I did. I should change them all to survivability
 %SSS - no explanation for randomized meeting the deadline more often?
 %SL: I am not quite sure why, it was not designed for this, but somehow works
-Another expectation was that Max-capacity would boost survivability in the early stage, giving the system a slightly higher chance to meet the recovery deadline when three or four crews are available. An unexpected outcome is that the Randomized scheme outperformed others in meeting the recovery deadline when only two crews are available. As shown in Figure \ref{fig:single-2}, the Randomized scheme was dominating in recovered survivability between time step 10 and 20. The reason is that Max-capacity takes a greedy approach to achieving survivability but neglects to mitigate failures. The Randomized scheme has no such focus and ends up with more balanced recovery. 
 
-As expected, the two-crew scenarios highlight the differences between schemes, as shown in Figure \ref{fig:single-2}. An interesting observation from Figure \ref{fig:single-4} is that the four schemes achieve very similar outcomes when four crews are available. This is expected, as the abundant recovery resource has shortened the recovery to the point where failure propagation is unlikely and the order of recovery actions becomes insignificant.
+Max-capacity was expected to boost survivability in the early stage, giving the system a slightly higher chance to meet the recovery deadline when three or four crews are available. However, the Randomized scheme outperformed others in meeting the recovery deadline when only two crews are available. As shown in Fig.  \ref{fig:single-2}, the Randomized scheme was dominating in recovered survivability between time step 10 and 20. The reason is that Max-capacity takes a greedy approach to achieving survivability but neglects to mitigate failures. The Randomized scheme has no such focus and ends up with more balanced recovery. 
+
+As expected, the two-crew scenarios highlight the differences between schemes, as shown in Fig.  \ref{fig:single-2}. An interesting observation from Fig.  \ref{fig:single-4} is that the four schemes achieve very similar outcomes when four crews are available. This is expected, as the abundant recovery resource has shortened the recovery to the point where failure propagation is unlikely and the order of recovery actions becomes insignificant.
 
 \subsection{Experiment 2: Cyber-attack on IEEE-14}
 
@@ -608,9 +581,8 @@ Our second experiment aims to replicate the effect of a cyber attack. Motivating
 
 An attacker can interfere with normal operation of smart devices, causing them to malfunction; or send malicious commands to manually trigger the imbalance of power distribution. Such attacks leave a power grid blind, confused, or actively dangerous; sometimes all three at once. Failure propagation can become more likely and harder to predict. To capture these effects, we have amplified the dependency matrix used in our second experiment. 
 
-%SSS = specify the number of runs. Maybe even add it to each table.
-%SL: experiment 2 and 3 have 1,000 runs
-As respective initial failures caused by an attack, we chose the three smart devices with the highest probability of failure. They are the two PMU devices installed on buses 6 and 9, respectively, along with the FACTS device installed on the line between bus 1 and 5. In each case, we investigated recovery assuming two, three, and four available crews, respectively. The results are presented in Table \ref{TB:cyber}. \textbf{Figure \ref{fig:CyberAttack}} depicts the recovered system survivability during the experiment.
+
+As respective initial failures caused by an attack, we chose the three smart devices with the highest probability of failure. They are the two PMU devices installed on buses 6 and 9, respectively, along with the FACTS device installed on the line between bus 1 and 5. In each case, we investigated recovery assuming two, three, and four available crews, respectively. The results are presented in Table \ref{TB:cyber}. Fig. \ref{fig:CyberAttack} depicts the recovered system survivability during the experiment.
 
 \begin{table}[!htbp]
 \centering
@@ -721,12 +693,12 @@ As respective initial failures caused by an attack, we chose the three smart dev
     \label{fig:CyberAttack}
 \end{figure}
 
-Compared to experiment 1, the cyber-attack has caused a lengthier disruption to the grid, but it does not directly impact the system survivability. This case shows survivability falling after five time steps, as compared to the 2-3 time steps associated with line failure. This is due to the fact that the cyber failure has to propagate to the physical layer before it can affect the service capacity. 
+Compared to experiment 1, the cyber-attack caused a longer disruption to the grid but did not directly impact the system survivability. This case shows survivability falling after five time steps, as compared to the 2-3 time steps associated with line failure. This is due to the fact that the cyber failure has to propagate to the physical layer before it can affect the service capacity. 
 
-The Pre-computed scheme has performed as expected and has reducing the additional failures caused by propagation, which shortens the restoration time and increases the survivability recovery rate at the later stage, after roughly 20 time steps (see Figure \ref{fig:CyberAttack}). The downside of choosing this scheme is that it has the lowest chance of meeting the recovery deadline. The randomized scheme leads by this measure, at the cost of restoration time and a greater number of additional failures. With only two crews available (Figure \ref{fig:cyber-2}), roughly half of the trials did not complete within the time horizon. The two dynamic schemes are less extreme in their approach, achieving balance between all the rewards, with Max-capacity more successful at meeting the recovery deadline and Min-cascade achieving lower restoration time. 
+The Pre-computed scheme performed as expected and reduced the number of additional failures caused by propagation, which shortens the restoration time and increases the survivability recovery rate at the later stage, after roughly 20 time steps (see Fig.  \ref{fig:CyberAttack}). The downside of choosing this scheme is that it has the lowest chance of meeting the recovery deadline. The randomized scheme leads by this measure, at the cost of restoration time and a greater number of additional failures. With only two crews available (Fig.  \ref{fig:cyber-2}), roughly half of the trials did not complete within the time horizon. The two dynamic schemes are less extreme in their approach, achieving balance between all the rewards, with Max-capacity more successful at meeting the recovery deadline and Min-cascade achieving lower restoration time. 
 
 \subsection{Experiment 3: Extreme weather (Massive physical failure)}
-On rare occasions, power grids can experience massive physical failure due to extreme weather events, such as hurricanes, wildfires, or earthquakes. The 2021 North American winter storm~\cite{menati_preliminary_2021} and the 2016 South Australian storm~\cite{jamborsalamati_framework_2018} are  examples where extreme weather caused catastrophic blackouts. Although these events are rare, the severity of their consequences makes them work examining. In situations involving extreme weather, the probability of failure propagation could increase, as components become more vulnerable under such conditions. Recovery times are likely to be longer, as crews have to operate difficult circumstances. As failures typically outnumber available crews during extreme weather, dispatch decision schemes become critical.
+On rare occasions, power grids can experience massive physical failure due to extreme weather events, such as hurricanes, wildfires, or earthquakes. The 2021 North American winter storm~\cite{menati_preliminary_2021} and the 2016 South Australian storm~\cite{jamborsalamati_framework_2018} are  examples where extreme weather caused catastrophic blackouts. Although these events are rare, the severity of their consequences makes them worth examining. In situations involving extreme weather, the probability of failure propagation could increase, as components become more vulnerable under such conditions. Recovery times are likely to be longer, as crews have to operate under difficult circumstances. As failures typically outnumber available crews during extreme weather, dispatch decision schemes become critical.
 
 %SSS - what does synthetic progression mean? 
 %SL since IEEE-14 has no geographical data, we can only synthesize the storm progression throughout the grid like estimation or speculation
@@ -755,13 +727,12 @@ Line outage between buses & At time step ($t$) \\ \hline
 \end{tabular}
 \end{table}
 
-%SSS - we need to be more consistent is using time step, decision epoch, hour
-%I tried not to use "hour", only use "time steps" to keep it consistant. But sometimes I mistakenly put down hourI 
-We have amplified the dependency index to simulate extreme weather conditions in the system. For components in the red area in Figure \ref{fig:storm}, we have also increased the average repair time by one time step to reflect the effect of extreme weather on the crews. Given that the final line outage caused by the storm occurred at time step 5, we postponed the recovery deadline by four time steps. We also extended the time horizon to 70 time steps, to allow for lengthier observation of the recovery process. Compared to the other scenarios, greater loss of survivability is expected in early stages and a greater number of crews are required to win the race against cascading failure. In extreme conditions, utilities often borrow recovery crews from their counterparts in unaffected regions. We allotted four, five, and six crews, respectively, in this experiment. 
 
-The results are presented in Table \ref{TB:storm}. \textbf{Figure \ref{fig:ExtreWeather}} reports the recovered system survivability over the duration of the experiment.
+We amplified the dependency index to simulate extreme weather conditions in the system. For components in the red area in Fig.  \ref{fig:storm}, we have also increased the average repair time by one time step to reflect the effect of extreme weather on the crews. Given that the final line outage caused by the storm occurred at time step 5, we postponed the recovery deadline by four time steps. We also extended the time horizon to 70 time steps, to allow for lengthier observation of the recovery process. Compared to the other scenarios, greater loss of survivability is expected in early stages and a greater number of crews are required to win the race against cascading failure. In extreme conditions, utilities often obtain additional recovery crews from their counterparts in unaffected regions. We allotted four, five, and six crews, respectively, in this experiment. 
 
-\begin{table}[!htbp]y
+The results are presented in Table \ref{TB:ExtreW} and Fig. \ref{fig:ExtreWeather}.
+
+\begin{table}[!htbp]
 \centering
 \caption{Experiment 3: Extreme weather with IEEE-14}
 \label{TB:ExtreW}
@@ -869,28 +840,27 @@ The results are presented in Table \ref{TB:storm}. \textbf{Figure \ref{fig:Extre
 \end{figure}
 
 
-As expected, the Pre-computed scheme was able to minimize additional failures, which leads to the shortest time to restoration and effective bounce back after 20 time steps (see Figure \ref{fig:ExtreWeather}).  Max-capacity was able to take the lead on recovering the system survivability before the deadline. A significant gap is noted between Max-capacity and every other scheme in the first 10-20 time steps of Figures \ref{fig:Extre-5} and \ref{fig:Extre-6}.
+As expected, the Pre-computed scheme was able to minimize additional failures, which leads to the shortest time to restoration and effective bounce back after 20 time steps (see Fig.  \ref{fig:ExtreWeather}).  Max-capacity was able to take the lead on recovering the system survivability before the deadline. A significant gap is noted between Max-capacity and every other scheme in the first 10-20 time steps of Fig. \ref{fig:Extre-5} and Fig. \ref{fig:Extre-6}.
 
-%SSS - the figure does not show a decision support system
-%SL: I can recreate the figure and add DS system
+
 \subsection{Experiment 4: Two-line failure in IEEE-30}
-Our experiments with the IEEE-30 test system are intended to demonstrate scalability of the proposed model. The original IEEE-30 grid has 41 lines, 30 buses, and 24 loads. Similar to the IEEE-14 case, we created the smart IEEE-30 grid depicted in Figure \ref{fig:IEEE30} by adding PMUs, FACTS devices, and a decision support system to the original IEEE-30 test system. 
+Our experiments with the IEEE-30 test system are intended to demonstrate scalability of the proposed model. The original IEEE-30 grid has 41 lines, 30 buses, and 24 loads. Similar to the IEEE-14 case, we created the smart IEEE-30 grid depicted in Fig.  \ref{fig:IEEE30} by adding PMUs, FACTS devices, and a decision support system to the original IEEE-30 test system. 
 %We have created IEEE-30 smart from the original system by adding 6 PMUs on BUS 1,5,10,12,15,27; and 5 FACTS on lines between BUS 6 \& 8, 8 \& 28, 22 \& 28, 27 \& 28, 27 \& 30; for the best observability and configurability. 
  We use the same method as the first three experiments to calculate dependency indices for IEEE-30. We assume the same recovery time distribution for each type of component. The only difference is in the system survivability calculation. MATLAB with the PSAT toolbox was embedded into Google Colab to compute system survivability for when the system has fewer than three failed lines; the survivability is assumed to be zero otherwise (as in the IEEE-14 experiments). Using the PSAT toolbox is a compromise to the size of IEEE-30. Since there are 41 lines, 5 FACTS devices, and a decision support system, there could be a $2^{46} \approx 10^{13}$ unique states. The resulting lookup table would be prohibitively large. The downside of using embedded PSAT is the execution time (typically 10 seconds per check), which is considerably slower than using a search table ($< 1$ second per check). 
- Given the computational constraints, we limited this experiment to 100 trials and 50 time steps horizon.%Perhaps artificial intelligence techniques could be used to speed up the power flow calculation in our future work. 
+ Given the computational constraints, we limited this experiment to 100 trials and 50 time steps.%Perhaps artificial intelligence techniques could be used to speed up the power flow calculation in our future work. 
 
-To systematically capture the race between failure propagation and recovery efforts, we examined a double-failure scenario for the IEEE-30 smart grid. This system is larger and has more structural redundancy than the IEEE-14, and its inter-component dependencies are comparatively weaker; as a result, the failure of a single component is more readily absorbed by the network. Consequently, we select a two-component initial failure for our experimental setup. From the 53 candidate components in the system, we designate transmission lines 23 and 6 (see Figure \ref{fig:IEEE30}) as the initial failure. This choice is informed by importance analysis performed on all IEEE-30 components using the method introduced in \cite{redacted5}, where these two lines were found to be  most likely to induce extensive fault propagation and exert the largest adverse effect on system survivability. As in the first three experiments, we amplified the dependency matrix to increase the likelihood of observing cascading events.
+To systematically capture the race between failure propagation and recovery efforts, we examined a double-failure scenario for the IEEE-30 smart grid. This system is larger and has more structural redundancy than the IEEE-14, and its inter-component dependencies are comparatively weaker; as a result, the failure of a single component is more readily absorbed by the network. Consequently, we select a two-component initial failure for our experimental setup. From the 53 candidate components in the system, we designate transmission lines 23 and 6 (see Fig.  \ref{fig:IEEE30}) as the initial failure. This choice is informed by importance analysis performed on all IEEE-30 components using the method introduced in \cite{woodard_survivability_2021}, where these two lines were found to be  most likely to induce extensive failure propagation and exert the largest adverse effect on system survivability. As in the first three experiments, we amplified the dependency matrix to increase the likelihood of observing cascading events.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=\linewidth]{images/ieee30.pdf}
-    \caption{IEEE-30 smart grid (adopted from \cite{redacted5})}
+    \caption{IEEE-30 smart grid (adapted from \cite{woodard_survivability_2021})}
     \label{fig:IEEE30}
 \end{figure}
 
 \begin{table}[!htbp]
 \centering
-\caption{Experiment 4: Two-line failure of IEEE-30 simulation}
+\caption{Experiment 4: Two-line failure of IEEE-30}
 \label{TB:30results}
 \begin{tabular}{|lrrrr|}
 \hline
@@ -967,7 +937,7 @@ To systematically capture the race between failure propagation and recovery effo
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
     \centering
     
     \begin{subfigure}[b]{0.4\textwidth}
@@ -995,26 +965,25 @@ To systematically capture the race between failure propagation and recovery effo
     \label{fig:30-result}
 \end{figure}
 
-The result of this experiment is unexpectedly different from any IEEE-14 result. Since the IEEE-30 is larger and more complex than the IEEE-14, we examined the state transitions within the simulation and discovered an interesting phenomenon. As we increase the number of repair crews, the additional failures and earliest restoration time increase in some cases,  especially when the Pre-computed recovery scheme is used. We attribute this phenomenon to failure propagation. Some components have much stronger dependencies (higher likelihood of failing or causing failure); strong dependencies would take longer for the system to adapt and absorb. Equation \ref{eq:pij} shows that dependencies are decreasing exponentially with time. However, if a weak-dependency component repeatedly fails and is recovered, the system will have to repeatedly absorb the failures. It will cause more additional failures than leaving the component failed. A similar phenomenon was observed in the 2023 Kenya blackout, where repairs failed to alleviate the power shortage, yet expanded the outage to additional regions. The Pre-computed scheme appears to aggravate this phenomenon and achieved worse outcomes when a greater number of crews were available. As shown in Table \ref{TB:30results}, both additional failures and restoration time increase, and the coverage decreases. Figure \ref{fig:30-result}) shows that the recovery rate of Pre-computed  worsens over time. 
+The results differ markedly from those observed in the IEEE-14 experiments. Since the IEEE-30 is larger and more complex than the IEEE-14, we examined the state transitions within the simulation and discovered an interesting phenomenon. As we increase the number of repair crews, the additional failures and earliest restoration time increase in some cases,  especially when the Pre-computed recovery scheme is used. Based on inspection of state transitions, we attribute this phenomenon to failure propagation. Some components exhibit substantially stronger dependencies (higher likelihood of failing or causing failure); strong dependencies would take longer for the system to adapt and absorb. Equation \ref{eq:pij} shows that dependencies are decreasing exponentially with time. However, if a weak-dependency component repeatedly fails and is recovered, the system will have to repeatedly absorb the failures. It will cause more additional failures than leaving the component failed. A similar phenomenon was observed in the 2023 Kenya blackout, where repairs failed to alleviate the power shortage, yet expanded the outage to additional regions. The Pre-computed scheme appears to aggravate this phenomenon and achieved worse outcomes when a greater number of crews were available. As shown in Table \ref{TB:30results}, both additional failures and restoration time increase, and the coverage decreases. Fig.  \ref{fig:30-result} shows that the recovery rate of Pre-computed  worsens over time. 
 
-%SSS - shouldn't increased connectivity create additional failure propagation paths?
-%SL: connectivity is wrong here. 
-In examining the state transitions, we observed that Min-cascade recovered the smart devices before the lines. An operational cyber layer redirects the power flow to a stable state. Max-capacity prioritized the physical layer, recovering the lines first. This will provide sufficient power to the remining part of the system and reduced additional failures among them. The Randomized scheme is similar to the Pre-computed scheme, in its lack of focus on one layer of the system. Haphazard recovery actions can leave failure propagation paths open, leading to many additional failures. However, as shown in Figure \ref{fig:30-result}, the Randomized scheme was able to restore the greatest survivability before the deadline (time step 16). It also achieves higher average survivability before the 20th time step. Min-cascade dominates the rest of the timeline, similar to the Pre-computed scheme in the three IEEE-14 experiments. 
+
+In examining the state transitions, we observed that Min-cascade recovered the smart devices before the lines. An operational cyber layer redirects the power flow to a stable state. Max-capacity prioritized the physical layer, recovering the lines first. This will provide sufficient power to the remining part of the system and reduced additional failures among them. The Randomized scheme is similar to the Pre-computed scheme, in its lack of focus on one layer of the system. Uncoordinated recovery actions can leave failure propagation paths open, leading to many additional failures. However, as shown in Fig.  \ref{fig:30-result}, the Randomized scheme was able to restore the greatest survivability before the deadline (time step 16). It also achieves higher average survivability before the 20th time step. Min-cascade dominates the rest of the timeline, similar to the Pre-computed scheme in the three IEEE-14 experiments. 
 
 The main purpose of the fourth experiment is to demonstrate scalability of the model by applying it to a larger and more complex power grid as compared to the IEEE-14. Simulation time can be a revealing measure. The IEEE-30 experiment takes much longer than any of the IEEE-14 experiment, because a survivability lookup table would be prohibitively large and survivability has to be computed with PSAT. Simulation of the IEEE-14 with Google Colab takes between 30 minutes and one hour, with runtime type set to CPU, using 1-2 GB of RAM and 20-25 GB of disk. Simulating the IEEE-30 in the same environment requires between two and four hours, but requires roughly the same amount of memory and disk space. If the survivability computation were eliminated from the IEEE-30 experiment, 100 trials of the simulation would complete in approximately 12 minutes. Comparing this to the 30 minutes to one hour required for 1000 trials of the IEEE-14 simulation demonstrates that the model scales well.
 
 \section{Conclusions and Future Work}\label{sec:conclusions}
 
-This paper proposes a mathematical model to analyze the race between cascading failure and recovery efforts in a complex networked system. Our model predicts failure propagation with consideration of the effect of recovery actions and facilitates evaluation of system survivability after each action, all of which are crucial to decision support during recovery.
+This paper proposes a mathematical model to analyze the race between cascading failure and recovery efforts in a complex networked system. Our model predicts failure propagation with consideration of the effect of recovery actions and facilitates evaluation of system survivability after each action and enables decision support during recovery.
 
-To illustrate the utility of our model, we carried out case studies on respective simulated smart grids based on the IEEE-14 and IEEE-30 test systems. Given a number of recovery schemes that differ in objective, for example maintaining service capacity vs. limiting failure propagation vs. achieving the fastest recovery, the experiments collectively demonstrated that our model can provide decision support during recovery by elucidating differences between their outcomes.
+To illustrate the utility of our model, we carried out case studies on respective simulated smart grids based on the IEEE-14 and IEEE-30 test systems. Given a number of recovery schemes that differ in objective, for example maintaining service capacity vs. limiting failure propagation, the experiments collectively demonstrated that our model can provide decision support during recovery by elucidating differences between the outcomes of the schemes.
 
-Our model is not limited to power grids. Given the topology and component-level information, our model can be used to analyze recovery schemes for other networked systems. Examples include water distribution networks and transportation systems. Other directions for extending the model to include consideration of partially observable component states, and concurrent component failures that are independent of an ongoing cascade. More refined repair time distributions that incorporate logistics-based time estimation, as well as allowing for partially or completely unsuccessful recovery actions, are among potential enhancements to the model.
+Our model is not limited to power grids. Given the topology and component-level information, our model can be used to analyze recovery schemes for other networked systems, such as water distribution networks and transportation systems. Other directions for extending the model include consideration of partially observable component states and concurrent component failures that are independent of an ongoing cascade, allowing for more refined repair time distributions that incorporate logistics-based time estimation, and considering partially or completely unsuccessful recovery actions.
 
 %\section{Acknowledgment}
 %\thanks{Funding from NSF DUE-1742523 and DUE-2221559 and Department of Education awards P200A180095 and P200A210121 is gratefully acknowledged.}
 
-%\IEEEtriggeratref{22}
+\IEEEtriggeratref{19}
 
 \bibliographystyle{IEEEtran}
 \bibliography{export-data.bib}
